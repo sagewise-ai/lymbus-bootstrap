@@ -20,7 +20,7 @@ function Frame5() {
           <ArrowRight />
         </div>
       </div>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.5'}}>Back to forms</p>
       </div>
     </div>
@@ -43,7 +43,7 @@ function Frame6() {
             </div>
           </div>
         </div>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.5px]">Form Builder</p>
+        <p className=" font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.5px]" style={{fontFamily: "Inter, sans-serif"}}>Form Builder</p>
       </div>
     </div>
   );
@@ -52,7 +52,7 @@ function Frame6() {
 function TextInput() {
   return (
     <div className="position-absolute content-stretch d-flex align-items-center start-0 overflow-hidden top-0" style={{'backgroundColor':'#f5f7f7', 'height':'36px', 'paddingLeft':'40px', 'paddingRight':'16px', 'paddingTop':'8px', 'paddingBottom':'8px', 'borderRadius':'10px', 'width':'448px'}} data-name="Text Input">
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(10,10,10,0.5)]">Search</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(10,10,10,0.5)]" style={{fontFamily: "Inter, sans-serif"}}>Search</p>
     </div>
   );
 }
@@ -83,7 +83,7 @@ function Text() {
   return (
     <div className="min-h-px min-w-px position-relative" style={{'height':'16px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
-        <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[16px] left-0 not-italic text-[#6c708c] text-[12px] top-[0.5px]">Main Hospital</p>
+        <p className="position-absolute  font-bold leading-[16px] left-0 not-italic text-[#6c708c] text-[12px] top-[0.5px]" style={{fontFamily: "Inter, sans-serif"}}>Main Hospital</p>
       </div>
     </div>
   );
@@ -152,7 +152,7 @@ function Container2() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] text-white w-full">
+        <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] text-white w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Details</p>
         </div>
       </div>
@@ -189,7 +189,7 @@ function Container3() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6c708c] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6c708c] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Configure</p>
         </div>
       </div>
@@ -223,7 +223,7 @@ function Container4() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6c708c] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] whitespace-nowrap">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6c708c] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="" style={{'lineHeight':'1.5'}}>{`Preview & Share`}</p>
         </div>
       </div>
@@ -254,7 +254,7 @@ function FormsHeader() {
 function TextInput1() {
   return (
     <div className="content-stretch d-flex align-items-center overflow-hidden position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px', 'borderRadius':'10px', 'width':'448px'}} data-name="Text Input">
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]">Untitled form</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Untitled form</p>
     </div>
   );
 }
@@ -262,7 +262,7 @@ function TextInput1() {
 function Frame25() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] min-w-full not-italic overflow-hidden relative shrink-0 text-[#151515] text-[14px] text-ellipsis w-[min-content] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] min-w-full not-italic overflow-hidden relative shrink-0 text-[#151515] text-[14px] text-ellipsis w-[min-content] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'1.2'}}>Form Name</p>
       </div>
       <TextInput1 />
@@ -286,7 +286,7 @@ function TextInput2() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#151515] text-[14px]">How would you rate your overall experience at our facility?</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#151515] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>How would you rate your overall experience at our facility?</p>
         </div>
       </div>
     </div>
@@ -330,7 +330,7 @@ function Icon2() {
 function TextInput3() {
   return (
     <div className="content-stretch d-flex align-items-center overflow-hidden position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px', 'borderRadius':'10px', 'width':'160px'}} data-name="Text Input">
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#151515] text-[14px]">Rating Scale</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#151515] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Rating Scale</p>
       <Icon2 />
     </div>
   );
@@ -394,7 +394,7 @@ function Frame12() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'8px'}}>
       <Copy />
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[1.2] not-italic relative shrink-0 text-[#6a7282] text-[16px]">Duplicate</p>
+      <p className=" font-normal leading-[1.2] not-italic relative shrink-0 text-[#6a7282] text-[16px]" style={{fontFamily: "Inter, sans-serif"}}>Duplicate</p>
     </div>
   );
 }
@@ -418,7 +418,7 @@ function Frame13() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'8px'}}>
       <Trash />
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[1.2] not-italic relative shrink-0 text-[#c52020] text-[16px]">Delete</p>
+      <p className=" font-normal leading-[1.2] not-italic relative shrink-0 text-[#c52020] text-[16px]" style={{fontFamily: "Inter, sans-serif"}}>Delete</p>
     </div>
   );
 }
@@ -444,7 +444,7 @@ function Toggle() {
 function Frame11() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'8px'}}>
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[1.2] not-italic relative shrink-0 text-[#6a7282] text-[16px]">Required</p>
+      <p className=" font-normal leading-[1.2] not-italic relative shrink-0 text-[#6a7282] text-[16px]" style={{fontFamily: "Inter, sans-serif"}}>Required</p>
       <Toggle />
     </div>
   );
@@ -510,7 +510,7 @@ function TextInput4() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]">Untitled question</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Untitled question</p>
         </div>
       </div>
     </div>
@@ -554,7 +554,7 @@ function Icon3() {
 function TextInput5() {
   return (
     <div className="content-stretch d-flex align-items-center overflow-hidden position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px', 'borderRadius':'10px'}} data-name="Text Input">
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]">Question Type</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Question Type</p>
       <Icon3 />
     </div>
   );
@@ -704,7 +704,7 @@ function Frame() {
           <Group />
         </div>
       </div>
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] whitespace-pre-wrap">Staff were courteous and respectful</p>
+      <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Staff were courteous and respectful</p>
       <Frame21 />
     </div>
   );
@@ -804,7 +804,7 @@ function Frame16() {
           <Group1 />
         </div>
       </div>
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] whitespace-pre-wrap">Was your privacy respected during the visit?</p>
+      <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Was your privacy respected during the visit?</p>
       <p className="font-["Inter:Italic',sans-serif] font-normal italic leading-[normal] relative shrink-0 text-[#6a7282] text-[14px]">Single Choice</p>
       <Frame26 />
     </div>
@@ -861,7 +861,7 @@ function TextInput6() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
           <Icon4 />
         </div>
       </div>
@@ -872,7 +872,7 @@ function TextInput6() {
 function Frame32() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Range</p>
       </div>
       <TextInput6 />
@@ -882,7 +882,7 @@ function Frame32() {
 
 function Frame35() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Medium',sans-serif] font-medium gap-[16px] items-start leading-[0] not-italic relative shrink-0 text-[#151515] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+    <div className="content-stretch d-flex  font-medium gap-[16px] items-start leading-[0] not-italic relative shrink-0 text-[#151515] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
       <div className="d-flex flex-column justify-content-center position-relative flex-shrink-0" style={{'width':'32px'}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Icon</p>
       </div>
@@ -898,7 +898,7 @@ function TextInput7() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -925,7 +925,7 @@ function TextInput8() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -952,7 +952,7 @@ function TextInput9() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -979,7 +979,7 @@ function TextInput10() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -1006,7 +1006,7 @@ function TextInput11() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'10px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#151515] text-[14px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -1056,7 +1056,7 @@ function Frame36() {
 function Frame40() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[16px] w-full">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[16px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.3'}}>Rating Properties</p>
       </div>
       <Frame36 />
@@ -1070,7 +1070,7 @@ function Overlay() {
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#f3f4f6', 'borderRadius':'8px'}} />
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'8px', 'paddingRight':'8px'}}>
-          <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] whitespace-nowrap">
+          <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
             <p className="" style={{'lineHeight':'1.2'}}>Cancel</p>
           </div>
         </div>
@@ -1084,7 +1084,7 @@ function Overlay1() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#374dea', 'height':'32px', 'borderRadius':'8px'}} data-name="Overlay">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'8px', 'paddingRight':'8px'}}>
-          <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap">
+          <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
             <p className="" style={{'lineHeight':'1.2'}}>Save</p>
           </div>
         </div>

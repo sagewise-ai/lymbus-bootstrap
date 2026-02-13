@@ -74,7 +74,7 @@ function Icon1() {
 function Text() {
   return (
     <div className="position-absolute" style={{'height':'16px', 'left':'34px', 'top':'4px', 'width':'91.781px'}} data-name="Text">
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[16px] left-0 not-italic text-[12px] text-white top-px">Lymbus Insight</p>
+      <p className="position-absolute  font-bold leading-[16px] left-0 not-italic text-[12px] text-white top-px" style={{fontFamily: "Inter, sans-serif"}}>Lymbus Insight</p>
     </div>
   );
 }
@@ -91,7 +91,7 @@ function Container2() {
 function Heading() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'60px'}} data-name="Heading 3">
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[30px] left-0 not-italic text-[#0f172b] text-[24px] top-0 tracking-[0.0703px] w-[729px] whitespace-pre-wrap">Patient satisfaction is at its highest point in a year, driven by recent improvements in the West Wing.</p>
+      <p className="position-absolute  font-bold leading-[30px] left-0 not-italic text-[#0f172b] text-[24px] top-0 tracking-[0.0703px] w-[729px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Patient satisfaction is at its highest point in a year, driven by recent improvements in the West Wing.</p>
     </div>
   );
 }
@@ -99,7 +99,7 @@ function Heading() {
 function Paragraph() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'15px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[15px] left-0 not-italic text-[#90a1b9] text-[10px] top-[0.5px] tracking-[0.1172px] uppercase">Current Score</p>
+      <p className="position-absolute  font-bold leading-[15px] left-0 not-italic text-[#90a1b9] text-[10px] top-[0.5px] tracking-[0.1172px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Current Score</p>
     </div>
   );
 }
@@ -107,7 +107,7 @@ function Paragraph() {
 function Container5() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" style={{'height':'36px'}} data-name="Container">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[36px] min-h-px min-w-px not-italic relative text-[#0f172b] text-[30px] tracking-[0.3955px] whitespace-pre-wrap">88.5</p>
+      <p className=" font-bold leading-[36px] min-h-px min-w-px not-italic relative text-[#0f172b] text-[30px] tracking-[0.3955px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>88.5</p>
     </div>
   );
 }
@@ -124,7 +124,7 @@ function Container4() {
 function Paragraph1() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'15px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[15px] left-0 not-italic text-[#90a1b9] text-[10px] top-[0.5px] tracking-[0.1172px] uppercase">YoY Trend</p>
+      <p className="position-absolute  font-bold leading-[15px] left-0 not-italic text-[#90a1b9] text-[10px] top-[0.5px] tracking-[0.1172px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>YoY Trend</p>
     </div>
   );
 }
@@ -132,7 +132,7 @@ function Paragraph1() {
 function Container7() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" style={{'height':'36px'}} data-name="Container">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[36px] not-italic relative shrink-0 text-[#096] text-[30px] tracking-[0.3955px]">+4.2%</p>
+      <p className=" font-bold leading-[36px] not-italic relative shrink-0 text-[#096] text-[30px] tracking-[0.3955px]" style={{fontFamily: "Inter, sans-serif"}}>+4.2%</p>
     </div>
   );
 }
@@ -174,7 +174,7 @@ function Button() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center px-px position-relative" style={{'borderColor':'transparent', 'gap':'5px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[20px] not-italic relative shrink-0 text-[#4f39f6] text-[14px] text-center tracking-[-0.1504px]">See what changed</p>
+        <p className=" font-bold leading-[20px] not-italic relative shrink-0 text-[#4f39f6] text-[14px] text-center tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>See what changed</p>
         <Icon2 />
       </div>
     </div>

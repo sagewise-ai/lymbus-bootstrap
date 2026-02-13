@@ -27,7 +27,7 @@ function Text() {
   return (
     <div className="position-relative flex-shrink-0" style={{'height':'28px', 'width':'92.117px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
-        <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[28px] left-0 not-italic text-[#09156a] text-[20px] top-[-0.5px] tracking-[-0.5px]">Lymbus AI</p>
+        <p className="position-absolute  font-bold leading-[28px] left-0 not-italic text-[#09156a] text-[20px] top-[-0.5px] tracking-[-0.5px]" style={{fontFamily: "Inter, sans-serif"}}>Lymbus AI</p>
       </div>
     </div>
   );
@@ -66,7 +66,7 @@ function Container1() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] text-white w-full">
+        <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] text-white w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Dashboard</p>
         </div>
       </div>
@@ -107,7 +107,7 @@ function Container2() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Lymbus AI</p>
         </div>
       </div>
@@ -145,7 +145,7 @@ function Container3() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Root Cause</p>
         </div>
       </div>
@@ -185,7 +185,7 @@ function Container4() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Benchmarking</p>
         </div>
       </div>
@@ -223,7 +223,7 @@ function Container5() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Engagement</p>
         </div>
       </div>
@@ -262,7 +262,7 @@ function Container6() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Escalation</p>
         </div>
       </div>
@@ -303,7 +303,7 @@ function Container7() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Reports</p>
         </div>
       </div>
@@ -355,7 +355,7 @@ function Container8() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Settings</p>
         </div>
       </div>
@@ -399,7 +399,7 @@ function Container9() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#151515] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>{`Help & Support`}</p>
         </div>
       </div>
@@ -526,7 +526,7 @@ function Aside() {
 function TextInput() {
   return (
     <div className="position-absolute content-stretch d-flex align-items-center start-0 overflow-hidden top-0" style={{'backgroundColor':'#f5f7f7', 'height':'36px', 'paddingLeft':'40px', 'paddingRight':'16px', 'paddingTop':'8px', 'paddingBottom':'8px', 'borderRadius':'10px', 'width':'448px'}} data-name="Text Input">
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(10,10,10,0.5)]">Search</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(10,10,10,0.5)]" style={{fontFamily: "Inter, sans-serif"}}>Search</p>
     </div>
   );
 }
@@ -557,7 +557,7 @@ function Text1() {
   return (
     <div className="min-h-px min-w-px position-relative" style={{'height':'16px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
-        <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[16px] left-0 not-italic text-[#364153] text-[12px] top-[0.5px]">Main Hospital</p>
+        <p className="position-absolute  font-bold leading-[16px] left-0 not-italic text-[#364153] text-[12px] top-[0.5px]" style={{fontFamily: "Inter, sans-serif"}}>Main Hospital</p>
       </div>
     </div>
   );
@@ -599,7 +599,7 @@ function DashboardHeader() {
   return (
     <div className="position-absolute bg-white content-stretch d-flex align-items-center justify-content-between pb-px top-0" style={{'height':'64px', 'left':'280px', 'paddingLeft':'32px', 'paddingRight':'32px', 'width':'1160px'}} data-name="DashboardHeader">
       <div aria-hidden="true" className="position-absolute border-bottom border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#f3f4f6'}} />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.5px]">Engagement</p>
+      <p className=" font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.5px]" style={{fontFamily: "Inter, sans-serif"}}>Engagement</p>
       <Frame47 />
     </div>
   );
@@ -625,7 +625,7 @@ function Container12() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Insights</p>
         </div>
       </div>
@@ -659,7 +659,7 @@ function Container13() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] text-white whitespace-nowrap">
+        <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] text-white whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="" style={{'lineHeight':'1.5'}}>Campaigns</p>
         </div>
       </div>
@@ -697,7 +697,7 @@ function Container14() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Forms</p>
         </div>
       </div>
@@ -733,7 +733,7 @@ function Container15() {
   return (
     <div className="position-relative flex-shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+        <div className="d-flex flex-column  font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Responses</p>
         </div>
       </div>
@@ -765,10 +765,10 @@ function Frame15() {
 function Frame23() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0 whitespace-nowrap" style={{'gap':'8px', 'lineHeight':'0', 'width':'597.5px'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center relative shrink-0 text-[#151515] text-[16px]">
+      <div className="d-flex flex-column  font-semibold justify-center relative shrink-0 text-[#151515] text-[16px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.3'}}>All Campaigns</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[12px] text-[rgba(21,21,21,0.7)]">
+      <div className="d-flex flex-column  font-normal justify-center relative shrink-0 text-[12px] text-[rgba(21,21,21,0.7)]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.3'}}>Manage and track your active outreach</p>
       </div>
     </div>
@@ -847,7 +847,7 @@ function Frame5() {
     <div className="position-relative flex-shrink-0">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative" style={{'borderColor':'transparent', 'gap':'8px'}}>
         <Search />
-        <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] tracking-[1.1px] uppercase whitespace-nowrap">
+        <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] tracking-[1.1px] uppercase whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="" style={{'lineHeight':'1.2'}}>Search...</p>
         </div>
       </div>
@@ -907,7 +907,7 @@ function Container16() {
 function Container19() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Active</p>
       </div>
     </div>
@@ -925,7 +925,7 @@ function Container18() {
 function Container21() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>SMS</p>
       </div>
     </div>
@@ -991,7 +991,7 @@ function Frame40() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'4px'}}>
       <Calendar />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>16 Oct, 2026 - 28 Nov 2026</p>
       </div>
     </div>
@@ -1001,7 +1001,7 @@ function Frame40() {
 function Frame31() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Appointment Reminder</p>
       </div>
       <Frame40 />
@@ -1021,10 +1021,10 @@ function Frame10() {
 function Frame16() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>98%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Delivered</p>
       </div>
     </div>
@@ -1042,10 +1042,10 @@ function Frame26() {
 function Frame18() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>45%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Opened</p>
       </div>
     </div>
@@ -1063,10 +1063,10 @@ function Frame27() {
 function Frame19() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>43%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Clicked</p>
       </div>
     </div>
@@ -1103,10 +1103,10 @@ function Frame37() {
 function Frame33() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-between fst-normal position-relative flex-shrink-0 text-uppercase w-100 whitespace-nowrap" style={{'lineHeight':'0'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center relative shrink-0 text-[10px] text-[rgba(74,109,124,0.6)] tracking-[1px]">
+      <div className="d-flex flex-column  font-semibold justify-center relative shrink-0 text-[10px] text-[rgba(74,109,124,0.6)] tracking-[1px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Overall Performance</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[11px]">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[11px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>75%</p>
       </div>
     </div>
@@ -1147,7 +1147,7 @@ function Overlay3() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'backgroundColor':'#fb7185', 'gap':'4px', 'height':'32px', 'paddingLeft':'8px', 'paddingRight':'8px', 'borderRadius':'8px', 'width':'212px'}} data-name="Overlay">
       <Pause />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Pause</p>
       </div>
     </div>
@@ -1189,7 +1189,7 @@ function Container17() {
 function Container24() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#fb7185] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#fb7185] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Paused</p>
       </div>
     </div>
@@ -1207,7 +1207,7 @@ function Container23() {
 function Container26() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Email</p>
       </div>
     </div>
@@ -1273,7 +1273,7 @@ function Frame48() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'4px'}}>
       <Calendar1 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>16 Oct, 2026 - 28 Nov 2026</p>
       </div>
     </div>
@@ -1283,7 +1283,7 @@ function Frame48() {
 function Frame46() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Monthly Health Checkup</p>
       </div>
       <Frame48 />
@@ -1303,10 +1303,10 @@ function Frame11() {
 function Frame22() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>98%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Delivered</p>
       </div>
     </div>
@@ -1324,10 +1324,10 @@ function Frame29() {
 function Frame25() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>45%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Opened</p>
       </div>
     </div>
@@ -1345,10 +1345,10 @@ function Frame49() {
 function Frame51() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>43%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Clicked</p>
       </div>
     </div>
@@ -1385,10 +1385,10 @@ function Frame38() {
 function Frame53() {
   return (
     <div className="content-stretch d-flex align-items-start justify-content-between fst-normal position-relative flex-shrink-0 text-uppercase w-100 whitespace-nowrap" style={{'lineHeight':'0', 'fontSize':'11px'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]">
+      <div className="d-flex flex-column  font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Overall Performance</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50]">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>75%</p>
       </div>
     </div>
@@ -1436,7 +1436,7 @@ function Overlay4() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'backgroundColor':'#10b981', 'gap':'4px', 'height':'32px', 'paddingLeft':'8px', 'paddingRight':'8px', 'borderRadius':'8px', 'width':'212px'}} data-name="Overlay">
       <Overlay5 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Resume</p>
       </div>
     </div>
@@ -1478,7 +1478,7 @@ function Container22() {
 function Container29() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Active</p>
       </div>
     </div>
@@ -1496,7 +1496,7 @@ function Container28() {
 function Container31() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>SMS</p>
       </div>
     </div>
@@ -1562,7 +1562,7 @@ function Frame60() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'4px'}}>
       <Calendar2 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>16 Oct, 2026 - 28 Nov 2026</p>
       </div>
     </div>
@@ -1572,7 +1572,7 @@ function Frame60() {
 function Frame59() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>{`No-Show Reduction `}</p>
       </div>
       <Frame60 />
@@ -1592,10 +1592,10 @@ function Frame56() {
 function Frame63() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>98%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Delivered</p>
       </div>
     </div>
@@ -1613,10 +1613,10 @@ function Frame62() {
 function Frame65() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>45%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Opened</p>
       </div>
     </div>
@@ -1634,10 +1634,10 @@ function Frame64() {
 function Frame67() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>43%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Clicked</p>
       </div>
     </div>
@@ -1674,10 +1674,10 @@ function Frame55() {
 function Frame69() {
   return (
     <div className="content-stretch d-flex align-items-start justify-content-between fst-normal position-relative flex-shrink-0 text-uppercase w-100 whitespace-nowrap" style={{'lineHeight':'0', 'fontSize':'11px'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]">
+      <div className="d-flex flex-column  font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Overall Performance</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50]">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>75%</p>
       </div>
     </div>
@@ -1735,7 +1735,7 @@ function Container27() {
 function Container34() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Active</p>
       </div>
     </div>
@@ -1753,7 +1753,7 @@ function Container33() {
 function Container36() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Email</p>
       </div>
     </div>
@@ -1819,7 +1819,7 @@ function Frame75() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'4px'}}>
       <Calendar3 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>16 Oct, 2026 - 28 Nov 2026</p>
       </div>
     </div>
@@ -1829,7 +1829,7 @@ function Frame75() {
 function Frame74() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>{`Patient Follow-up `}</p>
       </div>
       <Frame75 />
@@ -1849,10 +1849,10 @@ function Frame12() {
 function Frame78() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>98%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Delivered</p>
       </div>
     </div>
@@ -1870,10 +1870,10 @@ function Frame77() {
 function Frame80() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>45%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Opened</p>
       </div>
     </div>
@@ -1891,10 +1891,10 @@ function Frame79() {
 function Frame82() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>43%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Clicked</p>
       </div>
     </div>
@@ -1931,10 +1931,10 @@ function Frame71() {
 function Frame84() {
   return (
     <div className="content-stretch d-flex align-items-start justify-content-between fst-normal position-relative flex-shrink-0 text-uppercase w-100 whitespace-nowrap" style={{'lineHeight':'0', 'fontSize':'11px'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]">
+      <div className="d-flex flex-column  font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Overall Performance</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50]">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>75%</p>
       </div>
     </div>
@@ -1975,7 +1975,7 @@ function Overlay6() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'backgroundColor':'#fb7185', 'gap':'4px', 'height':'32px', 'paddingLeft':'8px', 'paddingRight':'8px', 'borderRadius':'8px', 'width':'212px'}} data-name="Overlay">
       <Pause1 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Pause</p>
       </div>
     </div>
@@ -2017,7 +2017,7 @@ function Container32() {
 function Container39() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#10b981] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>Active</p>
       </div>
     </div>
@@ -2035,7 +2035,7 @@ function Container38() {
 function Container41() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" data-name="Container">
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[10px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'15px'}}>SMS</p>
       </div>
     </div>
@@ -2101,7 +2101,7 @@ function Frame90() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'4px'}}>
       <Calendar4 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#4a6d7c] text-[11px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>16 Oct, 2026 - 28 Nov 2026</p>
       </div>
     </div>
@@ -2111,7 +2111,7 @@ function Frame90() {
 function Frame89() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Appointment Reminder</p>
       </div>
       <Frame90 />
@@ -2131,10 +2131,10 @@ function Frame13() {
 function Frame93() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>98%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Delivered</p>
       </div>
     </div>
@@ -2152,10 +2152,10 @@ function Frame92() {
 function Frame95() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>45%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Opened</p>
       </div>
     </div>
@@ -2173,10 +2173,10 @@ function Frame94() {
 function Frame97() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'4px', 'lineHeight':'0', 'borderRadius':'24px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50] text-[16px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>43%</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full">
+      <div className="d-flex flex-column  font-medium justify-center relative shrink-0 text-[#4a6d7c] text-[11px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.2'}}>Clicked</p>
       </div>
     </div>
@@ -2213,10 +2213,10 @@ function Frame86() {
 function Frame99() {
   return (
     <div className="content-stretch d-flex align-items-start justify-content-between fst-normal position-relative flex-shrink-0 text-uppercase w-100 whitespace-nowrap" style={{'lineHeight':'0', 'fontSize':'11px'}}>
-      <div className="d-flex flex-column font-["Inter:Semi_Bold',sans-serif] font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]">
+      <div className="d-flex flex-column  font-semibold justify-center relative shrink-0 text-[rgba(74,109,124,0.6)] tracking-[1.1px]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Overall Performance</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#2c3e50]">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#2c3e50]" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>75%</p>
       </div>
     </div>
@@ -2257,7 +2257,7 @@ function Overlay7() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'backgroundColor':'#fb7185', 'gap':'4px', 'height':'32px', 'paddingLeft':'8px', 'paddingRight':'8px', 'borderRadius':'8px', 'width':'212px'}} data-name="Overlay">
       <Pause2 />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11px] text-white whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'1.2'}}>Pause</p>
       </div>
     </div>

@@ -8,7 +8,7 @@ function Frame2() {
     <div className="position-relative flex-shrink-0 w-100">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative w-100" style={{'padding':'16px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]">Campaigns</p>
+          <p className=" font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]" style={{fontFamily: "Inter, sans-serif"}}>Campaigns</p>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@ function Frame1() {
     <div className="position-relative flex-shrink-0 w-100">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative w-100" style={{'padding':'16px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]">{`Forms `}</p>
+          <p className=" font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]" style={{fontFamily: "Inter, sans-serif"}}>{`Forms `}</p>
         </div>
       </div>
     </div>

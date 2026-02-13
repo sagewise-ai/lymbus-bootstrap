@@ -3,7 +3,7 @@ import svgPaths from "./svg-2pm7nbaulj";
 function Label() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">Net Promoter Score (NPS)</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Net Promoter Score (NPS)</p>
     </div>
   );
 }
@@ -13,7 +13,7 @@ function TextInput() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">60</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>60</p>
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@ function Input() {
 function Paragraph() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Target NPS score for comparison</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Target NPS score for comparison</p>
     </div>
   );
 }
@@ -49,7 +49,7 @@ function BenchmarkInput() {
 function Label1() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">PREM Score</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>PREM Score</p>
     </div>
   );
 }
@@ -58,7 +58,7 @@ function Text() {
   return (
     <div className="bg-white position-relative flex-shrink-0" style={{'height':'25px', 'borderRadius':'12px', 'width':'28.477px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[15px] left-[9px] not-italic text-[#6a7282] text-[10px] top-[5.5px] tracking-[0.1172px]">%</p>
+      <p className="position-absolute  font-bold leading-[15px] left-[9px] not-italic text-[#6a7282] text-[10px] top-[5.5px] tracking-[0.1172px]" style={{fontFamily: "Inter, sans-serif"}}>%</p>
     </div>
   );
 }
@@ -68,7 +68,7 @@ function TextInput1() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">85</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>85</p>
           <Text />
         </div>
       </div>
@@ -88,7 +88,7 @@ function Input1() {
 function Paragraph1() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Patient Reported Experience Measure target</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Patient Reported Experience Measure target</p>
     </div>
   );
 }
@@ -105,7 +105,7 @@ function BenchmarkInput1() {
 function Label2() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">PROM Score</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>PROM Score</p>
     </div>
   );
 }
@@ -114,7 +114,7 @@ function Text1() {
   return (
     <div className="bg-white content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'paddingLeft':'8px', 'paddingRight':'8px', 'paddingTop':'5px', 'paddingBottom':'5px', 'borderRadius':'12px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>%</p>
     </div>
   );
 }
@@ -124,7 +124,7 @@ function TextInput2() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">80</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>80</p>
           <Text1 />
         </div>
       </div>
@@ -144,7 +144,7 @@ function Input2() {
 function Paragraph2() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Patient Reported Outcome Measure target</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Patient Reported Outcome Measure target</p>
     </div>
   );
 }
@@ -161,7 +161,7 @@ function BenchmarkInput2() {
 function Label3() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">Response Rate</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Response Rate</p>
     </div>
   );
 }
@@ -170,7 +170,7 @@ function Text2() {
   return (
     <div className="bg-white position-relative flex-shrink-0" style={{'height':'25px', 'borderRadius':'12px', 'width':'28.477px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[15px] left-[9px] not-italic text-[#6a7282] text-[10px] top-[5.5px] tracking-[0.1172px]">%</p>
+      <p className="position-absolute  font-bold leading-[15px] left-[9px] not-italic text-[#6a7282] text-[10px] top-[5.5px] tracking-[0.1172px]" style={{fontFamily: "Inter, sans-serif"}}>%</p>
     </div>
   );
 }
@@ -180,7 +180,7 @@ function TextInput3() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">45</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>45</p>
           <Text2 />
         </div>
       </div>
@@ -200,7 +200,7 @@ function Input3() {
 function Paragraph3() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Target survey response rate</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Target survey response rate</p>
     </div>
   );
 }
@@ -217,7 +217,7 @@ function BenchmarkInput3() {
 function Label4() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">Wait Time</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Wait Time</p>
     </div>
   );
 }
@@ -226,7 +226,7 @@ function Text3() {
   return (
     <div className="bg-white content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'paddingLeft':'8px', 'paddingRight':'8px', 'paddingTop':'4px', 'paddingBottom':'4px', 'borderRadius':'12px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">min</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>min</p>
     </div>
   );
 }
@@ -236,7 +236,7 @@ function TextInput4() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">15</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>15</p>
           <Text3 />
         </div>
       </div>
@@ -256,7 +256,7 @@ function Input4() {
 function Paragraph4() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Maximum acceptable wait time in minutes</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Maximum acceptable wait time in minutes</p>
     </div>
   );
 }
@@ -273,7 +273,7 @@ function BenchmarkInput4() {
 function Label5() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">Readmission Rate</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Readmission Rate</p>
     </div>
   );
 }
@@ -282,7 +282,7 @@ function Text4() {
   return (
     <div className="bg-white content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'paddingLeft':'8px', 'paddingRight':'8px', 'paddingTop':'4px', 'paddingBottom':'4px', 'borderRadius':'12px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>%</p>
     </div>
   );
 }
@@ -292,7 +292,7 @@ function TextInput5() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">5</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>5</p>
           <Text4 />
         </div>
       </div>
@@ -312,7 +312,7 @@ function Input5() {
 function Paragraph5() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Maximum acceptable readmission rate</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Maximum acceptable readmission rate</p>
     </div>
   );
 }
@@ -329,7 +329,7 @@ function BenchmarkInput5() {
 function Label6() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">Patient Satisfaction</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Patient Satisfaction</p>
     </div>
   );
 }
@@ -338,7 +338,7 @@ function Text5() {
   return (
     <div className="bg-white content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'paddingLeft':'8px', 'paddingRight':'8px', 'paddingTop':'4px', 'paddingBottom':'4px', 'borderRadius':'12px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>%</p>
     </div>
   );
 }
@@ -348,7 +348,7 @@ function TextInput6() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">90</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>90</p>
           <Text5 />
         </div>
       </div>
@@ -368,7 +368,7 @@ function Input6() {
 function Paragraph6() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Overall satisfaction target</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Overall satisfaction target</p>
     </div>
   );
 }
@@ -385,7 +385,7 @@ function BenchmarkInput6() {
 function Label7() {
   return (
     <div className="content-stretch d-flex align-items-start position-relative flex-shrink-0 w-100" data-name="Label">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase">Communication Score</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Communication Score</p>
     </div>
   );
 }
@@ -394,7 +394,7 @@ function Text6() {
   return (
     <div className="bg-white content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'paddingLeft':'8px', 'paddingRight':'8px', 'paddingTop':'4px', 'paddingBottom':'4px', 'borderRadius':'12px'}} data-name="Text">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>%</p>
     </div>
   );
 }
@@ -404,7 +404,7 @@ function TextInput7() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'height':'44px', 'borderRadius':'16px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">88</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>88</p>
           <Text6 />
         </div>
       </div>
@@ -424,7 +424,7 @@ function Input7() {
 function Paragraph7() {
   return (
     <div className="position-relative flex-shrink-0 w-100" style={{'height':'16px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px">Staff communication effectiveness target</p>
+      <p className="position-absolute  font-normal leading-[16px] left-0 not-italic text-[#6a7282] text-[12px] top-px" style={{fontFamily: "Inter, sans-serif"}}>Staff communication effectiveness target</p>
     </div>
   );
 }
@@ -457,7 +457,7 @@ function Button() {
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'16px'}} />
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
         <Icon />
-        <p className="-translate-x-1/2 position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[20px] left-[110.5px] not-italic text-[#6a7282] text-[14px] text-center top-[13.5px] tracking-[-0.1504px]">Reset to Defaults</p>
+        <p className="-translate-x-1/2 position-absolute  font-bold leading-[20px] left-[110.5px] not-italic text-[#6a7282] text-[14px] text-center top-[13.5px] tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>Reset to Defaults</p>
       </div>
     </div>
   );
@@ -482,7 +482,7 @@ function Button1() {
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#3649e9', 'height':'44px', 'borderRadius':'16px', 'width':'196.453px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center position-relative size-full" style={{'borderColor':'transparent', 'gap':'8px', 'paddingLeft':'24px', 'paddingRight':'24px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Icon1 />
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[20px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[-0.1504px]">Save Benchmarks</p>
+        <p className=" font-bold leading-[20px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>Save Benchmarks</p>
       </div>
     </div>
   );

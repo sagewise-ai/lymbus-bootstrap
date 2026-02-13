@@ -18,7 +18,7 @@ function Button() {
     <div className="position-relative flex-shrink-0" style={{'height':'40px', 'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex h-100 align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'24px', 'paddingRight':'24px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Icon />
-        <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center">Insights</p>
+        <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center" style={{fontFamily: "Inter, sans-serif"}}>Insights</p>
       </div>
     </div>
   );
@@ -41,7 +41,7 @@ function Button1() {
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#3649e9', 'height':'40px', 'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex h-100 align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'24px', 'paddingRight':'24px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Icon1 />
-        <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white">Campaigns</p>
+        <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white" style={{fontFamily: "Inter, sans-serif"}}>Campaigns</p>
       </div>
     </div>
   );
@@ -68,7 +68,7 @@ function Button2() {
     <div className="position-relative flex-shrink-0" style={{'height':'40px', 'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex h-100 align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'24px', 'paddingRight':'24px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Icon2 />
-        <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center">Forms</p>
+        <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center" style={{fontFamily: "Inter, sans-serif"}}>Forms</p>
       </div>
     </div>
   );
@@ -94,7 +94,7 @@ function Button3() {
     <div className="position-relative flex-shrink-0" style={{'height':'40px', 'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex h-100 align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'24px', 'paddingRight':'24px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Icon3 />
-        <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center">Responses</p>
+        <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center" style={{fontFamily: "Inter, sans-serif"}}>Responses</p>
       </div>
     </div>
   );
@@ -115,10 +115,10 @@ function TabsEngagement() {
 function FormsListHeader() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0" style={{'gap':'8px', 'width':'597.5px'}} data-name="Forms List Header">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#09156a] text-[18px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] relative shrink-0 text-[#09156a] text-[18px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'27px'}}>All Campaigns</p>
       </div>
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#6a7282] text-[14px]">Manage and track your active outreach</p>
+      <p className=" font-medium leading-[normal] relative shrink-0 text-[#6a7282] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Manage and track your active outreach</p>
     </div>
   );
 }
@@ -195,7 +195,7 @@ function Container1() {
     <div className="bg-white content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'16px', 'height':'40px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'10px', 'paddingBottom':'10px', 'borderRadius':'12px', 'width':'256px'}} data-name="Container">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
       <Icon4 />
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]">Search</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Search</p>
     </div>
   );
 }
@@ -252,7 +252,7 @@ function Text() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'47.68px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -304,7 +304,7 @@ function Container3() {
 function Heading() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Flu Vaccination Drive 2026</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Flu Vaccination Drive 2026</p>
     </div>
   );
 }
@@ -328,7 +328,7 @@ function Container5() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon7 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">01, Feb 2026 - 31, Mar 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>01, Feb 2026 - 31, Mar 2026</p>
     </div>
   );
 }
@@ -336,7 +336,7 @@ function Container5() {
 function Paragraph() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">99%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>99%</p>
     </div>
   );
 }
@@ -344,7 +344,7 @@ function Paragraph() {
 function Paragraph1() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -361,7 +361,7 @@ function Container7() {
 function Paragraph2() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">85%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>85%</p>
     </div>
   );
 }
@@ -369,7 +369,7 @@ function Paragraph2() {
 function Paragraph3() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -386,7 +386,7 @@ function Container8() {
 function Paragraph4() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">64%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>64%</p>
     </div>
   );
 }
@@ -394,7 +394,7 @@ function Paragraph4() {
 function Paragraph5() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -420,7 +420,7 @@ function Container6() {
 
 function Container11() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>92%</p>
     </div>
@@ -457,7 +457,7 @@ function Wh() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f0fdf4', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#10b981] text-[10px] tracking-[0.5px] uppercase">Active</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#10b981] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Active</p>
         </div>
       </div>
     </div>
@@ -482,7 +482,7 @@ function Text1() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'47.68px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -534,7 +534,7 @@ function Container14() {
 function Heading1() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Flu Vaccination Drive 2026</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Flu Vaccination Drive 2026</p>
     </div>
   );
 }
@@ -558,7 +558,7 @@ function Container16() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon9 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">01, Feb 2026 - 31, Mar 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>01, Feb 2026 - 31, Mar 2026</p>
     </div>
   );
 }
@@ -566,7 +566,7 @@ function Container16() {
 function Paragraph6() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">99%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>99%</p>
     </div>
   );
 }
@@ -574,7 +574,7 @@ function Paragraph6() {
 function Paragraph7() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -591,7 +591,7 @@ function Container18() {
 function Paragraph8() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">85%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>85%</p>
     </div>
   );
 }
@@ -599,7 +599,7 @@ function Paragraph8() {
 function Paragraph9() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -616,7 +616,7 @@ function Container19() {
 function Paragraph10() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">64%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>64%</p>
     </div>
   );
 }
@@ -624,7 +624,7 @@ function Paragraph10() {
 function Paragraph11() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -650,7 +650,7 @@ function Container17() {
 
 function Container22() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>92%</p>
     </div>
@@ -687,7 +687,7 @@ function Wh1() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f0fdf4', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#10b981] text-[10px] tracking-[0.5px] uppercase">Active</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#10b981] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Active</p>
         </div>
       </div>
     </div>
@@ -712,7 +712,7 @@ function Text2() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'47.68px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -764,7 +764,7 @@ function Container25() {
 function Heading2() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Flu Vaccination Drive 2026</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Flu Vaccination Drive 2026</p>
     </div>
   );
 }
@@ -788,7 +788,7 @@ function Container27() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon11 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">01, Feb 2026 - 31, Mar 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>01, Feb 2026 - 31, Mar 2026</p>
     </div>
   );
 }
@@ -796,7 +796,7 @@ function Container27() {
 function Paragraph12() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">99%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>99%</p>
     </div>
   );
 }
@@ -804,7 +804,7 @@ function Paragraph12() {
 function Paragraph13() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -821,7 +821,7 @@ function Container29() {
 function Paragraph14() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">85%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>85%</p>
     </div>
   );
 }
@@ -829,7 +829,7 @@ function Paragraph14() {
 function Paragraph15() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -846,7 +846,7 @@ function Container30() {
 function Paragraph16() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">64%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>64%</p>
     </div>
   );
 }
@@ -854,7 +854,7 @@ function Paragraph16() {
 function Paragraph17() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -880,7 +880,7 @@ function Container28() {
 
 function Container33() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>92%</p>
     </div>
@@ -917,7 +917,7 @@ function Wh2() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f0fdf4', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#10b981] text-[10px] tracking-[0.5px] uppercase">Active</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#10b981] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Active</p>
         </div>
       </div>
     </div>
@@ -942,7 +942,7 @@ function Text3() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'57.586px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">Email</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Email</p>
       </div>
     </div>
   );
@@ -952,7 +952,7 @@ function Text4() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'57.586px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -1005,7 +1005,7 @@ function Container36() {
 function Heading3() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Telehealth Awareness Campaign</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Telehealth Awareness Campaign</p>
     </div>
   );
 }
@@ -1029,7 +1029,7 @@ function Container38() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon13 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">10, Jan 2026 - 15, Apr 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>10, Jan 2026 - 15, Apr 2026</p>
     </div>
   );
 }
@@ -1037,7 +1037,7 @@ function Container38() {
 function Paragraph18() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">88%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>88%</p>
     </div>
   );
 }
@@ -1045,7 +1045,7 @@ function Paragraph18() {
 function Paragraph19() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -1062,7 +1062,7 @@ function Container40() {
 function Paragraph20() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">45%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>45%</p>
     </div>
   );
 }
@@ -1070,7 +1070,7 @@ function Paragraph20() {
 function Paragraph21() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -1087,7 +1087,7 @@ function Container41() {
 function Paragraph22() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">12%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>12%</p>
     </div>
   );
 }
@@ -1095,7 +1095,7 @@ function Paragraph22() {
 function Paragraph23() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -1121,7 +1121,7 @@ function Container39() {
 
 function Container44() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>25%</p>
     </div>
@@ -1158,7 +1158,7 @@ function Wh3() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#fffbea', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#d97706] text-[10px] tracking-[0.5px] uppercase">Paused</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#d97706] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Paused</p>
         </div>
       </div>
     </div>
@@ -1183,7 +1183,7 @@ function Text5() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'57.586px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">Email</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Email</p>
       </div>
     </div>
   );
@@ -1193,7 +1193,7 @@ function Text6() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'57.586px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -1246,7 +1246,7 @@ function Container47() {
 function Heading4() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Telehealth Awareness Campaign</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Telehealth Awareness Campaign</p>
     </div>
   );
 }
@@ -1270,7 +1270,7 @@ function Container49() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon15 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">10, Jan 2026 - 15, Apr 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>10, Jan 2026 - 15, Apr 2026</p>
     </div>
   );
 }
@@ -1278,7 +1278,7 @@ function Container49() {
 function Paragraph24() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">88%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>88%</p>
     </div>
   );
 }
@@ -1286,7 +1286,7 @@ function Paragraph24() {
 function Paragraph25() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -1303,7 +1303,7 @@ function Container51() {
 function Paragraph26() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">45%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>45%</p>
     </div>
   );
 }
@@ -1311,7 +1311,7 @@ function Paragraph26() {
 function Paragraph27() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -1328,7 +1328,7 @@ function Container52() {
 function Paragraph28() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">12%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>12%</p>
     </div>
   );
 }
@@ -1336,7 +1336,7 @@ function Paragraph28() {
 function Paragraph29() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -1362,7 +1362,7 @@ function Container50() {
 
 function Container55() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>25%</p>
     </div>
@@ -1399,7 +1399,7 @@ function Wh4() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#fffbea', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#d97706] text-[10px] tracking-[0.5px] uppercase">Paused</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#d97706] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Paused</p>
         </div>
       </div>
     </div>
@@ -1424,7 +1424,7 @@ function Text7() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'47.68px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -1476,7 +1476,7 @@ function Container58() {
 function Heading5() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Diabetic Wellness Outreach</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Diabetic Wellness Outreach</p>
     </div>
   );
 }
@@ -1500,7 +1500,7 @@ function Container60() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon17 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">01, Nov 2025 - 31, Jan 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>01, Nov 2025 - 31, Jan 2026</p>
     </div>
   );
 }
@@ -1508,7 +1508,7 @@ function Container60() {
 function Paragraph30() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">92%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>92%</p>
     </div>
   );
 }
@@ -1516,7 +1516,7 @@ function Paragraph30() {
 function Paragraph31() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -1533,7 +1533,7 @@ function Container62() {
 function Paragraph32() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">54%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>54%</p>
     </div>
   );
 }
@@ -1541,7 +1541,7 @@ function Paragraph32() {
 function Paragraph33() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -1558,7 +1558,7 @@ function Container63() {
 function Paragraph34() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">31%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>31%</p>
     </div>
   );
 }
@@ -1566,7 +1566,7 @@ function Paragraph34() {
 function Paragraph35() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -1592,7 +1592,7 @@ function Container61() {
 
 function Container66() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>45%</p>
     </div>
@@ -1629,7 +1629,7 @@ function Wh5() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#fef2f2', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#dc2626] text-[10px] tracking-[0.5px] uppercase">Ended</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#dc2626] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Ended</p>
         </div>
       </div>
     </div>
@@ -1654,7 +1654,7 @@ function Text8() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'height':'24px', 'borderRadius':'12px', 'width':'47.68px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'borderColor':'transparent', 'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">SMS</p>
+        <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>SMS</p>
       </div>
     </div>
   );
@@ -1706,7 +1706,7 @@ function Container69() {
 function Heading6() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Heading 4">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap">Diabetic Wellness Outreach</p>
+      <p className=" font-bold leading-[27px] min-h-px min-w-px not-italic relative text-[#09156a] text-[18px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Diabetic Wellness Outreach</p>
     </div>
   );
 }
@@ -1730,7 +1730,7 @@ function Container71() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" style={{'gap':'8px'}} data-name="Container">
       <Icon19 />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap">01, Nov 2025 - 31, Jan 2026</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase w-[178px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>01, Nov 2025 - 31, Jan 2026</p>
     </div>
   );
 }
@@ -1738,7 +1738,7 @@ function Container71() {
 function Paragraph36() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">92%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>92%</p>
     </div>
   );
 }
@@ -1746,7 +1746,7 @@ function Paragraph36() {
 function Paragraph37() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Delivered</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delivered</p>
     </div>
   );
 }
@@ -1763,7 +1763,7 @@ function Container73() {
 function Paragraph38() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">54%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>54%</p>
     </div>
   );
 }
@@ -1771,7 +1771,7 @@ function Paragraph38() {
 function Paragraph39() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Opened</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Opened</p>
     </div>
   );
 }
@@ -1788,7 +1788,7 @@ function Container74() {
 function Paragraph40() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">31%</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>31%</p>
     </div>
   );
 }
@@ -1796,7 +1796,7 @@ function Paragraph40() {
 function Paragraph41() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0 w-100" data-name="Paragraph">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Clicked</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Clicked</p>
     </div>
   );
 }
@@ -1822,7 +1822,7 @@ function Container72() {
 
 function Container77() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Bold',sans-serif] font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" data-name="Container">
+    <div className="content-stretch d-flex  font-bold items-center justify-between leading-[16.5px] not-italic relative shrink-0 text-[10px] tracking-[0.6145px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}} data-name="Container">
       <p className="position-relative flex-shrink-0" style={{'color':'#6a7282'}}>Overall Performance</p>
       <p className="position-relative flex-shrink-0" style={{'color':'#09156a'}}>45%</p>
     </div>
@@ -1859,7 +1859,7 @@ function Wh6() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#fef2f2', 'height':'32px', 'borderRadius':'12px'}} data-name="wh">
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'12px', 'paddingRight':'12px', 'paddingTop':'4px', 'paddingBottom':'4px'}}>
-          <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#dc2626] text-[10px] tracking-[0.5px] uppercase">Ended</p>
+          <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#dc2626] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Ended</p>
         </div>
       </div>
     </div>
@@ -1924,7 +1924,7 @@ function H() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="H3">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center position-relative w-100" style={{'borderColor':'transparent'}}>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]">Engagement</p>
+        <p className=" font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]" style={{fontFamily: "Inter, sans-serif"}}>Engagement</p>
       </div>
     </div>
   );
@@ -1947,7 +1947,7 @@ function TextInput() {
   return (
     <div className="content-stretch d-flex align-items-center overflow-hidden position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'gap':'16px', 'height':'36px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'10px', 'paddingBottom':'10px', 'borderRadius':'12px', 'width':'448px'}} data-name="Text Input">
       <Icon20 />
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]">Search...</p>
+      <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px]" style={{fontFamily: "Inter, sans-serif"}}>Search...</p>
     </div>
   );
 }
@@ -1967,7 +1967,7 @@ function Icon21() {
 function Button12() {
   return (
     <div className="content-stretch d-flex h-100 align-items-center position-relative flex-shrink-0" style={{'backgroundColor':'#f5f7f7', 'gap':'8px', 'paddingLeft':'16px', 'paddingRight':'16px', 'borderRadius':'12px'}} data-name="Button">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px] text-center">Main Hospital</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px] text-center" style={{fontFamily: "Inter, sans-serif"}}>Main Hospital</p>
       <Icon21 />
     </div>
   );
@@ -2051,7 +2051,7 @@ function Text9() {
   return (
     <div className="position-relative flex-shrink-0" style={{'height':'28px', 'width':'92.117px'}} data-name="Text">
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
-        <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[28px] left-0 not-italic text-[#09156a] text-[20px] top-[-0.5px] tracking-[-0.95px]">Lymbus</p>
+        <p className="position-absolute  font-bold leading-[28px] left-0 not-italic text-[#09156a] text-[20px] top-[-0.5px] tracking-[-0.95px]" style={{fontFamily: "Inter, sans-serif"}}>Lymbus</p>
       </div>
     </div>
   );
@@ -2089,7 +2089,7 @@ function Container81() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Dashboard</p>
         </div>
       </div>
@@ -2130,7 +2130,7 @@ function Container82() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Lymbus AI</p>
         </div>
       </div>
@@ -2168,7 +2168,7 @@ function Container83() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Root Cause</p>
         </div>
       </div>
@@ -2208,7 +2208,7 @@ function Container84() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Benchmarking</p>
         </div>
       </div>
@@ -2246,7 +2246,7 @@ function Container85() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Engagement</p>
         </div>
       </div>
@@ -2285,7 +2285,7 @@ function Container86() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Escalation</p>
         </div>
       </div>
@@ -2326,7 +2326,7 @@ function Container87() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Reports</p>
         </div>
       </div>
@@ -2378,7 +2378,7 @@ function Container88() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Settings</p>
         </div>
       </div>
@@ -2422,7 +2422,7 @@ function Container89() {
   return (
     <div className="min-h-px min-w-px position-relative" data-name="Container">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent'}}>
-        <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[14px] w-full">
+        <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[14px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>{`Help & Support`}</p>
         </div>
       </div>

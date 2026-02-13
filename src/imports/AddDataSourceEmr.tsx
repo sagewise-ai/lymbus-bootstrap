@@ -22,7 +22,7 @@ function Frame2() {
 
 function Frame1() {
   return (
-    <div className="content-stretch d-flex flex-column font-["Inter:Bold',sans-serif] font-bold gap-[4px] items-start justify-center min-h-px min-w-px not-italic relative whitespace-pre-wrap">
+    <div className="content-stretch d-flex flex-column  font-bold gap-[4px] items-start justify-center min-h-px min-w-px not-italic relative whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>
       <p className="position-relative flex-shrink-0 w-100" style={{'lineHeight':'27px', 'color':'#09156a', 'fontSize':'18px'}}>Add Data Source</p>
       <p className="position-relative flex-shrink-0 text-uppercase w-100" style={{'lineHeight':'normal', 'color':'#6a7282', 'fontSize':'10px', 'letterSpacing':'0.5px'}}>Select a clinic to add the data source to.</p>
     </div>
@@ -95,7 +95,7 @@ function TextInput() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">City General Hospital</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>City General Hospital</p>
           <Icon1 />
         </div>
       </div>
@@ -106,7 +106,7 @@ function TextInput() {
 function Frame7() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" style={{'gap':'8px', 'width':'293px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Facility Selection</p>
       </div>
       <TextInput />
@@ -171,10 +171,10 @@ function Frame3() {
 function FormCardTitle() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start min-h-px min-w-px fst-normal position-relative" style={{'gap':'8px', 'lineHeight':'0'}} data-name="Form Card Title">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'18.7px'}}>EMR System</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'normal'}}>Connect to Electronic Medical Records</p>
       </div>
     </div>
@@ -197,7 +197,7 @@ function TextInput1() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center justify-content-between position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">City General Hospital</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>City General Hospital</p>
         </div>
       </div>
     </div>
@@ -207,7 +207,7 @@ function TextInput1() {
 function Frame5() {
   return (
     <div className="/ 2] col-[1 content-stretch d-flex flex-column align-items-start position-relative align-self-start flex-shrink-0 span" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Data Source Name</p>
       </div>
       <TextInput1 />
@@ -220,7 +220,7 @@ function TextInput2() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">https://sunrise.health/api</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>https://sunrise.health/api</p>
         </div>
       </div>
     </div>
@@ -230,7 +230,7 @@ function TextInput2() {
 function Frame6() {
   return (
     <div className="/ 2] col-[1 content-stretch d-flex flex-column align-items-start position-relative align-self-start flex-shrink-0 span" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>API Endpoint</p>
       </div>
       <TextInput2 />
@@ -255,7 +255,7 @@ function TextInput3() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">FHIR R4</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>FHIR R4</p>
           <Icon2 />
         </div>
       </div>
@@ -266,7 +266,7 @@ function TextInput3() {
 function Frame8() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative align-self-start flex-shrink-0" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>FHIR Version</p>
       </div>
       <TextInput3 />
@@ -279,7 +279,7 @@ function TextInput4() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">SC_21324</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>SC_21324</p>
         </div>
       </div>
     </div>
@@ -289,7 +289,7 @@ function TextInput4() {
 function Frame9() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative align-self-start flex-shrink-0" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Client ID</p>
       </div>
       <TextInput4 />
@@ -349,7 +349,7 @@ function Overlay() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'height':'40px', 'paddingLeft':'24px', 'paddingRight':'24px', 'borderRadius':'12px'}} data-name="Overlay">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'normal'}}>Back</p>
       </div>
     </div>
@@ -360,7 +360,7 @@ function Overlay1() {
   return (
     <div className="content-stretch d-flex align-items-center justify-content-center position-relative flex-shrink-0" style={{'backgroundColor':'#3649e9', 'height':'40px', 'paddingLeft':'24px', 'paddingRight':'24px', 'borderRadius':'12px'}} data-name="Overlay">
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#3649e9', 'borderRadius':'12px'}} />
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white tracking-[-0.15px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white tracking-[-0.15px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'normal'}}>Create Data Source</p>
       </div>
     </div>

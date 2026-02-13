@@ -22,7 +22,7 @@ function Frame2() {
 
 function Frame1() {
   return (
-    <div className="content-stretch d-flex flex-column font-["Inter:Bold',sans-serif] font-bold gap-[4px] items-start justify-center min-h-px min-w-px not-italic relative whitespace-pre-wrap">
+    <div className="content-stretch d-flex flex-column  font-bold gap-[4px] items-start justify-center min-h-px min-w-px not-italic relative whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>
       <p className="position-relative flex-shrink-0 w-100" style={{'lineHeight':'27px', 'color':'#09156a', 'fontSize':'18px'}}>Add Data Source</p>
       <p className="position-relative flex-shrink-0 text-uppercase w-100" style={{'lineHeight':'normal', 'color':'#6a7282', 'fontSize':'10px', 'letterSpacing':'0.5px'}}>Select a clinic to add the data source to.</p>
     </div>
@@ -95,7 +95,7 @@ function TextInput() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">City General Hospital</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>City General Hospital</p>
           <Icon1 />
         </div>
       </div>
@@ -106,7 +106,7 @@ function TextInput() {
 function Frame8() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0" style={{'gap':'8px', 'width':'293px'}}>
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full">
+      <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'normal'}}>Facility Selection</p>
       </div>
       <TextInput />
@@ -171,10 +171,10 @@ function Frame3() {
 function FormCardTitle() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start min-h-px min-w-px fst-normal position-relative" style={{'gap':'8px', 'lineHeight':'0'}} data-name="Form Card Title">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'18.7px'}}>EMR System</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'normal'}}>Electronic Medical Records</p>
       </div>
     </div>
@@ -230,10 +230,10 @@ function Frame4() {
 function FormCardTitle1() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0 w-100" style={{'gap':'8px', 'lineHeight':'0'}} data-name="Form Card Title">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'18.7px'}}>Database</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'normal'}}>Direct database connection</p>
       </div>
     </div>
@@ -297,10 +297,10 @@ function Frame5() {
 function FormCardTitle2() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0 w-100" style={{'gap':'8px', 'lineHeight':'0'}} data-name="Form Card Title">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'18.7px'}}>Rest API</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'normal'}}>Connect via REST API endpoints</p>
       </div>
     </div>
@@ -366,10 +366,10 @@ function Frame6() {
 function FormCardTitle3() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0 w-100" style={{'gap':'8px', 'lineHeight':'0'}} data-name="Form Card Title">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'18.7px'}}>Excel File</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'normal'}}>Import data from spreadsheets</p>
       </div>
     </div>
@@ -435,10 +435,10 @@ function Frame7() {
 function FormCardTitle4() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start fst-normal position-relative flex-shrink-0 w-100" style={{'gap':'8px', 'lineHeight':'0'}} data-name="Form Card Title">
-      <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full">
+      <div className="d-flex flex-column  font-bold justify-center relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.015px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'18.7px'}}>Google Sheets</p>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center overflow-hidden relative shrink-0 text-[#6a7282] text-[12px] text-ellipsis w-full whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="overflow-hidden" style={{'lineHeight':'normal'}}>Sync data from Google Sheets</p>
       </div>
     </div>

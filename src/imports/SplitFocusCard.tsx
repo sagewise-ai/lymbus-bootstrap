@@ -4,7 +4,7 @@ function Paragraph() {
   return (
     <div className="position-relative flex-shrink-0" style={{'height':'16px', 'width':'411px'}} data-name="Paragraph">
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
-        <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[16px] left-0 not-italic text-[12px] text-[rgba(255,255,255,0.7)] top-px uppercase">Aggregate Score</p>
+        <p className="position-absolute  font-bold leading-[16px] left-0 not-italic text-[12px] text-[rgba(255,255,255,0.7)] top-px uppercase" style={{fontFamily: "Inter, sans-serif"}}>Aggregate Score</p>
       </div>
     </div>
   );
@@ -13,7 +13,7 @@ function Paragraph() {
 function Heading() {
   return (
     <div className="position-absolute start-0 top-0" style={{'height':'60px', 'width':'118.211px'}} data-name="Heading 2">
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[60px] left-0 not-italic text-[60px] text-white top-[0.5px] tracking-[-2.7363px]">88.5</p>
+      <p className="position-absolute  font-bold leading-[60px] left-0 not-italic text-[60px] text-white top-[0.5px] tracking-[-2.7363px]" style={{fontFamily: "Inter, sans-serif"}}>88.5</p>
     </div>
   );
 }
@@ -35,7 +35,7 @@ function Container2() {
   return (
     <div className="position-absolute" style={{'backgroundColor':'rgba(255, 255, 255, 0.1)', 'height':'28px', 'left':'134.21px', 'borderRadius':'8px', 'top':'28.5px', 'width':'66.344px'}} data-name="Container">
       <Icon />
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[28px] left-[20px] not-italic text-[#00d88c] text-[18px] top-0 tracking-[-0.4395px]">4.2%</p>
+      <p className="position-absolute  font-bold leading-[28px] left-[20px] not-italic text-[#00d88c] text-[18px] top-0 tracking-[-0.4395px]" style={{fontFamily: "Inter, sans-serif"}}>4.2%</p>
     </div>
   );
 }
@@ -77,7 +77,7 @@ function Button() {
     <div className="position-relative flex-shrink-0" style={{'borderRadius':'14px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'8px'}}>
         <Icon1 />
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[20px] not-italic relative shrink-0 text-[#00d88c] text-[14px] text-center">Lymbus Insight</p>
+        <p className=" font-bold leading-[20px] not-italic relative shrink-0 text-[#00d88c] text-[14px] text-center" style={{fontFamily: "Inter, sans-serif"}}>Lymbus Insight</p>
       </div>
     </div>
   );
@@ -99,7 +99,7 @@ function Container() {
 function Heading1() {
   return (
     <div className="position-relative flex-shrink-0" style={{'height':'24px', 'width':'650px'}} data-name="Heading 4">
-      <p className="position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[24px] left-0 not-italic text-[#0f172b] text-[16px] top-[-0.5px] tracking-[-0.3125px]">What’s does this mean?</p>
+      <p className="position-absolute  font-bold leading-[24px] left-0 not-italic text-[#0f172b] text-[16px] top-[-0.5px] tracking-[-0.3125px]" style={{fontFamily: "Inter, sans-serif"}}>What’s does this mean?</p>
     </div>
   );
 }
@@ -136,7 +136,7 @@ function Container5() {
 function Text() {
   return (
     <div className="position-absolute content-stretch d-flex align-items-start top-px" style={{'height':'16.5px', 'left':'238.02px', 'width':'75.602px'}} data-name="Text">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[19.25px] not-italic relative shrink-0 text-[#0f172b] text-[14px] tracking-[-0.1504px]">14 minutes</p>
+      <p className=" font-bold leading-[19.25px] not-italic relative shrink-0 text-[#0f172b] text-[14px] tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>14 minutes</p>
     </div>
   );
 }
@@ -144,9 +144,9 @@ function Text() {
 function Paragraph1() {
   return (
     <div className="position-absolute top-0" style={{'height':'19.25px', 'left':'30px', 'width':'392.641px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[19.25px] left-0 not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]">Reduced wait times in Cardiology by</p>
+      <p className="position-absolute  font-normal leading-[19.25px] left-0 not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>Reduced wait times in Cardiology by</p>
       <Text />
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[19.25px] left-[313.62px] not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]">on average.</p>
+      <p className="position-absolute  font-normal leading-[19.25px] left-[313.62px] not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>on average.</p>
     </div>
   );
 }
@@ -192,7 +192,7 @@ function Container6() {
 function Text1() {
   return (
     <div className="position-absolute content-stretch d-flex align-items-start top-px" style={{'height':'16.5px', 'left':'192.72px', 'width':'110.273px'}} data-name="Text">
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[19.25px] not-italic relative shrink-0 text-[#0f172b] text-[14px] tracking-[-0.1504px]">Digital Check-in</p>
+      <p className=" font-bold leading-[19.25px] not-italic relative shrink-0 text-[#0f172b] text-[14px] tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>Digital Check-in</p>
     </div>
   );
 }
@@ -200,9 +200,9 @@ function Text1() {
 function Paragraph2() {
   return (
     <div className="position-absolute top-0" style={{'height':'19.25px', 'left':'30px', 'width':'348.523px'}} data-name="Paragraph">
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[19.25px] left-0 not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]">Successful launch of the new</p>
+      <p className="position-absolute  font-normal leading-[19.25px] left-0 not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>Successful launch of the new</p>
       <Text1 />
-      <p className="position-absolute font-["Inter:Regular',sans-serif] font-normal leading-[19.25px] left-[302.99px] not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]">portal.</p>
+      <p className="position-absolute  font-normal leading-[19.25px] left-[302.99px] not-italic text-[#45556c] text-[14px] top-0 tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>portal.</p>
     </div>
   );
 }
@@ -253,7 +253,7 @@ function Button1() {
   return (
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#0f172b', 'height':'40px', 'borderRadius':'14px', 'width':'177.086px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid position-relative size-full" style={{'borderColor':'transparent'}}>
-        <p className="-translate-x-1/2 position-absolute font-["Inter:Bold',sans-serif] font-bold leading-[20px] left-[77px] not-italic text-[14px] text-center text-white top-[10.5px] tracking-[-0.1504px]">{`Read more `}</p>
+        <p className="-translate-x-1/2 position-absolute  font-bold leading-[20px] left-[77px] not-italic text-[14px] text-center text-white top-[10.5px] tracking-[-0.1504px]" style={{fontFamily: "Inter, sans-serif"}}>{`Read more `}</p>
         <Icon4 />
       </div>
     </div>

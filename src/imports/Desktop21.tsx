@@ -22,7 +22,7 @@ function Button() {
     <div className="position-relative flex-shrink-0" style={{'backgroundColor':'#374dea', 'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'24px', 'paddingRight':'24px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Component />
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[18.7px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[-0.015px]">Details</p>
+        <p className=" font-bold leading-[18.7px] not-italic relative shrink-0 text-[14px] text-center text-white tracking-[-0.015px]" style={{fontFamily: "Inter, sans-serif"}}>Details</p>
       </div>
     </div>
   );
@@ -51,7 +51,7 @@ function Button1() {
     <div className="position-relative flex-shrink-0" style={{'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'23px', 'paddingRight':'23px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Settings />
-        <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center tracking-[-0.15px]">Configure</p>
+        <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center tracking-[-0.15px]" style={{fontFamily: "Inter, sans-serif"}}>Configure</p>
       </div>
     </div>
   );
@@ -75,7 +75,7 @@ function Button2() {
     <div className="position-relative flex-shrink-0" style={{'borderRadius':'24px'}} data-name="Button">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex align-items-center position-relative" style={{'borderColor':'transparent', 'gap':'9px', 'paddingLeft':'23px', 'paddingRight':'23px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
         <Component1 />
-        <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center tracking-[-0.15px]">{`Preview & Share`}</p>
+        <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-center tracking-[-0.15px]" style={{fontFamily: "Inter, sans-serif"}}>{`Preview & Share`}</p>
       </div>
     </div>
   );
@@ -97,7 +97,7 @@ function TextInput() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'height':'40px', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] tracking-[-0.15px]">Untitled form</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[14px] tracking-[-0.15px]" style={{fontFamily: "Inter, sans-serif"}}>Untitled form</p>
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@ function TextInput1() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'height':'40px', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative size-full" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'10px', 'paddingBottom':'10px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.15px]">How would you rate your overall experience at our facility?</p>
+          <p className=" font-medium leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[14px] tracking-[-0.15px]" style={{fontFamily: "Inter, sans-serif"}}>How would you rate your overall experience at our facility?</p>
         </div>
       </div>
     </div>
@@ -173,7 +173,7 @@ function Toggle() {
 function Frame6() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'8px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">Required</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Required</p>
       <Toggle />
     </div>
   );
@@ -201,7 +201,7 @@ function Frame7() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'8px', 'padding':'8px', 'borderRadius':'12px'}}>
       <Copy />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase">Duplicate</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Duplicate</p>
     </div>
   );
 }
@@ -225,7 +225,7 @@ function Frame8() {
   return (
     <div className="content-stretch d-flex align-items-center position-relative flex-shrink-0" style={{'gap':'8px', 'padding':'8px', 'borderRadius':'12px'}}>
       <Trash />
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[normal] not-italic relative shrink-0 text-[#ef4444] text-[10px] tracking-[0.5px] uppercase">Delete</p>
+      <p className=" font-bold leading-[normal] not-italic relative shrink-0 text-[#ef4444] text-[10px] tracking-[0.5px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Delete</p>
     </div>
   );
 }
@@ -352,7 +352,7 @@ function Frame() {
           <Group />
         </div>
       </div>
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">Staff were courteous and respectful</p>
+      <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Staff were courteous and respectful</p>
       <Frame16 />
     </div>
   );
@@ -452,7 +452,7 @@ function Frame11() {
           <Group1 />
         </div>
       </div>
-      <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">Was your privacy respected during the visit?</p>
+      <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Was your privacy respected during the visit?</p>
       <p className="font-["Inter:Italic',sans-serif] font-normal italic leading-[normal] relative shrink-0 text-[#6a7282] text-[14px]">Single Choice</p>
       <Frame20 />
     </div>
@@ -515,7 +515,7 @@ function TextInput2() {
     <div className="position-relative flex-shrink-0 w-100" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'gap':'16px', 'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
           <Icon />
         </div>
       </div>
@@ -526,7 +526,7 @@ function TextInput2() {
 function Frame24() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'8px'}}>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Range</p>
       </div>
       <TextInput2 />
@@ -536,7 +536,7 @@ function Frame24() {
 
 function Frame27() {
   return (
-    <div className="content-stretch d-flex font-["Inter:Medium',sans-serif] font-medium gap-[16px] items-start leading-[0] not-italic relative shrink-0 text-[#09156a] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full">
+    <div className="content-stretch d-flex  font-medium gap-[16px] items-start leading-[0] not-italic relative shrink-0 text-[#09156a] text-[12px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] w-full" style={{fontFamily: "Inter, sans-serif"}}>
       <div className="d-flex flex-column justify-content-center position-relative flex-shrink-0" style={{'width':'32px'}}>
         <p className="whitespace-pre-wrap" style={{'lineHeight':'1.5'}}>Icon</p>
       </div>
@@ -552,7 +552,7 @@ function TextInput3() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -579,7 +579,7 @@ function TextInput4() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -606,7 +606,7 @@ function TextInput5() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -633,7 +633,7 @@ function TextInput6() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -660,7 +660,7 @@ function TextInput7() {
     <div className="min-h-px min-w-px position-relative" style={{'backgroundColor':'#f5f7f7', 'borderRadius':'12px'}} data-name="Text Input">
       <div className="d-flex flex-row align-items-center overflow-hidden size-full" style={{'borderRadius':'inherit'}}>
         <div className="content-stretch d-flex align-items-center position-relative w-100" style={{'paddingLeft':'16px', 'paddingRight':'16px', 'paddingTop':'12px', 'paddingBottom':'12px'}}>
-          <p className="font-["Inter:Medium',sans-serif] font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap">5</p>
+          <p className=" font-medium leading-[normal] min-h-px min-w-px not-italic relative text-[#09156a] text-[14px] tracking-[-0.15px] whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>5</p>
         </div>
       </div>
     </div>
@@ -711,7 +711,7 @@ function Frame32() {
   return (
     <div className="position-relative flex-shrink-0 w-100">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent', 'gap':'24px'}}>
-        <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[18px] w-full">
+        <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[18px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'27px'}}>Rating Properties</p>
         </div>
         <Frame28 />
@@ -726,7 +726,7 @@ function Overlay() {
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#eee', 'borderRadius':'12px'}} />
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'8px', 'paddingRight':'8px'}}>
-          <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-nowrap">
+          <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] tracking-[-0.15px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
             <p className="" style={{'lineHeight':'normal'}}>Cancel</p>
           </div>
         </div>
@@ -741,7 +741,7 @@ function Overlay1() {
       <div aria-hidden="true" className="position-absolute border border-solid top-0 bottom-0 start-0 end-0 pe-none" style={{'borderColor':'#374dea', 'borderRadius':'12px'}} />
       <div className="d-flex flex-row align-items-center justify-content-center size-full">
         <div className="content-stretch d-flex align-items-center justify-content-center position-relative size-full" style={{'paddingLeft':'8px', 'paddingRight':'8px'}}>
-          <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white tracking-[-0.15px] whitespace-nowrap">
+          <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-white tracking-[-0.15px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
             <p className="" style={{'lineHeight':'normal'}}>Save</p>
           </div>
         </div>
@@ -791,7 +791,7 @@ function BackToForms() {
           <ArrowRight />
         </div>
       </div>
-      <div className="d-flex flex-column font-["Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] tracking-[-0.15px] whitespace-nowrap">
+      <div className="d-flex flex-column  font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#6a7282] text-[14px] text-shadow-[0px_0.5px_1px_rgba(0,0,0,0.05)] tracking-[-0.15px] whitespace-nowrap" style={{fontFamily: "Inter, sans-serif"}}>
         <p className="" style={{'lineHeight':'normal'}}>Back to forms</p>
       </div>
     </div>
@@ -814,7 +814,7 @@ function H() {
             </div>
           </div>
         </div>
-        <p className="font-["Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]">Form Builder</p>
+        <p className=" font-bold leading-[28px] not-italic relative shrink-0 text-[#09156a] text-[20px] tracking-[-0.95px]" style={{fontFamily: "Inter, sans-serif"}}>Form Builder</p>
       </div>
     </div>
   );
@@ -846,7 +846,7 @@ function FormIcons() {
 function ShortTextInfo() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Short Text</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Short Text</p>
     </div>
   );
 }
@@ -878,7 +878,7 @@ function FormIcons1() {
 function ShortTextInfo1() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Paragraph</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Paragraph</p>
     </div>
   );
 }
@@ -911,7 +911,7 @@ function FormIcons2() {
 function ShortTextInfo2() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Number</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Number</p>
     </div>
   );
 }
@@ -942,7 +942,7 @@ function FormIcons3() {
 function ShortTextInfo3() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Email</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Email</p>
     </div>
   );
 }
@@ -971,7 +971,7 @@ function Frame38() {
 function Frame40() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Text Elements</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Text Elements</p>
       <Frame38 />
     </div>
   );
@@ -992,7 +992,7 @@ function Icon1() {
 function RatingScaleInfo() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Rating Scale Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px] w-full whitespace-pre-wrap">Rating</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px] w-full whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Rating</p>
     </div>
   );
 }
@@ -1027,7 +1027,7 @@ function Icon2() {
 function NpsScaleInfo() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="NPS Scale Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px] w-full whitespace-pre-wrap">NPS</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px] w-full whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>NPS</p>
     </div>
   );
 }
@@ -1064,7 +1064,7 @@ function Icon3() {
 function LikertScaleInfo() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Likert Scale Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px] w-full whitespace-pre-wrap">Emoji</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px] w-full whitespace-pre-wrap" style={{fontFamily: "Inter, sans-serif"}}>Emoji</p>
     </div>
   );
 }
@@ -1092,7 +1092,7 @@ function Frame37() {
 function Frame46() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Feedback Elements</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Feedback Elements</p>
       <Frame37 />
     </div>
   );
@@ -1115,7 +1115,7 @@ function FormIcons4() {
 function ShortTextInfo4() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Dropdown</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Dropdown</p>
     </div>
   );
 }
@@ -1146,7 +1146,7 @@ function FormIcons5() {
 function ShortTextInfo5() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[12px] text-white">Yes/No</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[12px] text-white" style={{fontFamily: "Inter, sans-serif"}}>Yes/No</p>
     </div>
   );
 }
@@ -1176,7 +1176,7 @@ function FormIcons6() {
 function ShortTextInfo6() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Checkbox</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Checkbox</p>
     </div>
   );
 }
@@ -1212,7 +1212,7 @@ function FormIcons7() {
 function ShortTextInfo7() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Radio</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Radio</p>
     </div>
   );
 }
@@ -1241,7 +1241,7 @@ function Frame39() {
 function Frame43() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Multi Elements</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Multi Elements</p>
       <Frame39 />
     </div>
   );
@@ -1264,7 +1264,7 @@ function FormIcons8() {
 function ShortTextInfo8() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Paragraph</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Paragraph</p>
     </div>
   );
 }
@@ -1295,7 +1295,7 @@ function FormIcons9() {
 function ShortTextInfo9() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Label</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Label</p>
     </div>
   );
 }
@@ -1322,7 +1322,7 @@ function Frame42() {
 function Frame45() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Other Elements</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Other Elements</p>
       <Frame42 />
     </div>
   );
@@ -1343,7 +1343,7 @@ function FormIcons10() {
 function ShortTextInfo10() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Attachment</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Attachment</p>
     </div>
   );
 }
@@ -1375,7 +1375,7 @@ function FormIcons11() {
 function ShortTextInfo11() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Image</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Image</p>
     </div>
   );
 }
@@ -1407,7 +1407,7 @@ function FormIcons12() {
 function ShortTextInfo12() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">File Upload</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>File Upload</p>
     </div>
   );
 }
@@ -1435,7 +1435,7 @@ function Frame47() {
 function Frame44() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Media Elements</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Media Elements</p>
       <Frame47 />
     </div>
   );
@@ -1459,7 +1459,7 @@ function FormIcons13() {
 function ShortTextInfo13() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Date</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Date</p>
     </div>
   );
 }
@@ -1495,7 +1495,7 @@ function FormIcons14() {
 function ShortTextInfo14() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start justify-content-center min-h-px min-w-px position-relative" data-name="Short Text Info">
-      <p className="font-["Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]">Time</p>
+      <p className=" font-normal leading-[normal] not-italic relative shrink-0 text-[#09156a] text-[12px]" style={{fontFamily: "Inter, sans-serif"}}>Time</p>
     </div>
   );
 }
@@ -1522,7 +1522,7 @@ function Frame48() {
 function Frame41() {
   return (
     <div className="content-stretch d-flex flex-column align-items-start position-relative flex-shrink-0 w-100" style={{'gap':'16px'}}>
-      <p className="font-["Inter:Bold',sans-serif] font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase">Date Elements</p>
+      <p className=" font-bold leading-[16.5px] not-italic relative shrink-0 text-[#6a7282] text-[10px] tracking-[0.6145px] uppercase" style={{fontFamily: "Inter, sans-serif"}}>Date Elements</p>
       <Frame48 />
     </div>
   );
@@ -1532,7 +1532,7 @@ function Frame36() {
   return (
     <div className="position-relative flex-shrink-0 w-100">
       <div className="bg-clip-padding border-0 border-solid content-stretch d-flex flex-column align-items-start position-relative w-100" style={{'borderColor':'transparent', 'gap':'24px'}}>
-        <div className="d-flex flex-column font-["Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[18px] w-full">
+        <div className="d-flex flex-column  font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#09156a] text-[18px] w-full" style={{fontFamily: "Inter, sans-serif"}}>
           <p className="whitespace-pre-wrap" style={{'lineHeight':'27px'}}>Elements</p>
         </div>
         <Frame40 />
