@@ -20,7 +20,7 @@ const resources = [
     location: 'Central Medical', 
     patients: '1,240', 
     score: 98, 
-    color: 'bg-[#FFB800]',
+    color: 'style={{backgroundColor: "#FFB800"}}',
     avatarColor: 'bg-brand-blue'
   },
   { 
@@ -32,7 +32,7 @@ const resources = [
     location: 'Eastgate Clinic', 
     patients: '890', 
     score: 96, 
-    color: 'bg-[#F20000]',
+    color: 'style={{backgroundColor: "#F20000"}}',
     avatarColor: 'bg-brand-blue'
   },
   { 
@@ -44,7 +44,7 @@ const resources = [
     location: 'Harbor View', 
     patients: '756', 
     score: 94, 
-    color: 'bg-[#008D36]',
+    color: 'style={{backgroundColor: "#008D36"}}',
     avatarColor: 'bg-brand-blue'
   },
   { 
@@ -56,7 +56,7 @@ const resources = [
     location: 'Summit Health', 
     patients: '680', 
     score: 92, 
-    color: 'bg-[#0078C1]',
+    color: 'style={{backgroundColor: "#0078C1"}}',
     avatarColor: 'bg-brand-blue'
   },
   { 
@@ -75,10 +75,10 @@ const resources = [
 
 export const Leaderboard = () => {
   return (
-    <section className="bg-card border border-brand-border p-8 space-y-8 overflow-hidden" style={{'borderRadius':'24px'}}>
-      <div className="d-flex align-items-center justify-content-between">
+    <section className="bg-card border border-brand-border p-8 space-y-8 overflow-d-none" style={{'borderRadius':'24px'}}>
+      <div className="d-d-flex align-align-items-center justify-content-between">
         <div className="space-y-1">
-          <div className="d-flex align-items-center gap-2">
+          <div className="d-d-flex align-align-items-center gap-2">
             <h3 className="text-xl fw-bold text-brand-dark">Top Performing Doctors</h3>
             <div className="text-brand-gray/40 hover:text-brand-blue transition-colors cursor-help">
               <Info size={14} />
@@ -86,7 +86,7 @@ export const Leaderboard = () => {
           </div>
           <p className="text-sm text-brand-gray">Based on patient volume and quality score</p>
         </div>
-        <div className="w-10 h-10 bg-brand-bg rounded-3 d-flex align-items-center justify-content-center text-brand-gray">
+        <div className="w-10 h-10 bg-brand-bg rounded-3 d-d-flex align-align-items-center justify-content-center text-brand-gray">
           <Trophy size={20} />
         </div>
       </div>
@@ -99,16 +99,16 @@ export const Leaderboard = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="d-flex flex-column xl:flex-row xl:items-center justify-content-between p-4 rounded-2xl hover:bg-brand-bg/40 transition-all group border border-transparent hover:border-brand-border gap-4"
+            className="d-d-flex d-flex-column xl:d-flex-row xl:align-items-center justify-content-between p-4 rounded-4 hover:bg-brand-bg/40 transition-all group border border-transparent hover:border-brand-border gap-4"
           >
-            <div className="d-flex align-items-center gap-3 lg:gap-6 flex-fill">
+            <div className="d-d-flex align-align-items-center gap-3 lg:gap-6 d-flex-fill">
               {/* Rank */}
-              <div className={`w-6 h-6 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-[10px] lg:text-xs font-bold shrink-0 ${resource.color} ${resource.rank <= 4 ? 'text-white shadow-lg' : 'shadow-sm'}`}>
+              <div className={`w-6 h-6 lg:w-8 lg:h-8 rounded-full d-flex align-items-center justify-content-center style={{color: "10px"}} lg:text-xs fw-bold flex-shrink-0 ${resource.color} ${resource.rank <= 4 ? 'text-white shadow-lg' : 'shadow-sm'}`}>
                 {resource.rank}
               </div>
 
               {/* Avatar */}
-              <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full ${resource.avatarColor} flex items-center justify-center text-white text-[10px] lg:text-xs font-bold shadow-md shrink-0 overflow-hidden relative`}>
+              <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-full ${resource.avatarColor} d-flex align-items-center justify-content-center text-white style={{color: "10px"}} lg:text-xs fw-bold shadow-md flex-shrink-0 overflow-d-none position-relative`}>
                 {resource.image ? (
                   <ImageWithFallback 
                     src={resource.image} 
@@ -121,34 +121,34 @@ export const Leaderboard = () => {
               </div>
 
               {/* Info */}
-              <div className="flex-fill min-w-0">
-                <div className="d-flex align-items-center gap-2 mb-0.5">
+              <div className="d-flex-fill min-w-0">
+                <div className="d-d-flex align-align-items-center gap-2 mb-0.5">
                   <h4 className="text-sm lg:text-base fw-bold text-brand-dark truncate">{resource.name}</h4>
                   {resource.rank === 1 && (
-                    <span className="bg-brand-blue text-white lg:text-[9px] fw-bold px-1.5 py-0.5 rounded text-uppercase tracking-wider" style={{'fontSize':'8px'}}>TOP</span>
+                    <span className="bg-brand-blue text-white lg:style={{color: "9px"}} fw-bold px-1.5 py-0.5 rounded text-uppercase tracking-wider" style={{'fontSize':'8px'}}>TOP</span>
                   )}
                 </div>
                 <p className="lg:text-xs text-brand-gray fw-medium truncate" style={{'fontSize':'10px'}}>
-                  {resource.title} <span className="d-none sm:inline">•</span> <span className="sm:block xl:inline text-brand-blue/70">{resource.location}</span>
+                  {resource.title} <span className="d-none sm:inline">•</span> <span className="sm:d-block xl:inline text-brand-blue/70">{resource.location}</span>
                 </p>
               </div>
             </div>
 
             {/* Metrics */}
-            <div className="d-grid grid-cols-2 sm:flex sm:items-center sm:justify-between xl:justify-end gap-4 sm:gap-6 lg:gap-12 xl:min-w-[250px]">
-              <div className="d-flex flex-column align-items-start">
-                <div className="d-flex align-items-center gap-1.5 text-brand-dark fw-bold text-xs lg:text-sm mb-1">
+            <div className="d-grid grid-cols-2 sm:d-flex sm:align-items-center sm:justify-content-between xl:justify-end gap-4 sm:gap-6 lg:gap-12 xl:min-style={{width: "250px"}}">
+              <div className="d-d-flex d-flex-column align-align-items-start">
+                <div className="d-d-flex align-align-items-center gap-1.5 text-brand-dark fw-bold text-xs lg:text-sm mb-1">
                   <Users size={12} className="text-brand-gray" />
                   {resource.patients}
                 </div>
-                <span className="lg:text-[10px] fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'9px'}}>Patients</span>
+                <span className="lg:style={{color: "10px"}} fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'9px'}}>Patients</span>
               </div>
 
-              <div className="d-flex flex-column align-items-end sm:items-start xl:items-end">
-                <div className="text-xl lg:text-[24px] fw-bold text-brand-dark leading-none">
+              <div className="d-d-flex d-flex-column align-items-end sm:align-items-start xl:items-end">
+                <div className="text-xl lg:style={{color: "24px"}} fw-bold text-brand-dark leading-none">
                   {resource.score}
                 </div>
-                <span className="lg:text-[10px] fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'9px'}}>Score</span>
+                <span className="lg:style={{color: "10px"}} fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'9px'}}>Score</span>
               </div>
             </div>
           </Motion.div>

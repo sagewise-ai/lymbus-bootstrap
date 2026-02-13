@@ -80,13 +80,13 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-bg d-flex align-items-center justify-content-center p-4 sm:p-6 lg:p-8 font-sans">
-      <div className="w-100 bg-card shadow-2xl border border-brand-border overflow-hidden d-flex flex-column md:flex-row" style={{'maxWidth':'1100px', 'borderRadius':'24px', 'minHeight':'700px'}}>
+    <div className="min-h-screen bg-brand-bg d-d-flex align-align-items-center justify-content-center p-4 sm:p-4 lg:p-8 font-sans">
+      <div className="w-100 bg-card shadow-2xl border border-brand-border overflow-d-none d-d-flex d-flex-column md:d-flex-row" style={{'maxWidth':'1100px', 'borderRadius':'24px', 'minHeight':'700px'}}>
         
         {/* Left Side: Value Proposition Carousel */}
-        <div className="w-100 md:w-1/2 position-relative bg-brand-dark d-flex flex-column justify-content-between p-12 overflow-hidden border-bottom md:border-b-0 md:border-r border-brand-border">
+        <div className="w-100 md:w-1/2 position-position-relative bg-brand-dark d-d-flex d-flex-column justify-content-between p-12 overflow-d-none border-bottom md:border-b-0 md:border-r border-brand-border">
           {/* Background Images with Crossfade */}
-          <div className="position-absolute top-0 bottom-0 start-0 end-0 z-0 overflow-hidden">
+          <div className="position-position-absolute top-0 bottom-0 start-0 end-0 z-0 overflow-d-none">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -94,7 +94,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                 animate={{ opacity: 0.25, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="position-absolute top-0 bottom-0 start-0 end-0 grayscale mix-blend-overlay"
+                className="position-position-absolute top-0 bottom-0 start-0 end-0 grayscale mix-blend-overlay"
               >
                 <ImageWithFallback 
                   src={VALUE_PROPS[currentSlide].image} 
@@ -103,12 +103,12 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                 />
               </motion.div>
             </AnimatePresence>
-            <div className="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-to-br from-brand-dark/80 via-brand-dark/60 to-transparent z-1" />
+            <div className="position-position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-to-br from-brand-dark/80 via-brand-dark/60 to-transparent z-1" />
           </div>
 
-          <div className="position-relative z-10">
-            <div className="d-flex align-items-center gap-3 mb-12">
-              <div className="w-12 h-12 rounded-2xl bg-brand-blue d-flex align-items-center justify-content-center text-white shadow-lg shadow-brand-blue/30">
+          <div className="position-position-relative z-10">
+            <div className="d-d-flex align-align-items-center gap-3 mb-12">
+              <div className="w-12 h-12 rounded-4 bg-brand-blue d-d-flex align-align-items-center justify-content-center text-white shadow-lg shadow-brand-blue/30">
                 <Activity size={28} />
               </div>
               <div>
@@ -151,7 +151,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
             </div>
             
             {/* Slide Indicators */}
-            <div className="d-flex gap-2 mt-8">
+            <div className="d-d-flex gap-2 mt-8">
               {VALUE_PROPS.map((_, i) => (
                 <button
                   key={i}
@@ -162,13 +162,13 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
             </div>
           </div>
 
-          <div className="position-relative z-10 d-flex flex-wrap gap-4 mt-auto">
+          <div className="position-position-relative z-10 d-d-flex d-flex-wrap gap-4 mt-auto">
             {[
               { icon: ShieldCheck, label: 'HIPAA Compliant' },
               { icon: Stethoscope, label: 'Clinical Accuracy' },
               { icon: Heart, label: 'Patient Centric' }
             ].map((feature, i) => (
-              <div key={i} className="d-flex align-items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 py-2 px-4 rounded-circle shadow-sm">
+              <div key={i} className="d-d-flex align-align-items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 py-2 px-4 rounded-circle shadow-sm">
                 <feature.icon size={16} className="text-brand-blue" />
                 <span className="fw-bold text-white text-uppercase tracking-wide" style={{'fontSize':'11px'}}>{feature.label}</span>
               </div>
@@ -177,7 +177,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
         </div>
 
         {/* Right Side: Forms */}
-        <div className="w-100 md:w-1/2 bg-white d-flex flex-column justify-content-center p-8 sm:p-12 lg:p-16 position-relative">
+        <div className="w-100 md:w-1/2 bg-white d-d-flex d-flex-column justify-content-center p-8 sm:p-12 lg:p-16 position-position-relative">
           <AnimatePresence mode="wait">
             {mode === 'login' && (
               <motion.div
@@ -196,23 +196,23 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">Work Email</label>
-                    <div className="position-relative group">
-                      <div className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
+                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">Work Email</label>
+                    <div className="position-position-relative group">
+                      <div className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
                         <Mail size={18} />
                       </div>
                       <input 
                         type="email" 
                         required
-                        className="w-100 h-14 pl-12 pr-4 bg-brand-bg border border-brand-border rounded-2xl text-brand-dark fw-medium placeholder:text-brand-gray/50 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all"
+                        className="w-100 h-14 pl-12 pr-4 bg-brand-bg border border-brand-border rounded-4 text-brand-dark fw-medium placeholder:text-brand-gray/50 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all"
                         placeholder="doctor@hospital.com"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <div className="d-flex justify-content-between align-items-center mb-1">
-                      <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">Password</label>
+                    <div className="d-d-flex justify-content-between align-align-items-center mb-1">
+                      <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">Password</label>
                       <button 
                         type="button"
                         onClick={() => toggleMode('forgot-password')}
@@ -221,20 +221,20 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                         Forgot?
                       </button>
                     </div>
-                    <div className="position-relative group">
-                      <div className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
+                    <div className="position-position-relative group">
+                      <div className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
                         <Lock size={18} />
                       </div>
                       <input 
                         type={showPassword ? "text" : "password"} 
                         required
-                        className="w-100 h-14 pl-12 pr-12 bg-brand-bg border border-brand-border rounded-2xl text-brand-dark fw-medium placeholder:text-brand-gray/50 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all"
+                        className="w-100 h-14 pl-12 pr-12 bg-brand-bg border border-brand-border rounded-4 text-brand-dark fw-medium placeholder:text-brand-gray/50 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all"
                         placeholder="••••••••••••"
                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray hover:text-brand-blue transition-colors focus:outline-none"
+                        className="position-position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray hover:text-brand-blue transition-colors focus:outline-none"
                       >
                         {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                       </button>
@@ -243,7 +243,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
 
                   <button 
                     disabled={isLoading}
-                    className="w-100 h-14 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-2xl fw-bold shadow-xl shadow-brand-blue/20 d-flex align-items-center justify-content-center gap-2 group transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-100 h-14 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-4 fw-bold shadow-xl shadow-brand-blue/20 d-d-flex align-align-items-center justify-content-center gap-2 group transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-circle animate-spin" />
@@ -287,9 +287,9 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="d-grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">First Name</label>
-                      <div className="position-relative group">
-                        <div className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
+                      <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">First Name</label>
+                      <div className="position-position-relative group">
+                        <div className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
                           <User size={16} />
                         </div>
                         <input 
@@ -300,7 +300,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">Last Name</label>
+                      <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">Last Name</label>
                       <input 
                         type="text" 
                         required
@@ -310,9 +310,9 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">Work Email</label>
-                    <div className="position-relative group">
-                      <div className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
+                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">Work Email</label>
+                    <div className="position-position-relative group">
+                      <div className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
                         <Mail size={18} />
                       </div>
                       <input 
@@ -324,9 +324,9 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">Password</label>
-                    <div className="position-relative group">
-                      <div className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
+                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">Password</label>
+                    <div className="position-position-relative group">
+                      <div className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
                         <Lock size={18} />
                       </div>
                       <input 
@@ -337,14 +337,14 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray hover:text-brand-blue transition-colors focus:outline-none"
+                        className="position-position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray hover:text-brand-blue transition-colors focus:outline-none"
                       >
                         {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                       </button>
                     </div>
                   </div>
 
-                  <div className="d-flex align-items-start gap-3 py-2">
+                  <div className="d-d-flex align-align-items-start gap-3 py-2">
                     <input type="checkbox" required className="mt-1 accent-brand-blue" id="terms" />
                     <label htmlFor="terms" className="text-brand-gray fw-medium leading-relaxed" style={{'fontSize':'11px'}}>
                       I agree to the <button type="button" className="text-brand-blue fw-bold">Terms of Service</button> and <button type="button" className="text-brand-blue fw-bold">Data Privacy Protocol</button> (HIPAA compliant).
@@ -353,7 +353,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
 
                   <button 
                     disabled={isLoading}
-                    className="w-100 h-14 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-2xl fw-bold shadow-xl shadow-brand-blue/20 d-flex align-items-center justify-content-center gap-2 group transition-all disabled:opacity-70"
+                    className="w-100 h-14 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-4 fw-bold shadow-xl shadow-brand-blue/20 d-d-flex align-align-items-center justify-content-center gap-2 group transition-all disabled:opacity-70"
                   >
                     {isLoading ? (
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-circle animate-spin" />
@@ -391,7 +391,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
               >
                 <button 
                   onClick={() => toggleMode('login')}
-                  className="d-flex align-items-center gap-2 text-brand-gray fw-bold text-xs text-uppercase tracking-widest mb-8 hover:text-brand-blue transition-colors group"
+                  className="d-d-flex align-align-items-center gap-2 text-brand-gray fw-bold text-xs text-uppercase tracking-widest mb-8 hover:text-brand-blue transition-colors group"
                 >
                   <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Login
                 </button>
@@ -403,15 +403,15 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-block ml-1">Work Email</label>
-                    <div className="position-relative group">
-                      <div className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
+                    <label className="text-xs fw-bold text-brand-gray text-uppercase tracking-widest d-d-block ml-1">Work Email</label>
+                    <div className="position-position-relative group">
+                      <div className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors">
                         <Mail size={18} />
                       </div>
                       <input 
                         type="email" 
                         required
-                        className="w-100 h-14 pl-12 pr-4 bg-brand-bg border border-brand-border rounded-2xl text-brand-dark fw-medium focus:outline-none focus:border-brand-blue transition-all"
+                        className="w-100 h-14 pl-12 pr-4 bg-brand-bg border border-brand-border rounded-4 text-brand-dark fw-medium focus:outline-none focus:border-brand-blue transition-all"
                         placeholder="doctor@hospital.com"
                       />
                     </div>
@@ -419,7 +419,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
 
                   <button 
                     disabled={isLoading}
-                    className="w-100 h-14 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-2xl fw-bold shadow-xl shadow-brand-blue/20 d-flex align-items-center justify-content-center gap-2 group transition-all disabled:opacity-70"
+                    className="w-100 h-14 bg-brand-blue hover:bg-brand-blue/90 text-white rounded-4 fw-bold shadow-xl shadow-brand-blue/20 d-d-flex align-align-items-center justify-content-center gap-2 group transition-all disabled:opacity-70"
                   >
                     {isLoading ? (
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-circle animate-spin" />
@@ -431,7 +431,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                   </button>
                 </form>
 
-                <div className="mt-12 p-6 bg-brand-bg/50 border border-brand-border rounded-2xl">
+                <div className="mt-12 p-4 bg-brand-bg/50 border border-brand-border rounded-4">
                   <p className="text-xs text-brand-gray fw-medium text-center leading-relaxed">
                     Note: For security reasons, if an account exists with this email, you will receive reset instructions within 2-5 minutes.
                   </p>
@@ -441,7 +441,7 @@ export const Auth: React.FC<AuthProps> = ({ onLogin }) => {
           </AnimatePresence>
 
           {/* Footer Branding */}
-          <div className="position-absolute bottom-8 left-1/2 -translate-x-1/2 text-center w-100 px-8 pe-none">
+          <div className="position-position-absolute bottom-8 left-1/2 -translate-x-1/2 text-center w-100 px-8 pe-none">
             <p className="fw-bold text-brand-gray/40 text-uppercase" style={{'fontSize':'10px', 'letterSpacing':'0.2em'}}>
               Lymbus AI © 2026 • Secure Infrastructure
             </p>

@@ -22,13 +22,13 @@ const GuideCard = ({ icon: Icon, title, description, meta, delay }: any) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
-    className="bg-card p-6 border border-brand-border hover:shadow-lg transition-all cursor-pointer group d-flex flex-column align-items-start h-100" style={{'borderRadius':'24px'}}
+    className="bg-card p-4 border border-brand-border hover:shadow-lg transition-all cursor-pointer group d-d-flex d-flex-column align-align-items-start h-100" style={{'borderRadius':'24px'}}
   >
-    <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue d-flex align-items-center justify-content-center mb-4 group-hover:scale-110 transition-transform">
+    <div className="w-12 h-12 rounded-4 bg-brand-blue/10 text-brand-blue d-d-flex align-align-items-center justify-content-center mb-4 group-hover:scale-110 transition-transform">
       <Icon size={24} />
     </div>
     <h3 className="text-lg fw-bold text-brand-dark mb-2">{title}</h3>
-    <p className="text-sm text-brand-gray mb-6 flex-fill">{description}</p>
+    <p className="text-sm text-brand-gray mb-6 d-flex-fill">{description}</p>
     <span className="text-xs fw-bold text-brand-blue text-uppercase tracking-wider group-hover:underline">
       {meta}
     </span>
@@ -40,15 +40,15 @@ const FeatureItem = ({ badge, title, description, delay, icon: Icon }: any) => (
     initial={{ opacity: 0, x: -20 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.5, delay }}
-    className="bg-card p-4 md:p-6 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all cursor-pointer group d-flex flex-column md:flex-row md:items-center gap-4 md:gap-6" style={{'borderRadius':'24px'}}
+    className="bg-card p-4 md:p-4 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all cursor-pointer group d-d-flex d-flex-column md:d-flex-row md:align-items-center gap-4 md:gap-6" style={{'borderRadius':'24px'}}
   >
-    <div className="flex-shrink-0">
+    <div className="d-flex-flex-shrink-0">
       <span className="px-3 py-1.5 rounded-3 bg-brand-blue/10 text-brand-blue fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>
         {badge}
       </span>
     </div>
-    <div className="flex-fill">
-      <h4 className="text-base fw-bold text-brand-dark mb-1 d-flex align-items-center gap-2">
+    <div className="d-flex-fill">
+      <h4 className="text-base fw-bold text-brand-dark mb-1 d-d-flex align-align-items-center gap-2">
         {title}
       </h4>
       <p className="text-sm text-brand-gray">{description}</p>
@@ -71,8 +71,8 @@ export const HelpSupport = () => {
 
       {/* Getting Started */}
       <section className="space-y-6">
-        <div className="d-flex align-items-center gap-3">
-          <div className="w-10 h-10 rounded-3 bg-brand-bg d-flex align-items-center justify-content-center text-brand-blue">
+        <div className="d-d-flex align-align-items-center gap-3">
+          <div className="w-10 h-10 rounded-3 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-blue">
             <Lightbulb size={20} />
           </div>
           <div>
@@ -108,8 +108,8 @@ export const HelpSupport = () => {
 
       {/* Feature Guides */}
       <section className="space-y-6 pt-4">
-        <div className="d-flex align-items-center gap-3">
-          <div className="w-10 h-10 rounded-3 bg-brand-bg d-flex align-items-center justify-content-center text-emerald-600">
+        <div className="d-d-flex align-align-items-center gap-3">
+          <div className="w-10 h-10 rounded-3 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-emerald-600">
             <Book size={20} />
           </div>
           <div>
@@ -170,10 +170,10 @@ export const HelpSupport = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-white border border-brand-border p-6 md:p-8 d-flex flex-column md:flex-row align-items-start md:items-center justify-content-between gap-6 md:gap-8 mt-8 shadow-sm" style={{'borderRadius':'24px'}}
+        className="bg-white border border-brand-border p-4 md:p-8 d-d-flex d-flex-column md:d-flex-row align-align-items-start md:align-items-center justify-content-between gap-6 md:gap-8 mt-8 shadow-sm" style={{'borderRadius':'24px'}}
       >
-        <div className="d-flex align-items-start gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue d-flex align-items-center justify-content-center flex-shrink-0">
+        <div className="d-d-flex align-align-items-start gap-4">
+          <div className="w-12 h-12 rounded-4 bg-brand-blue/10 text-brand-blue d-d-flex align-align-items-center justify-content-center d-flex-flex-shrink-0">
             <HelpCircle size={24} />
           </div>
           <div>
@@ -182,16 +182,16 @@ export const HelpSupport = () => {
           </div>
         </div>
 
-        <div className="d-flex flex-column sm:flex-row align-items-center gap-3 w-100 md:w-auto">
-          <button className="w-100 sm:w-auto px-6 py-3 rounded-3 border border-brand-border bg-white text-brand-dark fw-bold text-sm hover:bg-brand-bg transition-colors d-flex align-items-center justify-content-center gap-2">
+        <div className="d-d-flex d-flex-column sm:d-flex-row align-align-items-center gap-3 w-100 md:w-auto">
+          <button className="w-100 sm:w-auto px-5 py-2 rounded-3 border border-brand-border bg-white text-brand-dark fw-bold text-sm hover:bg-brand-bg transition-colors d-d-flex align-align-items-center justify-content-center gap-2">
             <FileText size={16} />
             Browse FAQs
           </button>
-          <button className="w-100 sm:w-auto px-6 py-3 rounded-3 border border-brand-border bg-white text-brand-dark fw-bold text-sm hover:bg-brand-bg transition-colors d-flex align-items-center justify-content-center gap-2">
+          <button className="w-100 sm:w-auto px-5 py-2 rounded-3 border border-brand-border bg-white text-brand-dark fw-bold text-sm hover:bg-brand-bg transition-colors d-d-flex align-align-items-center justify-content-center gap-2">
             <PlayCircle size={16} />
             Watch Tutorials
           </button>
-          <button className="w-100 sm:w-auto px-6 py-3 rounded-3 bg-brand-blue text-white fw-bold text-sm hover:bg-blue-600 transition-colors d-flex align-items-center justify-content-center gap-2 shadow-lg shadow-brand-blue/20">
+          <button className="w-100 sm:w-auto px-5 py-2 rounded-3 bg-brand-blue text-white fw-bold text-sm hover:bg-blue-600 transition-colors d-d-flex align-align-items-center justify-content-center gap-2 shadow-lg shadow-brand-blue/20">
             <Mail size={16} />
             Contact Support
           </button>

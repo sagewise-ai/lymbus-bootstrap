@@ -149,7 +149,7 @@ const BoxPlotChart = ({ title, metrics }: { title: string, metrics: MetricData[]
 
   return (
     <div className="bg-card p-5 border border-brand-border hover:shadow-md transition-shadow group" style={{'borderRadius':'24px'}}>
-      <div className="d-flex align-items-center justify-content-between mb-4 px-1">
+      <div className="d-d-flex align-align-items-center justify-content-between mb-4 px-1">
         <h3 className="text-sm fw-bold text-brand-dark tracking-tight">{title}</h3>
       </div>
       <Chart
@@ -175,28 +175,28 @@ const BoxPlotChart = ({ title, metrics }: { title: string, metrics: MetricData[]
               const color = data.fillColor || '#0052cc';
               
               return `
-                <div class="p-3 bg-white shadow-xl rounded-xl border border-brand-border min-w-[180px] font-sans">
-                  <div class="text-[13px] font-extrabold mb-2" style="color: ${color}">${label}</div>
+                <div class="p-3 bg-white shadow-xl rounded-3 border border-brand-border min-style={{width: "180px"}} font-sans">
+                  <div class="style={{color: "13px"}} font-extrabold mb-2" style="color: ${color}">${label}</div>
                   <div class="space-y-1">
-                    <div class="flex justify-between items-center gap-4">
-                      <span class="text-[11px] font-medium text-slate-500">Range:</span>
-                      <span class="text-[11px] font-bold text-brand-dark">${min === max ? `${min}%` : `${min}% – ${max}%`}</span>
+                    <div class="d-flex justify-content-between align-items-center gap-4">
+                      <span class="style={{color: "11px"}} fw-medium text-slate-500">Range:</span>
+                      <span class="style={{color: "11px"}} fw-bold text-brand-dark">${min === max ? `${min}%` : `${min}% – ${max}%`}</span>
                     </div>
-                    <div class="flex justify-between items-center gap-4">
-                      <span class="text-[11px] font-medium text-slate-500">Q1 (25th):</span>
-                      <span class="text-[11px] font-bold text-brand-dark">${q1}%</span>
+                    <div class="d-flex justify-content-between align-items-center gap-4">
+                      <span class="style={{color: "11px"}} fw-medium text-slate-500">Q1 (25th):</span>
+                      <span class="style={{color: "11px"}} fw-bold text-brand-dark">${q1}%</span>
                     </div>
-                    <div class="flex justify-between items-center gap-4">
-                      <span class="text-[11px] font-medium text-slate-500">Median:</span>
-                      <span class="text-[11px] font-bold text-brand-dark">${median}%</span>
+                    <div class="d-flex justify-content-between align-items-center gap-4">
+                      <span class="style={{color: "11px"}} fw-medium text-slate-500">Median:</span>
+                      <span class="style={{color: "11px"}} fw-bold text-brand-dark">${median}%</span>
                     </div>
-                    <div class="flex justify-between items-center gap-4">
-                      <span class="text-[11px] font-medium text-slate-500">Q3 (75th):</span>
-                      <span class="text-[11px] font-bold text-brand-dark">${q3}%</span>
+                    <div class="d-flex justify-content-between align-items-center gap-4">
+                      <span class="style={{color: "11px"}} fw-medium text-slate-500">Q3 (75th):</span>
+                      <span class="style={{color: "11px"}} fw-bold text-brand-dark">${q3}%</span>
                     </div>
-                    <div class="flex justify-between items-center pt-1.5 border-t border-slate-50 mt-1">
-                      <span class="text-[11px] font-medium text-slate-500">Your Value:</span>
-                      <span class="text-[11px] font-bold" style="color: ${color}">${score}%</span>
+                    <div class="d-flex justify-content-between align-items-center pt-1.5 border-t border-slate-50 mt-1">
+                      <span class="style={{color: "11px"}} fw-medium text-slate-500">Your Value:</span>
+                      <span class="style={{color: "11px"}} fw-bold" style="color: ${color}">${score}%</span>
                     </div>
                   </div>
                 </div>
@@ -240,13 +240,13 @@ const BoxPlotChart = ({ title, metrics }: { title: string, metrics: MetricData[]
 export const Benchmarking = () => {
   return (
     <div className="p-4 lg:p-8 space-y-6 lg:space-y-8 animate-in fade-in duration-500">
-      <div className="d-flex flex-column sm:flex-row sm:items-center justify-content-between gap-4">
+      <div className="d-d-flex d-flex-column sm:d-flex-row sm:align-items-center justify-content-between gap-4">
         <div>
           <h2 className="text-xl fw-bold text-brand-dark tracking-tight">Benchmarking</h2>
           <p className="text-brand-gray fw-bold text-uppercase mt-0.5" style={{'fontSize':'11px', 'letterSpacing':'0.1em'}}>National & Regional Distribution Analysis</p>
         </div>
         
-        <div className="d-flex align-items-center gap-2 bg-emerald-50 px-3 py-1.5 rounded-circle border border-emerald-100">
+        <div className="d-d-flex align-align-items-center gap-2 bg-emerald-50 px-3 py-1.5 rounded-circle border border-emerald-100">
           <TrendingUp size={14} className="text-emerald-600" />
           <span className="fw-bold text-emerald-700 text-uppercase tracking-widest" style={{'fontSize':'10px'}}>+4.2% Above National Avg</span>
         </div>
@@ -259,8 +259,8 @@ export const Benchmarking = () => {
           { icon: BarChart2, title: 'Response Stability', desc: 'Consistent 42% engagement rate', color: 'emerald' },
           { icon: TrendingUp, title: 'Key Strength', desc: 'Consistently exceeding clinical excellence targets', color: 'purple' }
         ].map((item, i) => (
-          <div key={i} className="bg-card p-4 border border-brand-border d-flex align-items-center gap-4 hover:border-brand-blue/30 transition-colors" style={{'borderRadius':'16px'}}>
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+          <div key={i} className="bg-card p-4 border border-brand-border d-d-flex align-align-items-center gap-4 hover:border-brand-blue/30 transition-colors" style={{'borderRadius':'16px'}}>
+            <div className={`w-10 h-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 ${
               item.color === 'blue' ? 'bg-blue-50 text-blue-600' : 
               item.color === 'emerald' ? 'bg-emerald-50 text-emerald-600' : 
               'bg-purple-50 text-purple-600'

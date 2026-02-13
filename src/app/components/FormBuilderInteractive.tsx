@@ -85,11 +85,11 @@ const DraggableSidebarItem = ({ type, label, icon: Icon, category }: FormElement
     <div
       ref={drag as any}
       className={cn(
-        "flex items-center gap-2 px-3 py-2.5 rounded-xl border border-brand-border bg-white cursor-grab active:cursor-grabbing transition-all hover:border-brand-blue hover:shadow-sm group",
+        "d-flex align-items-center gap-2 px-3 py-2.5 rounded-3 border border-brand-border bg-white cursor-grab active:cursor-grabbing transition-all hover:border-brand-blue hover:shadow-sm group",
         isDragging && "opacity-40 grayscale"
       )}
     >
-      <div className="w-8 h-8 rounded-3 bg-brand-bg d-flex align-items-center justify-content-center text-brand-gray group-hover:text-brand-blue transition-colors flex-shrink-0">
+      <div className="w-8 h-8 rounded-3 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-gray group-hover:text-brand-blue transition-colors d-flex-flex-shrink-0">
         <Icon size={16} />
       </div>
       <span className="fw-bold text-uppercase tracking-widest text-brand-gray group-hover:text-brand-dark leading-none" style={{'fontSize':'10px'}}>
@@ -124,22 +124,22 @@ const CanvasItem = ({
         onSelect();
       }}
       className={cn(
-        "group bg-white rounded-3xl border transition-all p-6 shadow-sm relative cursor-pointer",
+        "group bg-white rounded-3xl border transition-all p-4 shadow-sm position-relative cursor-pointer",
         isSelected 
           ? "border-brand-blue ring-2 ring-brand-blue/5 shadow-xl scale-[1.01] z-10" 
           : "border-brand-border hover:border-brand-blue/30 hover:shadow-md"
       )}
     >
-      <div className="d-flex align-items-start gap-4">
-        <div className="mt-1 d-flex flex-column gap-1 text-brand-gray/20 group-hover:text-brand-gray/40 transition-colors">
+      <div className="d-d-flex align-align-items-start gap-4">
+        <div className="mt-1 d-d-flex d-flex-column gap-1 text-brand-gray/20 group-hover:text-brand-gray/40 transition-colors">
           <GripVertical size={20} />
         </div>
         
-        <div className="flex-fill space-y-4">
-          <div className="d-flex align-items-center justify-content-between">
-            <div className="d-flex align-items-center gap-2">
+        <div className="d-flex-fill space-y-4">
+          <div className="d-d-flex align-align-items-center justify-content-between">
+            <div className="d-d-flex align-align-items-center gap-2">
               <div className={cn(
-                "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
+                "w-8 h-8 rounded-3 d-flex align-items-center justify-content-center transition-colors",
                 isSelected ? "bg-brand-blue text-white" : "bg-brand-bg text-brand-blue"
               )}>
                 {element.icon && typeof element.icon !== 'string' ? (
@@ -160,7 +160,7 @@ const CanvasItem = ({
             </div>
             
             <div className={cn(
-              "flex items-center gap-2 transition-opacity",
+              "d-flex align-items-center gap-2 transition-opacity",
               isSelected ? "opacity-100" : "opacity-0 group-hover:opacity-100"
             )}>
               <button 
@@ -193,7 +193,7 @@ const CanvasItem = ({
               {['radio', 'checkbox', 'dropdown'].includes(element.type) && element.properties?.options ? (
                 <div className="d-grid grid-cols-1 gap-2">
                   {element.properties.options.map((opt: string, i: number) => (
-                    <div key={i} className="d-flex align-items-center gap-3 px-4 py-2 bg-brand-bg/30 border border-brand-border/50 rounded-3">
+                    <div key={i} className="d-d-flex align-align-items-center gap-3 px-4 py-2 bg-brand-bg/30 border border-brand-border/50 rounded-3">
                       <div className={cn(
                         "w-4 h-4 border border-brand-border",
                         element.type === 'radio' ? "rounded-full" : "rounded"
@@ -203,7 +203,7 @@ const CanvasItem = ({
                   ))}
                 </div>
               ) : (
-                <div className="h-12 w-100 bg-brand-bg/50 border border-dashed border-brand-border rounded-3 d-flex align-items-center px-4">
+                <div className="h-12 w-100 bg-brand-bg/50 border border-dashed border-brand-border rounded-3 d-d-flex align-align-items-center px-4">
                   <span className="fw-bold text-brand-gray/30 text-uppercase tracking-widest" style={{'fontSize':'10px'}}>
                     {element.type === 'text' && (element.properties?.placeholder || 'Short answer text...')}
                     {element.type === 'paragraph' && (element.properties?.placeholder || 'Long answer text...')}
@@ -347,9 +347,9 @@ const FormBuilderInteractiveContent = () => {
   }));
 
   const renderPreview = () => (
-    <div className="flex-fill w-100 d-flex flex-column align-items-center p-4 lg:p-8 overflow-hidden h-100">
+    <div className="d-flex-fill w-100 d-d-flex d-flex-column align-align-items-center p-4 lg:p-8 overflow-d-none h-100">
       {/* Device Switcher */}
-      <div className="d-flex align-items-center gap-1 bg-white border border-brand-border p-1 rounded-3 mb-6 shadow-sm flex-shrink-0">
+      <div className="d-d-flex align-align-items-center gap-1 bg-white border border-brand-border p-1 rounded-3 mb-6 shadow-sm d-flex-flex-shrink-0">
         {[
           { id: 'mobile', icon: Smartphone, label: 'Mobile' },
           { id: 'tablet', icon: Tablet, label: 'Tablet' },
@@ -359,7 +359,7 @@ const FormBuilderInteractiveContent = () => {
             key={device.id}
             onClick={() => setPreviewDevice(device.id as any)}
             className={cn(
-              "flex items-center gap-2 px-3 py-2 rounded-lg text-[10px] font-bold transition-all uppercase tracking-widest",
+              "d-flex align-items-center gap-2 px-3 py-2 rounded-3 style={{color: "10px"}} fw-bold transition-all uppercase tracking-widest",
               previewDevice === device.id
                 ? "bg-brand-blue text-white shadow-md"
                 : "text-brand-gray hover:bg-brand-bg hover:text-brand-dark"
@@ -374,27 +374,27 @@ const FormBuilderInteractiveContent = () => {
 
       {/* Device Frame */}
       <div className={cn(
-        "relative flex-1 bg-white shadow-2xl border border-brand-border/20 overflow-hidden flex flex-col transition-all duration-500 ease-in-out origin-top",
-        previewDevice === 'mobile' ? "w-full max-w-[375px] rounded-[40px] mb-8" : 
-        previewDevice === 'tablet' ? "w-full max-w-[768px] rounded-[24px] mb-8" : 
-        "w-full h-full rounded-xl border-x"
+        "position-relative d-flex-grow-1 bg-white shadow-2xl border border-brand-border/20 overflow-d-none d-flex d-flex-column transition-all duration-500 ease-in-out origin-top",
+        previewDevice === 'mobile' ? "w-100 max-style={{width: "375px"}} style={{borderRadius: "40px"}} mb-8" : 
+        previewDevice === 'tablet' ? "w-100 max-style={{width: "768px"}} style={{borderRadius: "24px"}} mb-8" : 
+        "w-100 h-100 rounded-3 border-x"
       )}>
         {/* Notch (Mobile Only) */}
         {previewDevice === 'mobile' && (
-          <div className="position-absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand-dark/5 rounded-b-xl z-20 d-flex align-items-center justify-content-center backdrop-blur-md">
+          <div className="position-position-absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand-dark/5 rounded-b-xl z-20 d-d-flex align-align-items-center justify-content-center backdrop-blur-md">
             <div className="w-8 h-1 bg-brand-dark/20 rounded-circle" />
           </div>
         )}
 
         {/* Screen Content */}
         <div className={cn(
-          "flex-1 overflow-y-auto no-scrollbar bg-white",
-          previewDevice === 'mobile' ? "pt-12 pb-10 px-6" : "p-8 lg:p-12"
+          "d-flex-grow-1 overflow-y-auto no-scrollbar bg-white",
+          previewDevice === 'mobile' ? "pt-12 pb-10 px-5" : "p-8 lg:p-12"
         )}>
           <div className="max-w-3xl mx-auto space-y-8">
-            <div className="space-y-3 text-center sm:text-left">
+            <div className="space-y-3 text-center sm:text-start">
               <h2 className={cn(
-                "font-bold text-brand-dark leading-tight",
+                "fw-bold text-brand-dark leading-tight",
                 previewDevice === 'mobile' ? "text-2xl" : "text-3xl lg:text-4xl"
               )}>{formName}</h2>
               <div className={cn(
@@ -408,7 +408,7 @@ const FormBuilderInteractiveContent = () => {
                 <div 
                   key={el.id} 
                   className={cn(
-                    "group relative p-4 rounded-2xl transition-all border border-transparent hover:bg-brand-bg/30 hover:border-brand-blue/10 cursor-pointer animate-in fade-in slide-in-from-bottom-4",
+                    "group position-relative p-4 rounded-4 transition-all border border-transparent hover:bg-brand-bg/30 hover:border-brand-blue/10 cursor-pointer animate-in fade-in slide-in-from-bottom-4",
                     selectedElementId === el.id && "bg-brand-blue/5 border-brand-blue/20 ring-1 ring-brand-blue/20"
                   )}
                   style={{ animationDelay: `${i * 100}ms` }}
@@ -419,15 +419,15 @@ const FormBuilderInteractiveContent = () => {
                   }}
                 >
                   {/* Edit Hint */}
-                  <div className="position-absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="position-position-absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
                      <span className="fw-bold text-brand-blue text-uppercase bg-white px-2 py-1 rounded-circle shadow-sm border border-brand-blue/10" style={{'fontSize':'9px'}}>Edit</span>
                   </div>
 
                   <div className="space-y-4">
-                    <div className="d-flex align-items-start gap-3">
-                      <span className="w-6 h-6 rounded-3 bg-brand-bg d-flex align-items-center justify-content-center fw-bold text-brand-blue flex-shrink-0 mt-0.5" style={{'fontSize':'10px'}}>{i + 1}</span>
+                    <div className="d-d-flex align-align-items-start gap-3">
+                      <span className="w-6 h-6 rounded-3 bg-brand-bg d-d-flex align-align-items-center justify-content-center fw-bold text-brand-blue d-flex-flex-shrink-0 mt-0.5" style={{'fontSize':'10px'}}>{i + 1}</span>
                       <p className={cn(
-                        "font-bold text-brand-dark leading-snug",
+                        "fw-bold text-brand-dark leading-snug",
                         previewDevice === 'mobile' ? "text-base" : "text-lg"
                       )}>
                         {el.questionText || el.label}
@@ -438,13 +438,13 @@ const FormBuilderInteractiveContent = () => {
                     <div className="pl-9">
                       {el.type === 'nps' && (
                         <div className="space-y-3">
-                          <div className="d-flex flex-wrap gap-2">
+                          <div className="d-d-flex d-flex-wrap gap-2">
                             {Array.from({ length: 11 }).map((_, n) => (
                               <button 
                                 key={n} 
                                 className={cn(
-                                  "flex items-center justify-center rounded-xl border border-brand-border text-xs font-bold hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all active:scale-95",
-                                  previewDevice === 'mobile' ? "w-9 h-9 flex-1 min-w-[36px]" : "w-10 h-10"
+                                  "d-flex align-items-center justify-content-center rounded-3 border border-brand-border text-xs fw-bold hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all active:scale-95",
+                                  previewDevice === 'mobile' ? "w-9 h-9 d-flex-grow-1 min-style={{width: "36px"}}" : "w-10 h-10"
                                 )}
                                 aria-label={`Rate ${n}`}
                               >
@@ -452,7 +452,7 @@ const FormBuilderInteractiveContent = () => {
                               </button>
                             ))}
                           </div>
-                          <div className="d-flex justify-content-between fw-bold text-uppercase tracking-widest text-brand-gray/60" style={{'fontSize':'9px'}}>
+                          <div className="d-d-flex justify-content-between fw-bold text-uppercase tracking-widest text-brand-gray/60" style={{'fontSize':'9px'}}>
                             <span>Not Likely</span>
                             <span>Very Likely</span>
                           </div>
@@ -460,12 +460,12 @@ const FormBuilderInteractiveContent = () => {
                       )}
 
                       {(el.type === 'rating' || el.type === 'emoji') && (
-                        <div className="d-flex align-items-center gap-2 flex-wrap">
+                        <div className="d-d-flex align-align-items-center gap-2 d-flex-wrap">
                           {Array.from({ length: el.properties?.range || 5 }).map((_, n) => (
                             <button 
                               key={n} 
                               className={cn(
-                                "rounded-2xl bg-brand-bg/50 border border-brand-border flex items-center justify-center text-brand-gray/30 hover:bg-brand-blue/5 hover:border-brand-blue/20 hover:text-brand-blue transition-all active:scale-95",
+                                "rounded-4 bg-brand-bg/50 border border-brand-border d-flex align-items-center justify-content-center text-brand-gray/30 hover:bg-brand-blue/5 hover:border-brand-blue/20 hover:text-brand-blue transition-all active:scale-95",
                                 previewDevice === 'mobile' ? "w-12 h-12" : "w-14 h-14"
                               )}
                               aria-label={`Rate ${n + 1} stars`}
@@ -477,18 +477,18 @@ const FormBuilderInteractiveContent = () => {
                       )}
 
                       {['text', 'paragraph', 'email', 'number'].includes(el.type) && (
-                        <div className="position-relative">
+                        <div className="position-position-relative">
                           {el.type === 'paragraph' ? (
                             <textarea 
                               placeholder={el.properties?.placeholder || "Detailed feedback..."}
-                              className="w-100 h-32 bg-white border-2 border-brand-bg rounded-2xl p-4 text-sm fw-medium focus:outline-none focus:border-brand-blue/30 focus:ring-4 focus:ring-brand-blue/5 transition-all placeholder:text-brand-gray/30 resize-none shadow-sm"
+                              className="w-100 h-32 bg-white border-2 border-brand-bg rounded-4 p-4 text-sm fw-medium focus:outline-none focus:border-brand-blue/30 focus:ring-4 focus:ring-brand-blue/5 transition-all placeholder:text-brand-gray/30 resize-none shadow-sm"
                               readOnly
                             />
                           ) : (
                             <input 
                               type={el.type === 'email' ? 'email' : el.type === 'number' ? 'number' : 'text'}
                               placeholder={el.properties?.placeholder || "Short answer..."}
-                              className="w-100 bg-white border-2 border-brand-bg rounded-3 px-4 py-3.5 text-sm fw-medium focus:outline-none focus:border-brand-blue/30 focus:ring-4 focus:ring-brand-blue/5 transition-all placeholder:text-brand-gray/30 shadow-sm"
+                              className="w-100 bg-white border-2 border-brand-bg rounded-3 px-4 py-2.5 text-sm fw-medium focus:outline-none focus:border-brand-blue/30 focus:ring-4 focus:ring-brand-blue/5 transition-all placeholder:text-brand-gray/30 shadow-sm"
                               readOnly
                             />
                           )}
@@ -501,7 +501,7 @@ const FormBuilderInteractiveContent = () => {
                           (previewDevice === 'desktop' && ['radio', 'checkbox'].includes(el.type)) ? "grid-cols-2" : "grid-cols-1"
                         )}>
                           {el.type === 'dropdown' ? (
-                             <div className="w-100 p-4 rounded-2xl bg-white border-2 border-brand-bg d-flex align-items-center justify-content-between text-brand-gray/50 shadow-sm">
+                             <div className="w-100 p-4 rounded-4 bg-white border-2 border-brand-bg d-d-flex align-align-items-center justify-content-between text-brand-gray/50 shadow-sm">
                                 <span className="text-sm fw-bold">Select an option...</span>
                                 <ChevronDown size={16} />
                              </div>
@@ -509,7 +509,7 @@ const FormBuilderInteractiveContent = () => {
                             (el.type === 'yesno' ? ['Yes', 'No'] : (el.properties?.options || ['Option 1', 'Option 2'])).map((opt: string, idx: number) => (
                               <button 
                                 key={idx} 
-                                className="w-100 p-4 rounded-2xl bg-white border-2 border-brand-bg d-flex align-items-center justify-content-between group hover:border-brand-blue/30 hover:shadow-md transition-all text-start shadow-sm active:scale-[0.99]"
+                                className="w-100 p-4 rounded-4 bg-white border-2 border-brand-bg d-d-flex align-align-items-center justify-content-between group hover:border-brand-blue/30 hover:shadow-md transition-all text-start shadow-sm active:scale-[0.99]"
                               >
                                 <span className="text-sm fw-bold text-brand-dark">{opt}</span>
                                 <div className={cn(
@@ -523,8 +523,8 @@ const FormBuilderInteractiveContent = () => {
                       )}
                       
                       {['date', 'time', 'upload', 'attachment', 'image'].includes(el.type) && (
-                         <button className="h-14 w-100 bg-brand-bg/30 border-2 border-dashed border-brand-border rounded-3 d-flex align-items-center justify-content-center gap-3 hover:bg-brand-blue/5 hover:border-brand-blue/30 transition-all group">
-                           <div className="w-8 h-8 rounded-circle bg-white border border-brand-border d-flex align-items-center justify-content-center text-brand-gray group-hover:text-brand-blue group-hover:border-brand-blue/30 transition-colors">
+                         <button className="h-14 w-100 bg-brand-bg/30 border-2 border-dashed border-brand-border rounded-3 d-d-flex align-align-items-center justify-content-center gap-3 hover:bg-brand-blue/5 hover:border-brand-blue/30 transition-all group">
+                           <div className="w-8 h-8 rounded-circle bg-white border border-brand-border d-d-flex align-align-items-center justify-content-center text-brand-gray group-hover:text-brand-blue group-hover:border-brand-blue/30 transition-colors">
                               {el.type.includes('date') || el.type.includes('time') ? <Calendar size={14} /> : <Upload size={14} />}
                            </div>
                            <span className="text-xs fw-bold text-brand-gray group-hover:text-brand-blue text-uppercase tracking-wider transition-colors">
@@ -545,9 +545,9 @@ const FormBuilderInteractiveContent = () => {
                 Submit Feedback
               </button>
 
-              <div className="d-flex flex-column align-items-center gap-2 mt-8 opacity-40">
-                <div className="d-flex align-items-center gap-2">
-                  <div className="w-6 h-6 bg-brand-blue rounded-3 d-flex align-items-center justify-content-center text-white">
+              <div className="d-d-flex d-flex-column align-align-items-center gap-2 mt-8 opacity-40">
+                <div className="d-d-flex align-align-items-center gap-2">
+                  <div className="w-6 h-6 bg-brand-blue rounded-3 d-d-flex align-align-items-center justify-content-center text-white">
                     <span className="fw-bold" style={{'fontSize':'10px'}}>L</span>
                   </div>
                   <span className="fw-bold text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Powered by Lymbus AI</span>
@@ -559,7 +559,7 @@ const FormBuilderInteractiveContent = () => {
 
         {/* Home Bar (Mobile Only) */}
         {previewDevice === 'mobile' && (
-          <div className="position-absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-brand-dark/10 rounded-circle" />
+          <div className="position-position-absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-brand-dark/10 rounded-circle" />
         )}
       </div>
     </div>
@@ -644,17 +644,17 @@ const FormBuilderInteractiveContent = () => {
   ];
 
   return (
-    <div className="position-absolute top-0 bottom-0 start-0 end-0 d-flex overflow-hidden">
+    <div className="position-position-absolute top-0 bottom-0 start-0 end-0 d-d-flex overflow-d-none">
       {/* Left Sidebar - Elements */}
-      <aside className="w-72 bg-white border-end border-brand-border d-flex flex-column flex-shrink-0 overflow-hidden h-100">
-        <div className="p-6 border-bottom border-brand-border bg-white/95 backdrop-blur-sm z-10 flex-shrink-0">
-          <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-flex align-items-center gap-2">
+      <aside className="w-72 bg-white border-end border-brand-border d-d-flex d-flex-column d-flex-flex-shrink-0 overflow-d-none h-100">
+        <div className="p-4 border-bottom border-brand-border bg-white/95 backdrop-blur-sm z-10 d-flex-flex-shrink-0">
+          <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-d-flex align-align-items-center gap-2">
             <LayoutGrid size={16} className="text-brand-blue" />
             Elements
           </h2>
         </div>
         
-        <div className="flex-fill overflow-y-auto p-4 pb-40 space-y-8">
+        <div className="d-flex-fill overflow-y-auto p-4 pb-40 space-y-8">
           {elements.map((group) => (
             <div key={group.category} className="space-y-3">
               <h3 className="fw-bold text-brand-gray/60 text-uppercase" style={{'fontSize':'9px', 'letterSpacing':'0.2em'}}>{group.category}</h3>
@@ -663,7 +663,7 @@ const FormBuilderInteractiveContent = () => {
                   <div 
                     key={item.label} 
                     className={cn(
-                      "w-full",
+                      "w-100",
                       item.label.length > 6 ? "col-span-2" : "col-span-1"
                     )}
                   >
@@ -683,12 +683,12 @@ const FormBuilderInteractiveContent = () => {
 
       {/* Main Canvas Area */}
       <main 
-        className="flex-fill overflow-y-auto p-4 lg:p-8 d-flex flex-column align-items-center no-scrollbar bg-brand-bg/30"
+        className="d-flex-fill overflow-y-auto p-4 lg:p-8 d-d-flex d-flex-column align-align-items-center no-scrollbar bg-brand-bg/30"
         onClick={() => setSelectedElementId(null)}
       >
-        <div className="w-100 max-w-3xl d-flex flex-column align-items-center">
+        <div className="w-100 max-w-3xl d-d-flex d-flex-column align-align-items-center">
           {/* Tabs */}
-          <div className="bg-white p-1 border border-brand-border d-flex gap-1 mb-10 shadow-sm flex-shrink-0" style={{'borderRadius':'20px'}} onClick={e => e.stopPropagation()}>
+          <div className="bg-white p-1 border border-brand-border d-d-flex gap-1 mb-10 shadow-sm d-flex-flex-shrink-0" style={{'borderRadius':'20px'}} onClick={e => e.stopPropagation()}>
             {[
               { id: 'details', label: 'Details', icon: Layout },
               { id: 'preview', label: 'Preview & Share', icon: Eye },
@@ -697,7 +697,7 @@ const FormBuilderInteractiveContent = () => {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
                 className={cn(
-                  "flex items-center gap-2 px-6 py-2.5 rounded-[16px] text-[10px] font-bold transition-all uppercase tracking-widest",
+                  "d-flex align-items-center gap-2 px-5 py-2.5 style={{borderRadius: "16px"}} style={{color: "10px"}} fw-bold transition-all uppercase tracking-widest",
                   activeTab === tab.id 
                     ? "bg-brand-blue text-white shadow-lg shadow-brand-blue/20" 
                     : "text-brand-gray hover:bg-brand-bg hover:text-brand-dark"
@@ -729,14 +729,14 @@ const FormBuilderInteractiveContent = () => {
               <div 
                 ref={drop as any}
                 className={cn(
-                  "min-h-[400px] rounded-[40px] border-2 border-dashed transition-all flex flex-col gap-4 pb-20 px-1 pt-1",
+                  "min-style={{height: "400px"}} style={{borderRadius: "40px"}} border-2 border-dashed transition-all d-flex d-flex-column gap-4 pb-20 px-1 pt-1",
                   isOver ? "border-brand-blue bg-brand-blue/5 scale-[1.01]" : "border-brand-border/40 bg-transparent",
-                  canvasElements.length === 0 && "items-center justify-center"
+                  canvasElements.length === 0 && "align-items-center justify-content-center"
                 )}
               >
                 {canvasElements.length === 0 ? (
-                  <div className="d-flex flex-column align-items-center text-center p-12">
-                    <div className="w-20 h-20 rounded-circle bg-white border border-brand-border d-flex align-items-center justify-content-center text-brand-gray/20 mb-6 shadow-sm">
+                  <div className="d-d-flex d-flex-column align-align-items-center text-center p-12">
+                    <div className="w-20 h-20 rounded-circle bg-white border border-brand-border d-d-flex align-align-items-center justify-content-center text-brand-gray/20 mb-6 shadow-sm">
                       <MousePointer2 size={40} />
                     </div>
                     <h3 className="text-lg fw-bold text-brand-dark mb-2 text-uppercase tracking-tight">Drop elements here</h3>
@@ -775,19 +775,19 @@ const FormBuilderInteractiveContent = () => {
           animate={{ width: 320, opacity: 1 }}
           exit={{ width: 0, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="bg-white border-start border-brand-border d-flex flex-column flex-shrink-0 d-none xl:flex overflow-hidden h-100"
+          className="bg-white border-start border-brand-border d-d-flex d-flex-column d-flex-flex-shrink-0 d-none xl:d-flex overflow-d-none h-100"
         >
           {selectedElementId ? (
             /* Properties Panel */
             <>
-              <div className="p-6 border-bottom border-brand-border flex-shrink-0 bg-white/50">
-                <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-flex align-items-center gap-2">
+              <div className="p-4 border-bottom border-brand-border d-flex-flex-shrink-0 bg-white/50">
+                <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-d-flex align-align-items-center gap-2">
                   <Sparkles size={16} className="text-brand-blue" />
                   Properties
                 </h2>
               </div>
               
-              <div className="flex-fill overflow-y-auto p-6 space-y-8 scrollbar-hide">
+              <div className="d-flex-fill overflow-y-auto p-4 space-y-8 scrollbar-hide">
                 <AnimatePresence mode="wait">
                   {draftElement ? (
                     <Motion.div
@@ -800,18 +800,18 @@ const FormBuilderInteractiveContent = () => {
                       {/* Basic Info */}
                       <div className="space-y-6">
                         <div className="space-y-3">
-                          <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Question Label</label>
+                          <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Question Label</label>
                           <textarea 
                             value={draftElement.questionText}
                             onChange={(e) => setDraftElement(prev => prev ? ({ ...prev, questionText: e.target.value }) : null)}
                             placeholder={`Enter ${draftElement.label.toLowerCase()}...`}
-                            className="w-100 bg-brand-bg/50 border border-brand-border rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark focus:bg-white focus:ring-1 focus:ring-brand-blue/20 transition-all outline-none resize-none h-24"
+                            className="w-100 bg-brand-bg/50 border border-brand-border rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark focus:bg-white focus:ring-1 focus:ring-brand-blue/20 transition-all outline-none resize-none h-24"
                           />
                         </div>
 
                         {['text', 'paragraph', 'email', 'number'].includes(draftElement.type) && (
                           <div className="space-y-3">
-                            <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Placeholder Text</label>
+                            <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Placeholder Text</label>
                             <input 
                               type="text"
                               value={draftElement.properties?.placeholder || ''}
@@ -820,7 +820,7 @@ const FormBuilderInteractiveContent = () => {
                                 properties: { ...prev.properties, placeholder: e.target.value } 
                               }) : null)}
                               placeholder="e.g. Type your response..."
-                              className="w-100 bg-brand-bg/50 border border-brand-border rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark focus:bg-white focus:ring-1 focus:ring-brand-blue/20 transition-all outline-none"
+                              className="w-100 bg-brand-bg/50 border border-brand-border rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark focus:bg-white focus:ring-1 focus:ring-brand-blue/20 transition-all outline-none"
                             />
                           </div>
                         )}
@@ -828,29 +828,29 @@ const FormBuilderInteractiveContent = () => {
 
                       {/* Validation & Weightage */}
                       <div className="space-y-4">
-                        <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Scoring & Validation</label>
+                        <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Scoring & Validation</label>
                         <div className="space-y-2">
-                          <div className="d-flex align-items-center justify-content-between p-4 bg-brand-bg/50 rounded-3 border border-brand-border">
+                          <div className="d-d-flex align-align-items-center justify-content-between p-4 bg-brand-bg/50 rounded-3 border border-brand-border">
                             <span className="text-xs fw-bold text-brand-dark">Mark as Required</span>
                             <button 
                               onClick={() => setDraftElement(prev => prev ? ({ ...prev, required: !prev.required }) : null)}
                               className={cn(
-                                "w-9 h-5 rounded-full relative transition-all duration-300",
+                                "w-9 h-5 rounded-full position-relative transition-all duration-300",
                                 draftElement.required ? "bg-brand-blue shadow-sm shadow-brand-blue/30" : "bg-brand-border border border-brand-border"
                               )}
                             >
                               <div className={cn(
-                                "absolute top-1 w-3 h-3 bg-white rounded-full transition-all duration-300 shadow-sm",
+                                "position-absolute top-1 w-3 h-3 bg-white rounded-full transition-all duration-300 shadow-sm",
                                 draftElement.required ? "right-1" : "left-1"
                               )} />
                             </button>
                           </div>
                           
-                          <div className="d-flex align-items-center justify-content-between p-4 bg-brand-bg/50 rounded-3 border border-brand-border">
-                            <div className="d-flex flex-column gap-0.5">
+                          <div className="d-d-flex align-align-items-center justify-content-between p-4 bg-brand-bg/50 rounded-3 border border-brand-border">
+                            <div className="d-d-flex d-flex-column gap-0.5">
                               <span className="text-xs fw-bold text-brand-dark">Question Weightage</span>
                             </div>
-                            <div className="d-flex align-items-center gap-2 bg-white rounded-3 border border-brand-border p-1">
+                            <div className="d-d-flex align-align-items-center gap-2 bg-white rounded-3 border border-brand-border p-1">
                               <input 
                                 type="number" 
                                 min="0"
@@ -873,7 +873,7 @@ const FormBuilderInteractiveContent = () => {
                       {/* Specific Configs */}
                       {draftElement.type === 'rating' && (
                         <div className="space-y-4">
-                          <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Rating Range</label>
+                          <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Rating Range</label>
                           <div className="d-grid grid-cols-5 gap-2">
                             {[3, 4, 5, 7, 10].map(n => (
                               <button 
@@ -883,7 +883,7 @@ const FormBuilderInteractiveContent = () => {
                                   properties: { ...prev.properties, range: n } 
                                 }) : null)}
                                 className={cn(
-                                  "h-10 rounded-lg border text-[10px] font-bold transition-all",
+                                  "h-10 rounded-3 border style={{color: "10px"}} fw-bold transition-all",
                                   draftElement.properties?.range === n 
                                     ? "bg-brand-blue text-white border-brand-blue" 
                                     : "bg-white text-brand-gray border-brand-border hover:border-brand-blue/30"
@@ -898,8 +898,8 @@ const FormBuilderInteractiveContent = () => {
 
                       {['radio', 'checkbox', 'dropdown'].includes(draftElement.type) && (
                         <div className="space-y-4">
-                          <div className="d-flex align-items-center justify-content-between">
-                            <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Options</label>
+                          <div className="d-d-flex align-align-items-center justify-content-between">
+                            <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Options</label>
                             <button 
                               onClick={() => {
                                 const options = [...(draftElement.properties?.options || [])];
@@ -916,7 +916,7 @@ const FormBuilderInteractiveContent = () => {
                           </div>
                           <div className="space-y-2">
                             {(draftElement.properties?.options || []).map((opt: string, idx: number) => (
-                              <div key={idx} className="d-flex align-items-center gap-2">
+                              <div key={idx} className="d-d-flex align-align-items-center gap-2">
                                 <input 
                                   type="text"
                                   value={opt}
@@ -928,7 +928,7 @@ const FormBuilderInteractiveContent = () => {
                                       properties: { ...prev.properties, options } 
                                     }) : null);
                                   }}
-                                  className="flex-fill bg-brand-bg/50 border border-brand-border rounded-3 px-3 py-2 text-xs fw-bold text-brand-dark focus:bg-white transition-all outline-none"
+                                  className="d-flex-fill bg-brand-bg/50 border border-brand-border rounded-3 px-3 py-2 text-xs fw-bold text-brand-dark focus:bg-white transition-all outline-none"
                                 />
                                 <button 
                                   onClick={() => {
@@ -951,11 +951,11 @@ const FormBuilderInteractiveContent = () => {
                       {/* Global & Library Section */}
                       <div className="pt-8 border-top border-brand-border space-y-6">
                         <div className="space-y-4">
-                          <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Library & Classification</label>
+                          <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Library & Classification</label>
                           
                           <div className="p-4 bg-brand-bg/50 rounded-3 border border-brand-border space-y-3">
-                            <span className="text-xs fw-bold text-brand-dark d-block">Question Category</span>
-                            <div className="position-relative">
+                            <span className="text-xs fw-bold text-brand-dark d-d-block">Question Category</span>
+                            <div className="position-position-relative">
                               <select 
                                 value={draftElement.category}
                                 onChange={(e) => {
@@ -973,7 +973,7 @@ const FormBuilderInteractiveContent = () => {
                                 ))}
                                 <option value="ADD_NEW" className="text-brand-blue fw-bold">+ Add new category...</option>
                               </select>
-                              <div className="position-absolute right-3 top-1/2 -translate-y-1/2 pe-none text-brand-gray">
+                              <div className="position-position-absolute right-3 top-1/2 -translate-y-1/2 pe-none text-brand-gray">
                                 <ChevronDown size={14} />
                               </div>
                             </div>
@@ -984,7 +984,7 @@ const FormBuilderInteractiveContent = () => {
                                   initial={{ height: 0, opacity: 0 }}
                                   animate={{ height: 'auto', opacity: 1 }}
                                   exit={{ height: 0, opacity: 0 }}
-                                  className="overflow-hidden space-y-2"
+                                  className="overflow-d-none space-y-2"
                                 >
                                   <input 
                                     autoFocus
@@ -995,10 +995,10 @@ const FormBuilderInteractiveContent = () => {
                                     onKeyDown={(e) => e.key === 'Enter' && handleAddCategory()}
                                     className="w-100 bg-white border border-brand-blue/30 rounded-3 px-3 py-2 text-xs fw-bold text-brand-dark outline-none"
                                   />
-                                  <div className="d-flex gap-2">
+                                  <div className="d-d-flex gap-2">
                                     <button 
                                       onClick={handleAddCategory}
-                                      className="flex-fill py-2 bg-brand-blue text-white rounded-3 fw-bold text-uppercase tracking-widest" style={{'fontSize':'9px'}}
+                                      className="d-flex-fill py-2 bg-brand-blue text-white rounded-3 fw-bold text-uppercase tracking-widest" style={{'fontSize':'9px'}}
                                     >
                                       Create
                                     </button>
@@ -1007,7 +1007,7 @@ const FormBuilderInteractiveContent = () => {
                                         setShowCategoryInput(false);
                                         setNewCategoryName('');
                                       }}
-                                      className="flex-fill py-2 bg-brand-bg text-brand-gray rounded-3 fw-bold text-uppercase tracking-widest" style={{'fontSize':'9px'}}
+                                      className="d-flex-fill py-2 bg-brand-bg text-brand-gray rounded-3 fw-bold text-uppercase tracking-widest" style={{'fontSize':'9px'}}
                                     >
                                       Cancel
                                     </button>
@@ -1021,7 +1021,7 @@ const FormBuilderInteractiveContent = () => {
                                 onClick={() => {
                                   toast.success('Added to Question Bank');
                                 }}
-                                className="w-100 py-3 bg-white border border-brand-blue/30 text-brand-blue rounded-3 fw-bold text-uppercase hover:bg-brand-blue/5 transition-all d-flex align-items-center justify-content-center gap-2 group" style={{'fontSize':'9px', 'letterSpacing':'0.2em'}}
+                                className="w-100 py-2 bg-white border border-brand-blue/30 text-brand-blue rounded-3 fw-bold text-uppercase hover:bg-brand-blue/5 transition-all d-d-flex align-align-items-center justify-content-center gap-2 group" style={{'fontSize':'9px', 'letterSpacing':'0.2em'}}
                               >
                                 <Database size={12} className="group-hover:scale-110 transition-transform" />
                                 Add to Question Bank
@@ -1032,8 +1032,8 @@ const FormBuilderInteractiveContent = () => {
                       </div>
 
                       <div className="pt-6">
-                        <div className="bg-brand-bg/50 p-4 rounded-3 border border-brand-border d-flex gap-3">
-                          <Info size={16} className="text-brand-gray flex-shrink-0 mt-0.5" />
+                        <div className="bg-brand-bg/50 p-4 rounded-3 border border-brand-border d-d-flex gap-3">
+                          <Info size={16} className="text-brand-gray d-flex-flex-shrink-0 mt-0.5" />
                           <p className="leading-relaxed text-brand-gray fw-bold text-uppercase tracking-tight" style={{'fontSize':'10px'}}>
                             Review changes above. Click Save at the bottom to commit your updates.
                           </p>
@@ -1041,8 +1041,8 @@ const FormBuilderInteractiveContent = () => {
                       </div>
                     </Motion.div>
                   ) : (
-                    <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center py-20">
-                      <div className="w-20 h-20 bg-brand-bg rounded-circle d-flex align-items-center justify-content-center text-brand-gray/20 mb-6 border border-brand-border/50 animate-pulse">
+                    <div className="d-d-flex d-flex-column align-align-items-center justify-content-center h-100 text-center py-20">
+                      <div className="w-20 h-20 bg-brand-bg rounded-circle d-d-flex align-align-items-center justify-content-center text-brand-gray/20 mb-6 border border-brand-border/50 animate-pulse">
                         <Settings size={40} />
                       </div>
                       <h4 className="text-sm fw-bold text-brand-dark mb-2 text-uppercase tracking-tight">Canvas Focus</h4>
@@ -1054,9 +1054,9 @@ const FormBuilderInteractiveContent = () => {
                 </AnimatePresence>
               </div>
               
-              <div className="p-6 border-top border-brand-border bg-white flex-shrink-0">
+              <div className="p-4 border-top border-brand-border bg-white d-flex-flex-shrink-0">
                 <button 
-                  className="w-100 py-4 bg-brand-blue text-white rounded-3 fw-bold text-uppercase tracking-widest shadow-xl shadow-brand-blue/20 hover:bg-brand-blue/90 transition-all d-flex align-items-center justify-content-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" style={{'fontSize':'10px'}}
+                  className="w-100 py-4 bg-brand-blue text-white rounded-3 fw-bold text-uppercase tracking-widest shadow-xl shadow-brand-blue/20 hover:bg-brand-blue/90 transition-all d-d-flex align-align-items-center justify-content-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed" style={{'fontSize':'10px'}}
                   onClick={handleSaveProperties}
                   disabled={!draftElement}
                 >
@@ -1068,18 +1068,18 @@ const FormBuilderInteractiveContent = () => {
           ) : activeTab === 'preview' ? (
             /* Share Panel */
             <>
-              <div className="p-6 border-bottom border-brand-border flex-shrink-0 bg-white/50">
-                <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-flex align-items-center gap-2">
+              <div className="p-4 border-bottom border-brand-border d-flex-flex-shrink-0 bg-white/50">
+                <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-d-flex align-align-items-center gap-2">
                   <Share2 size={16} className="text-brand-blue" />
                   Share Form
                 </h2>
               </div>
               
-              <div className="flex-fill overflow-y-auto p-6 space-y-8 scrollbar-hide">
+              <div className="d-flex-fill overflow-y-auto p-4 space-y-8 scrollbar-hide">
                 <div className="space-y-4">
-                  <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Public Link</label>
-                  <div className="d-flex align-items-center gap-2 bg-brand-bg/50 border border-brand-border rounded-3 p-2 pl-4">
-                    <span className="text-xs fw-bold text-brand-gray truncate flex-fill">lymbus.ai/f/e7r9...</span>
+                  <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Public Link</label>
+                  <div className="d-d-flex align-align-items-center gap-2 bg-brand-bg/50 border border-brand-border rounded-3 p-2 pl-4">
+                    <span className="text-xs fw-bold text-brand-gray truncate d-flex-fill">lymbus.ai/f/e7r9...</span>
                     <button className="p-2 text-brand-blue hover:bg-white rounded-3 transition-all shadow-sm">
                       <Copy size={14} />
                     </button>
@@ -1087,28 +1087,28 @@ const FormBuilderInteractiveContent = () => {
                 </div>
 
                 <div className="space-y-4">
-                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-block opacity-60" style={{'fontSize':'10px'}}>Distribute Via</label>
+                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest d-d-block opacity-60" style={{'fontSize':'10px'}}>Distribute Via</label>
                    <div className="d-grid grid-cols-2 gap-3">
-                     <button className="d-flex flex-column align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
-                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-flex align-items-center justify-content-center text-brand-gray transition-colors">
+                     <button className="d-d-flex d-flex-column align-align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
+                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-d-flex align-align-items-center justify-content-center text-brand-gray transition-colors">
                          <Mail size={18} />
                        </div>
                        <span className="fw-bold text-uppercase tracking-widest text-brand-dark" style={{'fontSize':'10px'}}>Email</span>
                      </button>
-                     <button className="d-flex flex-column align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
-                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-flex align-items-center justify-content-center text-brand-gray transition-colors">
+                     <button className="d-d-flex d-flex-column align-align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
+                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-d-flex align-align-items-center justify-content-center text-brand-gray transition-colors">
                          <QrCode size={18} />
                        </div>
                        <span className="fw-bold text-uppercase tracking-widest text-brand-dark" style={{'fontSize':'10px'}}>QR Code</span>
                      </button>
-                     <button className="d-flex flex-column align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
-                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-flex align-items-center justify-content-center text-brand-gray transition-colors">
+                     <button className="d-d-flex d-flex-column align-align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
+                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-d-flex align-align-items-center justify-content-center text-brand-gray transition-colors">
                          <LinkIcon size={18} />
                        </div>
                        <span className="fw-bold text-uppercase tracking-widest text-brand-dark" style={{'fontSize':'10px'}}>Embed</span>
                      </button>
-                     <button className="d-flex flex-column align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
-                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-flex align-items-center justify-content-center text-brand-gray transition-colors">
+                     <button className="d-d-flex d-flex-column align-align-items-center justify-content-center gap-2 p-4 rounded-3 border border-brand-border hover:border-brand-blue/30 hover:bg-brand-blue/5 transition-all group">
+                       <div className="w-10 h-10 rounded-circle bg-brand-bg group-hover:bg-brand-blue group-hover:text-white d-d-flex align-align-items-center justify-content-center text-brand-gray transition-colors">
                          <Globe size={18} />
                        </div>
                        <span className="fw-bold text-uppercase tracking-widest text-brand-dark" style={{'fontSize':'10px'}}>Social</span>
@@ -1116,9 +1116,9 @@ const FormBuilderInteractiveContent = () => {
                    </div>
                 </div>
 
-                <div className="p-4 bg-brand-blue/5 rounded-2xl border border-brand-blue/10">
-                  <div className="d-flex align-items-start gap-3">
-                    <Info size={16} className="text-brand-blue mt-0.5 flex-shrink-0" />
+                <div className="p-4 bg-brand-blue/5 rounded-4 border border-brand-blue/10">
+                  <div className="d-d-flex align-align-items-start gap-3">
+                    <Info size={16} className="text-brand-blue mt-0.5 d-flex-flex-shrink-0" />
                     <div>
                       <h4 className="text-xs fw-bold text-brand-blue mb-1">Status: Draft</h4>
                       <p className="leading-relaxed text-brand-blue/80 fw-medium" style={{'fontSize':'10px'}}>
@@ -1129,9 +1129,9 @@ const FormBuilderInteractiveContent = () => {
                 </div>
               </div>
 
-              <div className="p-6 border-top border-brand-border bg-white flex-shrink-0">
+              <div className="p-4 border-top border-brand-border bg-white d-flex-flex-shrink-0">
                  <button 
-                  className="w-100 py-3 bg-brand-blue text-white rounded-3 fw-bold text-uppercase tracking-widest shadow-lg shadow-brand-blue/20 hover:bg-brand-blue/90 transition-all d-flex align-items-center justify-content-center gap-2" style={{'fontSize':'10px'}}
+                  className="w-100 py-2 bg-brand-blue text-white rounded-3 fw-bold text-uppercase tracking-widest shadow-lg shadow-brand-blue/20 hover:bg-brand-blue/90 transition-all d-d-flex align-align-items-center justify-content-center gap-2" style={{'fontSize':'10px'}}
                   onClick={() => toast.success('Form published successfully')}
                 >
                   <Globe size={14} />
@@ -1142,15 +1142,15 @@ const FormBuilderInteractiveContent = () => {
           ) : (
             /* Resource Library Panel */
             <>
-              <div className="p-6 border-bottom border-brand-border flex-shrink-0 bg-white/50">
-                <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-flex align-items-center gap-2">
+              <div className="p-4 border-bottom border-brand-border d-flex-flex-shrink-0 bg-white/50">
+                <h2 className="text-sm fw-bold text-brand-dark text-uppercase tracking-widest d-d-flex align-align-items-center gap-2">
                   <Database size={16} className="text-brand-blue" />
                   Resource Library
                 </h2>
               </div>
 
               {/* Tabs */}
-              <div className="d-flex border-bottom border-brand-border flex-shrink-0">
+              <div className="d-d-flex border-bottom border-brand-border d-flex-flex-shrink-0">
                 {[
                   { id: 'questions', label: 'Question Bank', icon: LayoutGrid },
                   { id: 'files', label: 'Files', icon: Paperclip },
@@ -1163,22 +1163,22 @@ const FormBuilderInteractiveContent = () => {
                       setActiveFilter(null);
                     }}
                     className={cn(
-                      "flex-1 py-4 text-[10px] font-bold uppercase tracking-widest transition-all relative",
+                      "d-flex-grow-1 py-4 style={{color: "10px"}} fw-bold uppercase tracking-widest transition-all position-relative",
                       libraryTab === tab.id ? "text-brand-blue" : "text-brand-gray hover:text-brand-dark"
                     )}
                   >
                     {tab.label}
                     {libraryTab === tab.id && (
-                      <Motion.div layoutId="activeTab" className="position-absolute bottom-0 start-0 end-0 h-0.5 bg-brand-blue" />
+                      <Motion.div layoutId="activeTab" className="position-position-absolute bottom-0 start-0 end-0 h-0.5 bg-brand-blue" />
                     )}
                   </button>
                 ))}
               </div>
 
               {/* Search & Filters */}
-              <div className="p-4 space-y-3 flex-shrink-0">
-                <div className="position-relative">
-                  <Search size={14} className="position-absolute left-3 top-1/2 -translate-y-1/2 text-brand-gray" />
+              <div className="p-4 space-y-3 d-flex-flex-shrink-0">
+                <div className="position-position-relative">
+                  <Search size={14} className="position-position-absolute left-3 top-1/2 -translate-y-1/2 text-brand-gray" />
                   <input 
                     type="text" 
                     placeholder={`Search ${libraryTab}...`}
@@ -1188,11 +1188,11 @@ const FormBuilderInteractiveContent = () => {
                   />
                 </div>
                 
-                <div className="d-flex align-items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+                <div className="d-d-flex align-align-items-center gap-2 overflow-x-auto no-scrollbar pb-1">
                   <button 
                     onClick={() => setActiveFilter(null)}
                     className={cn(
-                      "flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[9px] font-bold uppercase tracking-widest whitespace-nowrap transition-all",
+                      "d-flex align-items-center gap-1.5 px-3 py-1.5 rounded-full border style={{color: "9px"}} fw-bold uppercase tracking-widest whitespace-nowrap transition-all",
                       !activeFilter ? "bg-brand-blue text-white border-brand-blue" : "bg-white text-brand-gray border-brand-border hover:border-brand-blue/30"
                     )}
                   >
@@ -1203,7 +1203,7 @@ const FormBuilderInteractiveContent = () => {
                       key={filter}
                       onClick={() => setActiveFilter(filter)}
                       className={cn(
-                        "flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[9px] font-bold uppercase tracking-widest whitespace-nowrap transition-all",
+                        "d-flex align-items-center gap-1.5 px-3 py-1.5 rounded-full border style={{color: "9px"}} fw-bold uppercase tracking-widest whitespace-nowrap transition-all",
                         activeFilter === filter ? "bg-brand-blue text-white border-brand-blue" : "bg-white text-brand-gray border-brand-border hover:border-brand-blue/30"
                       )}
                     >
@@ -1214,7 +1214,7 @@ const FormBuilderInteractiveContent = () => {
               </div>
 
               {/* List Content */}
-              <div className="flex-fill overflow-y-auto p-4 space-y-2 scrollbar-hide">
+              <div className="d-flex-fill overflow-y-auto p-4 space-y-2 scrollbar-hide">
                 <AnimatePresence mode="popLayout">
                   {libraryTab === 'questions' ? (
                     filteredQuestions.length > 0 ? (
@@ -1225,7 +1225,7 @@ const FormBuilderInteractiveContent = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, scale: 0.95 }}
                           transition={{ delay: idx * 0.05 }}
-                          className="w-100 p-4 rounded-2xl bg-white border border-brand-border hover:border-brand-blue/30 hover:shadow-md transition-all text-start group d-flex flex-column gap-3"
+                          className="w-100 p-4 rounded-4 bg-white border border-brand-border hover:border-brand-blue/30 hover:shadow-md transition-all text-start group d-d-flex d-flex-column gap-3"
                           onClick={() => {
                             addElement({
                               type: q.type.toLowerCase().includes('yes/no') ? 'yesno' : q.type.toLowerCase().includes('rating') ? 'rating' : 'text',
@@ -1235,7 +1235,7 @@ const FormBuilderInteractiveContent = () => {
                             } as any);
                           }}
                         >
-                          <div className="d-flex align-items-center justify-content-between">
+                          <div className="d-d-flex align-align-items-center justify-content-between">
                             <span className="fw-bold text-brand-blue bg-brand-blue/5 px-2 py-0.5 rounded-circle text-uppercase tracking-wider" style={{'fontSize':'9px'}}>{q.category}</span>
                             <div className="p-1.5 rounded-3 bg-brand-bg text-brand-gray group-hover:text-brand-blue transition-colors">
                               <Plus size={12} />
@@ -1245,7 +1245,7 @@ const FormBuilderInteractiveContent = () => {
                         </Motion.button>
                       ))
                     ) : (
-                      <div className="d-flex flex-column align-items-center justify-content-center py-10 opacity-40">
+                      <div className="d-d-flex d-flex-column align-align-items-center justify-content-center py-10 opacity-40">
                         <FilterX size={32} />
                         <p className="fw-bold text-uppercase tracking-widest mt-4" style={{'fontSize':'10px'}}>No questions found</p>
                       </div>
@@ -1259,12 +1259,12 @@ const FormBuilderInteractiveContent = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, scale: 0.95 }}
                           transition={{ delay: idx * 0.05 }}
-                          className="w-100 p-4 rounded-2xl bg-white border border-brand-border hover:border-brand-blue/30 hover:shadow-md transition-all text-start group d-flex align-items-center gap-3"
+                          className="w-100 p-4 rounded-4 bg-white border border-brand-border hover:border-brand-blue/30 hover:shadow-md transition-all text-start group d-d-flex align-align-items-center gap-3"
                         >
-                          <div className="w-10 h-10 rounded-3 bg-brand-bg d-flex align-items-center justify-content-center text-brand-gray group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors flex-shrink-0">
+                          <div className="w-10 h-10 rounded-3 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-gray group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors d-flex-flex-shrink-0">
                             {f.type === 'IMAGE' ? <ImageIcon size={18} /> : <FileText size={18} />}
                           </div>
-                          <div className="flex-fill min-w-0">
+                          <div className="d-flex-fill min-w-0">
                             <p className="text-xs fw-bold text-brand-dark truncate">{f.name}</p>
                             <p className="fw-bold text-brand-gray text-uppercase tracking-wider mt-0.5" style={{'fontSize':'9px'}}>{f.size} • {f.date}</p>
                           </div>
@@ -1274,7 +1274,7 @@ const FormBuilderInteractiveContent = () => {
                         </Motion.button>
                       ))
                     ) : (
-                      <div className="d-flex flex-column align-items-center justify-content-center py-10 opacity-40">
+                      <div className="d-d-flex d-flex-column align-align-items-center justify-content-center py-10 opacity-40">
                         <FilterX size={32} />
                         <p className="fw-bold text-uppercase tracking-widest mt-4" style={{'fontSize':'10px'}}>No files found</p>
                       </div>

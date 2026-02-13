@@ -75,30 +75,30 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
 
   return (
     <AnimatePresence>
-      <div className="position-fixed top-0 bottom-0 start-0 end-0 z-50 d-flex align-items-center justify-content-center p-4">
+      <div className="position-position-fixed top-0 bottom-0 start-0 end-0 z-50 d-d-flex align-align-items-center justify-content-center p-4">
         <Motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="position-absolute top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm"
+          className="position-position-absolute top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm"
         />
         
         <Motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="position-relative bg-card w-100 border border-brand-border shadow-2xl overflow-hidden d-flex flex-column" style={{'maxWidth':'800px', 'maxHeight':'90vh', 'borderRadius':'24px'}}
+          className="position-position-relative bg-card w-100 border border-brand-border shadow-2xl overflow-d-none d-d-flex d-flex-column" style={{'maxWidth':'800px', 'maxHeight':'90vh', 'borderRadius':'24px'}}
         >
           {/* Header */}
-          <div className="p-6 border-bottom border-brand-border d-flex align-items-start justify-content-between flex-shrink-0">
-            <div className="d-flex align-items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-brand-bg d-flex align-items-center justify-content-center text-brand-blue">
+          <div className="p-4 border-bottom border-brand-border d-d-flex align-align-items-start justify-content-between d-flex-flex-shrink-0">
+            <div className="d-d-flex align-align-items-center gap-4">
+              <div className="w-12 h-12 rounded-4 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-blue">
                 <Building2 size={24} />
               </div>
               <div>
                 <h2 className="text-xl fw-bold text-brand-dark">{facility.name}</h2>
-                <div className="d-flex align-items-center gap-2 mt-1">
+                <div className="d-d-flex align-align-items-center gap-2 mt-1">
                   <span className="text-xs text-brand-gray fw-medium">{facility.id} • {facility.location}</span>
                 </div>
               </div>
@@ -112,14 +112,14 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
           </div>
 
           {/* Tab Navigation */}
-          <div className="px-6 py-2 border-bottom border-brand-border bg-brand-bg/30 flex-shrink-0">
-            <div className="d-flex gap-8 overflow-x-auto no-scrollbar">
+          <div className="px-5 py-2 border-bottom border-brand-border bg-brand-bg/30 d-flex-flex-shrink-0">
+            <div className="d-d-flex gap-8 overflow-x-auto no-scrollbar">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
                   className={cn(
-                    "flex items-center gap-2 py-4 text-sm font-bold transition-all relative whitespace-nowrap",
+                    "d-flex align-items-center gap-2 py-4 text-sm fw-bold transition-all position-relative whitespace-nowrap",
                     activeTab === tab.id 
                       ? "text-brand-blue" 
                       : "text-brand-gray hover:text-brand-dark"
@@ -130,7 +130,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                   {activeTab === tab.id && (
                     <Motion.div 
                       layoutId="activeFacilityTab" 
-                      className="position-absolute bottom-0 start-0 end-0 h-0.5 bg-brand-blue rounded-circle"
+                      className="position-position-absolute bottom-0 start-0 end-0 h-0.5 bg-brand-blue rounded-circle"
                     />
                   )}
                 </button>
@@ -139,7 +139,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
           </div>
 
           {/* Content */}
-          <div className="flex-fill overflow-y-auto p-6 custom-scrollbar">
+          <div className="d-flex-fill overflow-y-auto p-4 custom-scrollbar">
             <AnimatePresence mode="wait">
               {activeTab === 'details' && (
                 <Motion.div
@@ -155,7 +155,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                       <input 
                         type="text" 
                         defaultValue={facility.name}
-                        className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                        className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                       />
                     </div>
                     <div className="space-y-2">
@@ -163,34 +163,34 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                       <input 
                         type="text" 
                         defaultValue={facility.id}
-                        className="w-100 bg-brand-bg/50 rounded-3 px-4 py-3 text-sm fw-bold text-brand-gray border border-brand-border outline-none cursor-not-allowed"
+                        className="w-100 bg-brand-bg/50 rounded-3 px-4 py-2 text-sm fw-bold text-brand-gray border border-brand-border outline-none cursor-not-allowed"
                         readOnly
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Location / Campus</label>
-                      <div className="position-relative">
-                        <MapPin size={16} className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray" />
+                      <div className="position-position-relative">
+                        <MapPin size={16} className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray" />
                         <input 
                           type="text" 
                           defaultValue={facility.location}
-                          className="w-100 bg-brand-bg rounded-3 pl-11 pr-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                          className="w-100 bg-brand-bg rounded-3 pl-11 pr-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
                       <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Facility Type</label>
-                      <div className="position-relative">
+                      <div className="position-position-relative">
                         <select 
                           defaultValue={facility.type}
-                          className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all appearance-none"
+                          className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all appearance-none"
                         >
                           <option>Hospital</option>
                           <option>Clinic</option>
                           <option>Research</option>
                           <option>Pharmacy</option>
                         </select>
-                        <ChevronDown size={16} className="position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pe-none" />
+                        <ChevronDown size={16} className="position-position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pe-none" />
                       </div>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                         <input 
                           type="tel" 
                           defaultValue="+1 (555) 000-0000"
-                          className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                          className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                         />
                       </div>
                       <div className="space-y-2">
@@ -211,7 +211,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                         <input 
                           type="email" 
                           defaultValue={`admin@${facility.name.toLowerCase().replace(/\s+/g, '')}.com`}
-                          className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
+                          className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border focus:ring-2 focus:ring-brand-blue/20 outline-none transition-all"
                         />
                       </div>
                     </div>
@@ -242,11 +242,11 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                             <div 
                               key={int.id} 
                               onClick={() => setEditingIntegrationId(int.id)}
-                              className="bg-white border border-brand-border p-6 d-flex align-items-center justify-content-between group hover:border-brand-blue/30 transition-all shadow-sm cursor-pointer" style={{'borderRadius':'12px'}}
+                              className="bg-white border border-brand-border p-4 d-d-flex align-align-items-center justify-content-between group hover:border-brand-blue/30 transition-all shadow-sm cursor-pointer" style={{'borderRadius':'12px'}}
                             >
-                              <div className="d-flex align-items-center gap-5">
+                              <div className="d-d-flex align-align-items-center gap-5">
                                 <div className={cn(
-                                  "w-12 h-12 rounded-[12px] flex items-center justify-center shrink-0 transition-colors",
+                                  "w-12 h-12 style={{borderRadius: "12px"}} d-flex align-items-center justify-content-center flex-shrink-0 transition-colors",
                                   isConnected 
                                     ? int.color === 'blue' ? "bg-blue-50 text-brand-blue" : "bg-emerald-50 text-emerald-600"
                                     : "bg-brand-bg text-brand-gray"
@@ -256,7 +256,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                 <div className="space-y-1">
                                   <h5 className="fw-bold text-brand-dark leading-none" style={{'fontSize':'15px'}}>{int.label}</h5>
                                   <p className="text-xs text-brand-gray fw-medium">{int.desc}</p>
-                                  <div className="d-flex align-items-center gap-2 pt-1">
+                                  <div className="d-d-flex align-align-items-center gap-2 pt-1">
                                     {isConnected ? (
                                       <span className="px-2 py-1 rounded-2 bg-emerald-50 text-emerald-600 fw-bold text-uppercase tracking-wider border border-emerald-100/50" style={{'fontSize':'10px'}}>
                                         Connected
@@ -270,15 +270,15 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                 </div>
                               </div>
 
-                              <div className="d-flex align-items-center gap-4">
+                              <div className="d-d-flex align-align-items-center gap-4">
                                 <button 
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     toggleIntegration(int.id);
                                   }}
                                   className={cn(
-                                    "w-12 h-6 rounded-full p-1 transition-all relative flex items-center",
-                                    isConnected ? "bg-brand-blue shadow-[0_0_10px_rgba(54,73,233,0.3)]" : "bg-gray-200"
+                                    "w-12 h-6 rounded-full p-1 transition-all position-relative d-flex align-items-center",
+                                    isConnected ? "bg-brand-blue shadostyle={{width: "0_0_10px_rgba(54,73,233,0.3)"}}" : "bg-gray-200"
                                   )}
                                 >
                                   <div className={cn(
@@ -301,16 +301,16 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                       >
                         <button 
                           onClick={() => setEditingIntegrationId(null)}
-                          className="d-flex align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors mb-2"
+                          className="d-d-flex align-align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors mb-2"
                         >
                           <ChevronLeft size={16} />
                           <span className="fw-bold text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Back to Integrations</span>
                         </button>
 
-                        <div className="bg-white border border-brand-border p-6 shadow-sm" style={{'borderRadius':'12px'}}>
-                          <div className="d-flex align-items-center gap-4 mb-6 pb-6 border-bottom border-brand-border">
+                        <div className="bg-white border border-brand-border p-4 shadow-sm" style={{'borderRadius':'12px'}}>
+                          <div className="d-d-flex align-align-items-center gap-4 mb-6 pb-6 border-bottom border-brand-border">
                             <div className={cn(
-                              "w-12 h-12 rounded-[12px] flex items-center justify-center shrink-0",
+                              "w-12 h-12 style={{borderRadius: "12px"}} d-flex align-items-center justify-content-center flex-shrink-0",
                               editingIntegrationId === 'sms' ? "bg-blue-50 text-brand-blue" : editingIntegrationId === 'email' ? "bg-emerald-50 text-emerald-600" : "bg-amber-50 text-amber-600"
                               )}>
                               {React.createElement(integrationTypes.find(i => i.id === editingIntegrationId)?.icon || MessageSquare, { size: 24 })}
@@ -330,15 +330,15 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                               <>
                                 <div className="md:col-span-2 space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>URL</label>
-                                  <input type="url" defaultValue="https://api.example.com/sms/send" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
+                                  <input type="url" defaultValue="https://api.example.com/sms/send" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
                                 </div>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Connection Name</label>
-                                  <input type="text" defaultValue="Primary SMS Gateway" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
+                                  <input type="text" defaultValue="Primary SMS Gateway" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
                                 </div>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Method</label>
-                                  <select className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none">
+                                  <select className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none">
                                     <option>POST</option>
                                     <option>GET</option>
                                     <option>PUT</option>
@@ -347,18 +347,18 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                   </select>
                                 </div>
                                 <div className="md:col-span-2 space-y-3 mt-2 pt-6 border-top border-brand-border">
-                                  <div className="d-flex align-items-center justify-content-between">
+                                  <div className="d-d-flex align-align-items-center justify-content-between">
                                     <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Parameters</label>
                                     <button 
                                       onClick={addParam}
-                                      className="d-flex align-items-center gap-1.5 px-3 py-1.5 rounded-3 bg-brand-blue/10 text-brand-blue fw-bold text-uppercase tracking-widest hover:bg-brand-blue/20 transition-all" style={{'fontSize':'10px'}}
+                                      className="d-d-flex align-align-items-center gap-1.5 px-3 py-1.5 rounded-3 bg-brand-blue/10 text-brand-blue fw-bold text-uppercase tracking-widest hover:bg-brand-blue/20 transition-all" style={{'fontSize':'10px'}}
                                     >
                                       <Plus size={12} />
                                       Add
                                     </button>
                                   </div>
                                   {smsParams.length > 0 && (
-                                    <div className="d-flex align-items-center gap-2 px-1">
+                                    <div className="d-d-flex align-align-items-center gap-2 px-1">
                                       <span className="w-50 fw-bold text-brand-gray/60 text-uppercase tracking-widest" style={{'fontSize':'9px'}}>Key</span>
                                       <span className="w-50 fw-bold text-brand-gray/60 text-uppercase tracking-widest" style={{'fontSize':'9px'}}>Value</span>
                                       <span className="" style={{'width':'40px'}} />
@@ -366,24 +366,24 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                   )}
                                   <div className="space-y-2">
                                     {smsParams.map(param => (
-                                      <div key={param.id} className="d-flex align-items-center gap-2">
+                                      <div key={param.id} className="d-d-flex align-align-items-center gap-2">
                                         <input 
                                           type="text" 
                                           value={param.key} 
                                           placeholder="key"
                                           onChange={(e) => updateParam(param.id, 'key', e.target.value)}
-                                          className="w-50 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none"
+                                          className="w-50 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none"
                                         />
                                         <input 
                                           type="text" 
                                           value={param.value} 
                                           placeholder="value"
                                           onChange={(e) => updateParam(param.id, 'value', e.target.value)}
-                                          className="w-50 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none"
+                                          className="w-50 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none"
                                         />
                                         <button 
                                           onClick={() => removeParam(param.id)}
-                                          className="p-2 rounded-3 hover:bg-red-50 text-brand-gray hover:text-red-500 transition-colors flex-shrink-0"
+                                          className="p-2 rounded-3 hover:bg-red-50 text-brand-gray hover:text-red-500 transition-colors d-flex-flex-shrink-0"
                                           aria-label={`Remove parameter ${param.key}`}
                                         >
                                           <Minus size={16} />
@@ -391,7 +391,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                       </div>
                                     ))}
                                     {smsParams.length === 0 && (
-                                      <p className="text-xs text-brand-gray/60 fw-medium py-3 text-center bg-brand-bg/50 rounded-3 border border-dashed border-brand-border">
+                                      <p className="text-xs text-brand-gray/60 fw-medium py-2 text-center bg-brand-bg/50 rounded-3 border border-dashed border-brand-border">
                                         No parameters added. Click "Add" to create one.
                                       </p>
                                     )}
@@ -404,15 +404,15 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                               <>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Email Account</label>
-                                  <input type="email" defaultValue={`admin@${facility.name.toLowerCase().replace(/\s+/g, '')}.com`} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
+                                  <input type="email" defaultValue={`admin@${facility.name.toLowerCase().replace(/\s+/g, '')}.com`} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
                                 </div>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Password</label>
-                                  <input type="password" defaultValue="••••••••••••" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
+                                  <input type="password" defaultValue="••••••••••••" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
                                 </div>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Mailbox Type</label>
-                                  <select className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none">
+                                  <select className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none">
                                     <option>IMAP</option>
                                     <option>POP3</option>
                                     <option>SMTP</option>
@@ -421,14 +421,14 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                 </div>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Server IP</label>
-                                  <input type="text" defaultValue="192.168.1.100" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
+                                  <input type="text" defaultValue="192.168.1.100" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
                                 </div>
                                 <div className="space-y-2">
                                   <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Port</label>
-                                  <input type="text" defaultValue="993" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
+                                  <input type="text" defaultValue="993" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none" />
                                 </div>
-                                <div className="space-y-2 d-flex align-items-end">
-                                  <label className="d-flex align-items-center gap-3 cursor-pointer py-3">
+                                <div className="space-y-2 d-d-flex align-items-end">
+                                  <label className="d-d-flex align-align-items-center gap-3 cursor-pointer py-2">
                                     <input type="checkbox" defaultChecked={false} className="w-5 h-5 rounded-2 border-2 border-brand-border text-brand-blue accent-brand-blue cursor-pointer" />
                                     <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Authentication</span>
                                   </label>
@@ -437,7 +437,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                             )}
                           </div>
 
-                          <div className="mt-8 pt-6 border-top border-brand-border d-flex justify-content-end">
+                          <div className="mt-8 pt-6 border-top border-brand-border d-d-flex justify-content-end">
                             <button 
                               onClick={() => {
                                 if (!activeIntegrations.includes(editingIntegrationId!)) {
@@ -446,7 +446,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                                 toast.success('Integration settings updated');
                                 setEditingIntegrationId(null);
                               }}
-                              className="px-6 py-2.5 rounded-3 bg-brand-blue text-white fw-bold text-uppercase tracking-widest hover:bg-brand-blue/90 transition-all shadow-lg shadow-brand-blue/10" style={{'fontSize':'10px'}}
+                              className="px-5 py-2.5 rounded-3 bg-brand-blue text-white fw-bold text-uppercase tracking-widest hover:bg-brand-blue/90 transition-all shadow-lg shadow-brand-blue/10" style={{'fontSize':'10px'}}
                             >
                               Save {integrationTypes.find(i => i.id === editingIntegrationId)?.label.split(' ')[0]} Settings
                             </button>
@@ -461,18 +461,18 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
           </div>
 
           {/* Footer */}
-          <div className="p-6 border-top border-brand-border d-flex align-items-center justify-content-between flex-shrink-0 bg-white">
+          <div className="p-4 border-top border-brand-border d-d-flex align-align-items-center justify-content-between d-flex-flex-shrink-0 bg-white">
             <button 
               onClick={() => setIsConfirmArchiveOpen(true)}
-              className="d-flex align-items-center gap-2 px-4 py-2.5 rounded-3 border border-red-100 text-red-500 fw-bold text-uppercase tracking-widest hover:bg-red-50 transition-all" style={{'fontSize':'10px'}}
+              className="d-d-flex align-align-items-center gap-2 px-4 py-2.5 rounded-3 border border-red-100 text-red-500 fw-bold text-uppercase tracking-widest hover:bg-red-50 transition-all" style={{'fontSize':'10px'}}
             >
               <Trash2 size={14} />
               Archive Facility
             </button>
-            <div className="d-flex align-items-center gap-3">
+            <div className="d-d-flex align-align-items-center gap-3">
               <button 
                 onClick={onClose}
-                className="px-6 py-2.5 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}
+                className="px-5 py-2.5 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}
               >
                 Cancel
               </button>
@@ -481,7 +481,7 @@ export const FacilityOverlay = ({ isOpen, onClose, facility }: FacilityOverlayPr
                   toast.success(`${facility.name} updated successfully`);
                   onClose();
                 }}
-                className="d-flex align-items-center gap-2 px-8 py-2.5 rounded-3 bg-brand-dark text-white fw-bold text-uppercase tracking-widest hover:bg-black transition-all shadow-xl active:scale-95" style={{'fontSize':'10px'}}
+                className="d-d-flex align-align-items-center gap-2 px-8 py-2.5 rounded-3 bg-brand-dark text-white fw-bold text-uppercase tracking-widest hover:bg-black transition-all shadow-xl active:scale-95" style={{'fontSize':'10px'}}
               >
                 <Save size={14} />
                 Save Changes

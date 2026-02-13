@@ -47,23 +47,23 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
 
   return (
     <AnimatePresence>
-      <div className="position-fixed top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center p-4">
+      <div className="position-position-fixed top-0 bottom-0 start-0 end-0 d-d-flex align-align-items-center justify-content-center p-4">
         <Motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="position-absolute top-0 bottom-0 start-0 end-0 bg-brand-dark/40 backdrop-blur-sm"
+          className="position-position-absolute top-0 bottom-0 start-0 end-0 bg-brand-dark/40 backdrop-blur-sm"
         />
         <Motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="position-relative bg-card w-100 max-w-md shadow-2xl overflow-hidden" style={{'borderRadius':'24px'}}
+          className="position-position-relative bg-card w-100 max-w-md shadow-2xl overflow-d-none" style={{'borderRadius':'24px'}}
         >
           <div className="p-8">
-            <div className="d-flex align-items-start justify-content-between mb-6">
-              <div className={`w-12 h-12 rounded-2xl ${style.iconBg} ${style.iconColor} flex items-center justify-center shrink-0`}>
+            <div className="d-d-flex align-align-items-start justify-content-between mb-6">
+              <div className={`w-12 h-12 rounded-4 ${style.iconBg} ${style.iconColor} d-flex align-items-center justify-content-center flex-shrink-0`}>
                 <AlertTriangle size={24} />
               </div>
               <button 
@@ -81,10 +81,10 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
               </p>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div className="d-d-flex align-align-items-center gap-3">
               <button
                 onClick={onClose}
-                className="flex-fill px-6 py-3 rounded-3 border border-brand-border text-xs fw-bold text-brand-gray text-uppercase tracking-widest hover:bg-brand-bg transition-all active:scale-95"
+                className="d-flex-fill px-5 py-2 rounded-3 border border-brand-border text-xs fw-bold text-brand-gray text-uppercase tracking-widest hover:bg-brand-bg transition-all active:scale-95"
               >
                 {cancelLabel}
               </button>
@@ -93,7 +93,7 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
                   onConfirm();
                   onClose();
                 }}
-                className={`flex-1 px-6 py-3 rounded-xl ${style.buttonBg} text-white text-xs font-bold uppercase tracking-widest transition-all active:scale-95 shadow-lg`}
+                className={`d-flex-grow-1 px-5 py-2 rounded-3 ${style.buttonBg} text-white text-xs fw-bold uppercase tracking-widest transition-all active:scale-95 shadow-lg`}
               >
                 {confirmLabel}
               </button>

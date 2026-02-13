@@ -118,8 +118,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
       <div className="bg-white border border-brand-border shadow-xl p-4" style={{'borderRadius':'12px', 'minWidth':'180px'}}>
         <p className="text-xs fw-bold text-brand-dark mb-3">{label}</p>
         {payload.map((entry: any, index: number) => (
-          <div key={index} className="d-flex align-items-center justify-content-between gap-4 py-1">
-            <div className="d-flex align-items-center gap-2">
+          <div key={index} className="d-d-flex align-align-items-center justify-content-between gap-4 py-1">
+            <div className="d-d-flex align-align-items-center gap-2">
               <div className={cn("w-2 h-2 rounded-full")} style={{ backgroundColor: entry.color }} />
               <span className="fw-medium text-brand-gray text-capitalize" style={{'fontSize':'11px'}}>{entry.name}</span>
             </div>
@@ -155,9 +155,9 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
       {/* Score Overview Row */}
       <div className="d-grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Overall Score Gauge */}
-        <div className="bg-white border border-brand-border p-6 d-flex flex-column align-items-center justify-content-center position-relative" style={{'borderRadius':'12px'}}>
+        <div className="bg-white border border-brand-border p-4 d-d-flex d-flex-column align-align-items-center justify-content-center position-position-relative" style={{'borderRadius':'12px'}}>
           <p className="fw-bold text-brand-gray text-uppercase tracking-widest mb-3" style={{'fontSize':'10px'}}>Overall Sentiment</p>
-          <div className="position-relative" style={{'width':'130px', 'height':'100px'}}>
+          <div className="position-position-relative" style={{'width':'130px', 'height':'100px'}}>
             <svg viewBox="0 0 120 100" className="w-100 h-100">
               {/* Background arc */}
               <path
@@ -180,13 +180,13 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
                 transition={{ duration: 1.2, ease: 'easeOut' }}
               />
             </svg>
-            <div className="position-absolute top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center pt-2">
+            <div className="position-position-absolute top-0 bottom-0 start-0 end-0 d-d-flex d-flex-column align-align-items-center justify-content-center pt-2">
               <span className={cn("text-3xl font-black", getScoreColor(data.overallScore))}>{data.overallScore}</span>
               <span className="text-brand-gray fw-medium" style={{'fontSize':'10px'}}>/100</span>
             </div>
           </div>
           <div className={cn(
-            "flex items-center gap-1 mt-2 px-2.5 py-1 rounded-full text-[10px] font-bold",
+            "d-flex align-items-center gap-1 mt-2 px-2.5 py-1 rounded-full style={{color: "10px"}} fw-bold",
             isUp ? "bg-emerald-50 text-emerald-600" : "bg-red-50 text-red-500"
           )}>
             {isUp ? <ArrowUpRight size={10} /> : <ArrowDownRight size={10} />}
@@ -195,7 +195,7 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
         </div>
 
         {/* Key Metrics */}
-        <div className="bg-white border border-brand-border p-6 space-y-4" style={{'borderRadius':'12px'}}>
+        <div className="bg-white border border-brand-border p-4 space-y-4" style={{'borderRadius':'12px'}}>
           <p className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Key Metrics</p>
           <div className="space-y-3">
             {[
@@ -203,7 +203,7 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
               { label: 'Response Rate', value: `${data.responseRate}%`, sub: 'vs 58% avg' },
               { label: 'Net Promoter Score', value: `+${data.nps}`, sub: data.nps >= 50 ? 'Excellent' : data.nps >= 30 ? 'Good' : 'Needs improvement' },
             ].map((m, i) => (
-              <div key={i} className="d-flex align-items-center justify-content-between py-2 border-bottom border-brand-border/50 last:border-0">
+              <div key={i} className="d-d-flex align-align-items-center justify-content-between py-2 border-bottom border-brand-border/50 last:border-0">
                 <div>
                   <p className="text-xs fw-bold text-brand-dark">{m.label}</p>
                   <p className="text-brand-gray" style={{'fontSize':'10px'}}>{m.sub}</p>
@@ -215,10 +215,10 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
         </div>
 
         {/* Distribution Donut */}
-        <div className="bg-white border border-brand-border p-6" style={{'borderRadius':'12px'}}>
+        <div className="bg-white border border-brand-border p-4" style={{'borderRadius':'12px'}}>
           <p className="fw-bold text-brand-gray text-uppercase tracking-widest mb-3" style={{'fontSize':'10px'}}>Sentiment Split</p>
-          <div className="d-flex align-items-center justify-content-center">
-            <div className="position-relative" style={{'width':'120px', 'height':'120px'}}>
+          <div className="d-d-flex align-align-items-center justify-content-center">
+            <div className="position-position-relative" style={{'width':'120px', 'height':'120px'}}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -239,15 +239,15 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>
-              <div className="position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
+              <div className="position-position-absolute top-0 bottom-0 start-0 end-0 d-d-flex align-align-items-center justify-content-center">
                 <Heart size={18} className="text-brand-blue" />
               </div>
             </div>
           </div>
           <div className="space-y-2 mt-3">
             {data.distribution.map((d, i) => (
-              <div key={i} className="d-flex align-items-center justify-content-between">
-                <div className="d-flex align-items-center gap-2">
+              <div key={i} className="d-d-flex align-align-items-center justify-content-between">
+                <div className="d-d-flex align-align-items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-circle" style={{ backgroundColor: d.color }} />
                   <span className="fw-medium text-brand-gray" style={{'fontSize':'11px'}}>{d.name}</span>
                 </div>
@@ -259,19 +259,19 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
       </div>
 
       {/* Trend Chart */}
-      <div className="bg-white border border-brand-border p-6" style={{'borderRadius':'12px'}}>
-        <div className="d-flex align-items-center justify-content-between mb-6">
+      <div className="bg-white border border-brand-border p-4" style={{'borderRadius':'12px'}}>
+        <div className="d-d-flex align-align-items-center justify-content-between mb-6">
           <div>
             <h4 className="text-sm fw-bold text-brand-dark">Sentiment Trend</h4>
             <p className="text-brand-gray mt-0.5" style={{'fontSize':'11px'}}>Monthly sentiment breakdown over the last 6 months</p>
           </div>
-          <div className="d-flex align-items-center gap-4">
+          <div className="d-d-flex align-align-items-center gap-4">
             {[
               { label: 'Positive', color: '#10b981' },
               { label: 'Neutral', color: '#f59e0b' },
               { label: 'Negative', color: '#ef4444' },
             ].map((l, i) => (
-              <div key={i} className="d-flex align-items-center gap-1.5">
+              <div key={i} className="d-d-flex align-align-items-center gap-1.5">
                 <div className="w-2 h-2 rounded-circle" style={{ backgroundColor: l.color }} />
                 <span className="fw-bold text-brand-gray text-uppercase tracking-wider" style={{'fontSize':'10px'}}>{l.label}</span>
               </div>
@@ -308,10 +308,10 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
       </div>
 
       {/* Category Breakdown */}
-      <div className="bg-white border border-brand-border p-6" style={{'borderRadius':'12px'}}>
+      <div className="bg-white border border-brand-border p-4" style={{'borderRadius':'12px'}}>
         <button
           onClick={() => setExpandedCategories(!expandedCategories)}
-          className="w-100 d-flex align-items-center justify-content-between mb-4"
+          className="w-100 d-d-flex align-align-items-center justify-content-between mb-4"
         >
           <div>
             <h4 className="text-sm fw-bold text-brand-dark text-start">Category Breakdown</h4>
@@ -323,7 +323,7 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
           <Motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
-            className="space-y-3 overflow-hidden"
+            className="space-y-3 overflow-d-none"
           >
             {data.categories
               .sort((a, b) => b.score - a.score)
@@ -335,26 +335,26 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
-                    className="d-flex align-items-center gap-4 group"
+                    className="d-d-flex align-align-items-center gap-4 group"
                   >
-                    <div className="w-8 h-8 rounded-3 bg-brand-bg d-flex align-items-center justify-content-center text-brand-gray flex-shrink-0 group-hover:text-brand-blue transition-colors">
+                    <div className="w-8 h-8 rounded-3 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-gray d-flex-flex-shrink-0 group-hover:text-brand-blue transition-colors">
                       <IconComp size={16} />
                     </div>
-                    <div className="flex-fill min-w-0">
-                      <div className="d-flex align-items-center justify-content-between mb-1.5">
+                    <div className="d-flex-fill min-w-0">
+                      <div className="d-d-flex align-align-items-center justify-content-between mb-1.5">
                         <span className="text-xs fw-bold text-brand-dark truncate">{cat.name}</span>
-                        <div className="d-flex align-items-center gap-2">
+                        <div className="d-d-flex align-align-items-center gap-2">
                           <span className={cn(
-                            "text-[10px] font-bold flex items-center gap-0.5",
+                            "style={{color: "10px"}} fw-bold d-flex align-items-center gap-0.5",
                             cat.change > 0 ? "text-emerald-600" : cat.change < 0 ? "text-red-500" : "text-brand-gray"
                           )}>
                             {cat.change > 0 ? <TrendingUp size={10} /> : cat.change < 0 ? <TrendingDown size={10} /> : <Minus size={10} />}
                             {cat.change > 0 ? '+' : ''}{cat.change}%
                           </span>
-                          <span className={cn("text-sm font-black min-w-[32px] text-right", getScoreColor(cat.score))}>{cat.score}</span>
+                          <span className={cn("text-sm font-black min-style={{width: "32px"}} text-right", getScoreColor(cat.score))}>{cat.score}</span>
                         </div>
                       </div>
-                      <div className="w-100 h-2 bg-light rounded-circle overflow-hidden">
+                      <div className="w-100 h-2 bg-light rounded-circle overflow-d-none">
                         <Motion.div
                           className="h-100 rounded-circle"
                           style={{ backgroundColor: getBarColor(cat.score) }}
@@ -373,13 +373,13 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
       </div>
 
       {/* Recent Feedback */}
-      <div className="bg-white border border-brand-border p-6" style={{'borderRadius':'12px'}}>
-        <div className="d-flex align-items-center justify-content-between mb-4">
+      <div className="bg-white border border-brand-border p-4" style={{'borderRadius':'12px'}}>
+        <div className="d-d-flex align-align-items-center justify-content-between mb-4">
           <div>
             <h4 className="text-sm fw-bold text-brand-dark">Recent Feedback</h4>
             <p className="text-brand-gray mt-0.5" style={{'fontSize':'11px'}}>Latest patient comments with AI-detected sentiment</p>
           </div>
-          <div className="d-flex align-items-center gap-1.5">
+          <div className="d-d-flex align-align-items-center gap-1.5">
             {(['all', 'positive', 'neutral', 'negative'] as const).map((f) => {
               const colors: Record<string, string> = {
                 all: 'bg-brand-bg text-brand-dark border-brand-border',
@@ -398,7 +398,7 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
                   key={f}
                   onClick={() => setFeedbackFilter(f)}
                   className={cn(
-                    "px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border transition-all",
+                    "px-2.5 py-1 rounded-3 style={{color: "10px"}} fw-bold uppercase tracking-wider border transition-all",
                     feedbackFilter === f ? activeColors[f] : colors[f]
                   )}
                 >
@@ -419,16 +419,16 @@ export const SentimentAnalysis = ({ facility }: SentimentAnalysisProps) => {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className={cn("border rounded-[12px] p-4 transition-all", s.border, "hover:shadow-sm")}
+                className={cn("border style={{borderRadius: "12px"}} p-4 transition-all", s.border, "hover:shadow-sm")}
               >
-                <div className="d-flex align-items-start gap-3">
-                  <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5", s.bg)}>
+                <div className="d-d-flex align-align-items-start gap-3">
+                  <div className={cn("w-8 h-8 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 mt-0.5", s.bg)}>
                     <SIcon size={14} className={s.text} />
                   </div>
-                  <div className="flex-fill min-w-0">
+                  <div className="d-flex-fill min-w-0">
                     <p className="text-xs text-brand-dark leading-relaxed">{fb.text}</p>
-                    <div className="d-flex align-items-center flex-wrap gap-2 mt-2.5">
-                      <span className={cn("px-2 py-0.5 rounded-md text-[9px] font-bold uppercase tracking-wider", s.bg, s.text)}>
+                    <div className="d-d-flex align-align-items-center d-flex-wrap gap-2 mt-2.5">
+                      <span className={cn("px-2 py-0.5 rounded-md style={{color: "9px"}} fw-bold uppercase tracking-wider", s.bg, s.text)}>
                         {fb.sentiment}
                       </span>
                       <span className="px-2 py-0.5 rounded-2 bg-brand-bg text-brand-gray fw-bold text-uppercase tracking-wider border border-brand-border/50" style={{'fontSize':'9px'}}>

@@ -31,7 +31,7 @@ export const FormsGuide = ({ onClose }: FormsGuideProps) => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0, y: -20 },
+    d-none: { opacity: 0, y: -20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -43,21 +43,21 @@ export const FormsGuide = ({ onClose }: FormsGuideProps) => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -10 },
+    d-none: { opacity: 0, x: -10 },
     visible: { opacity: 1, x: 0 },
   };
 
   return (
     <Motion.div
       variants={containerVariants}
-      initial="hidden"
+      initial="d-none"
       animate="visible"
-      className="bg-white border border-brand-border overflow-hidden mb-8 position-relative group" style={{'borderRadius':'24px'}}
+      className="bg-white border border-brand-border overflow-d-none mb-8 position-position-relative group" style={{'borderRadius':'24px'}}
     >
-      <div className="p-6 lg:p-8">
-        <div className="d-flex align-items-start justify-content-between mb-8">
-          <div className="d-flex align-items-center gap-4">
-            <div className="w-12 h-12 bg-brand-bg rounded-3 d-flex align-items-center justify-content-center text-brand-blue">
+      <div className="p-4 lg:p-8">
+        <div className="d-d-flex align-align-items-start justify-content-between mb-8">
+          <div className="d-d-flex align-align-items-center gap-4">
+            <div className="w-12 h-12 bg-brand-bg rounded-3 d-d-flex align-align-items-center justify-content-center text-brand-blue">
               <HelpCircle size={24} />
             </div>
             <div>
@@ -73,17 +73,17 @@ export const FormsGuide = ({ onClose }: FormsGuideProps) => {
           </button>
         </div>
 
-        <div className="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 position-relative">
+        <div className="d-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 position-position-relative">
           {steps.map((step, index) => (
             <Motion.div
               key={step.id}
               variants={itemVariants}
-              className="d-flex align-items-start gap-4 position-relative group/step"
+              className="d-d-flex align-align-items-start gap-4 position-position-relative group/step"
             >
-              <div className="flex-shrink-0 w-8 h-8 bg-brand-blue text-white rounded-circle d-flex align-items-center justify-content-center fw-bold text-sm shadow-lg shadow-brand-blue/20 group-hover/step:scale-110 transition-transform">
+              <div className="d-flex-flex-shrink-0 w-8 h-8 bg-brand-blue text-white rounded-circle d-d-flex align-align-items-center justify-content-center fw-bold text-sm shadow-lg shadow-brand-blue/20 group-hover/step:scale-110 transition-transform">
                 {step.id}
               </div>
-              <div className="flex-fill pr-4">
+              <div className="d-flex-fill pr-4">
                 <h4 className="fw-bold text-brand-dark text-sm mb-1 group-hover/step:text-brand-blue transition-colors">
                   {step.title}
                 </h4>
@@ -92,7 +92,7 @@ export const FormsGuide = ({ onClose }: FormsGuideProps) => {
                 </p>
               </div>
               {index < steps.length - 1 && (
-                <div className="d-none lg:flex align-items-center position-absolute end-0 top-1 text-brand-border">
+                <div className="d-none lg:d-flex align-align-items-center position-position-absolute end-0 top-1 text-brand-border">
                   <ChevronRight size={20} />
                 </div>
               )}
@@ -101,7 +101,7 @@ export const FormsGuide = ({ onClose }: FormsGuideProps) => {
         </div>
       </div>
 
-      <div className="bg-brand-bg/30 px-6 lg:px-8 py-4 border-top border-brand-border d-flex align-items-center gap-3">
+      <div className="bg-brand-bg/30 px-5 lg:px-8 py-4 border-top border-brand-border d-d-flex align-align-items-center gap-3">
         <div className="text-brand-blue">
           <Lightbulb size={18} fill="currentColor" fillOpacity={0.2} />
         </div>

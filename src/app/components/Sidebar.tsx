@@ -42,11 +42,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onLog
   ];
 
   return (
-    <aside className="bg-card border-end border-brand-border vh-100 d-flex flex-column" style={{'width':'280px'}}>
+    <aside className="bg-card border-end border-brand-border vh-100 d-d-flex d-flex-column" style={{'width':'280px'}}>
       {/* Logo */}
-      <div className="p-6 border-bottom border-brand-border d-flex align-items-center gap-3">
+      <div className="p-4 border-bottom border-brand-border d-d-flex align-align-items-center gap-3">
         <div className={cn(
-          "w-8 h-8 rounded-lg flex items-center justify-center text-white",
+          "w-8 h-8 rounded-3 d-flex align-items-center justify-content-center text-white",
           "bg-brand-blue [data-theme='rainbow']_&:bg-gradient-to-tr [data-theme='rainbow']_&:from-[#FFB800] [data-theme='rainbow']_&:via-[#F20000] [data-theme='rainbow']_&:to-[#0078C1]"
         )}>
           <Sparkles size={18} fill="white" />
@@ -55,13 +55,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onLog
       </div>
 
       {/* Navigation */}
-      <nav className="flex-fill px-4 py-6 space-y-1 overflow-y-auto">
+      <nav className="d-flex-fill px-4 py-6 space-y-1 overflow-y-auto">
         {navItems.map((item) => (
           <button
             key={item.id}
             onClick={() => setActiveTab(item.id)}
             className={cn(
-              "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group relative",
+              "w-100 d-flex align-items-center gap-3 px-4 py-2 rounded-3 transition-all duration-200 group position-relative",
               item.className,
               activeTab === item.id 
                 ? "bg-brand-blue text-white shadow-lg shadow-brand-blue/20" 
@@ -89,7 +89,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onLog
             key={item.id}
             onClick={() => setActiveTab(item.id)}
             className={cn(
-              "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group",
+              "w-100 d-flex align-items-center gap-3 px-4 py-2 rounded-3 transition-all duration-200 group",
               activeTab === item.id 
                 ? "bg-brand-blue text-white shadow-lg shadow-brand-blue/20" 
                 : "text-brand-dark hover:bg-brand-bg"
@@ -103,20 +103,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onLog
 
       {/* User Profile */}
       <div className="p-4 border-top border-brand-border space-y-2">
-        <div className="w-100 d-flex align-items-center gap-3 p-2 bg-brand-bg rounded-3">
+        <div className="w-100 d-d-flex align-align-items-center gap-3 p-2 bg-brand-bg rounded-3">
           <img 
             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" 
             alt="User" 
             className="w-8 h-8 rounded-circle object-fit-cover"
           />
-          <div className="flex-fill text-start">
+          <div className="d-flex-fill text-start">
             <p className="text-sm fw-semibold text-brand-dark">Robert Fox</p>
             <p className="text-brand-gray" style={{'fontSize':'10px'}}>System Admin</p>
           </div>
         </div>
         <button 
           onClick={onLogout}
-          className="w-100 d-flex align-items-center gap-3 px-4 py-2.5 rounded-3 text-brand-gray hover:text-red-500 hover:bg-red-50 transition-all duration-200 group"
+          className="w-100 d-d-flex align-align-items-center gap-3 px-4 py-2.5 rounded-3 text-brand-gray hover:text-red-500 hover:bg-red-50 transition-all duration-200 group"
         >
           <LogOut size={18} className="group-hover:translate-x-0.5 transition-transform" />
           <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'11px'}}>Sign Out</span>

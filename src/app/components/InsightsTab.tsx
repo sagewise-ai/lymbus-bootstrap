@@ -79,13 +79,13 @@ const StatCard = ({ title, value, change, positive = true, icon: Icon, colorClas
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className={`bg-card p-6 rounded-[20px] border border-brand-border transition-all cursor-pointer relative hover:shadow-lg hover:border-brand-blue/20 ${rainbowClasses[index % 4]}`}
+      className={`bg-card p-4 style={{borderRadius: "20px"}} border border-brand-border transition-all cursor-pointer position-relative hover:shadow-lg hover:border-brand-blue/20 ${rainbowClasses[index % 4]}`}
     >
-      <div className="d-flex align-items-center gap-2 mb-4">
+      <div className="d-d-flex align-align-items-center gap-2 mb-4">
         <div className={colorClass}>
           <Icon size={16} />
         </div>
-        <div className="d-flex align-items-center gap-1.5 group/info position-relative">
+        <div className="d-d-flex align-align-items-center gap-1.5 group/info position-position-relative">
           <h4 className="text-xs fw-bold text-brand-dark text-uppercase tracking-wider">{title}</h4>
           <div 
             className="text-brand-gray/40 hover:text-brand-blue transition-colors cursor-help"
@@ -101,23 +101,23 @@ const StatCard = ({ title, value, change, positive = true, icon: Icon, colorClas
                 initial={{ opacity: 0, y: 5, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 5, scale: 0.95 }}
-                className="position-absolute bottom-full start-0 mb-2 w-48 p-3 bg-brand-dark text-white leading-relaxed rounded-3 shadow-xl z-50 pe-none" style={{'fontSize':'10px'}}
+                className="position-position-absolute bottom-full start-0 mb-2 w-48 p-3 bg-brand-dark text-white leading-relaxed rounded-3 shadow-xl z-50 pe-none" style={{'fontSize':'10px'}}
               >
                 Metric details and analysis for {title}.
-                <div className="position-absolute top-full left-4 border-8 border-transparent border-t-brand-dark" />
+                <div className="position-position-absolute top-full left-4 border-8 border-transparent border-t-brand-dark" />
               </Motion.div>
             )}
           </AnimatePresence>
         </div>
       </div>
       <p className="fw-bold text-brand-dark leading-tight mb-2" style={{'fontSize':'32px'}}>{value}</p>
-      <div className="d-flex align-items-center gap-1">
+      <div className="d-d-flex align-align-items-center gap-1">
         {change.startsWith('-') ? (
           <ArrowDownRight size={14} className={positive ? 'text-green-500' : 'text-red-500'} />
         ) : (
           <ArrowUpRight size={14} className={positive ? 'text-green-500' : 'text-red-500'} />
         )}
-        <span className={`text-[12px] font-bold ${positive ? 'text-green-500' : 'text-red-500'}`}>{change}</span>
+        <span className={`style={{color: "12px"}} fw-bold ${positive ? 'text-green-500' : 'text-red-500'}`}>{change}</span>
         <span className="text-brand-gray ml-1" style={{'fontSize':'12px'}}>vs last month</span>
       </div>
     </Motion.div>
@@ -140,27 +140,27 @@ const ChartSection = ({
   info?: string,
   legendItems?: LegendItem[]
 }) => title === "Channel Comparison" ? null : (
-  <div className="bg-card p-6 lg:p-8 border border-brand-border h-100 d-flex flex-column min-w-0" style={{'borderRadius':'24px'}}>
-    <div className="d-flex align-items-center gap-2 mb-6 flex-shrink-0">
+  <div className="bg-card p-4 lg:p-8 border border-brand-border h-100 d-d-flex d-flex-column min-w-0" style={{'borderRadius':'24px'}}>
+    <div className="d-d-flex align-align-items-center gap-2 mb-6 d-flex-flex-shrink-0">
       <h3 className="text-lg fw-bold text-brand-dark">{title}</h3>
       {info && (
-        <div className="group position-relative">
+        <div className="group position-position-relative">
            <Info size={14} className="text-brand-gray/40 cursor-help hover:text-brand-blue transition-colors" />
-           <div className="position-absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-brand-dark text-white rounded-3 opacity-0 group-hover:opacity-100 transition-opacity pe-none z-10" style={{'fontSize':'10px'}}>
+           <div className="position-position-absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-brand-dark text-white rounded-3 opacity-0 group-hover:opacity-100 transition-opacity pe-none z-10" style={{'fontSize':'10px'}}>
              {info}
            </div>
         </div>
       )}
     </div>
     
-    <div className="flex-fill w-100 position-relative min-h-0">
+    <div className="d-flex-fill w-100 position-position-relative min-h-0">
       {children}
     </div>
 
     {legendItems && (
-      <div className="d-flex flex-wrap align-items-center justify-content-center gap-6 mt-8 pt-6 border-top border-brand-border/50 flex-shrink-0">
+      <div className="d-d-flex d-flex-wrap align-align-items-center justify-content-center gap-6 mt-8 pt-6 border-top border-brand-border/50 d-flex-flex-shrink-0">
         {legendItems.map((item) => (
-          <div key={item.label} className="d-flex align-items-center gap-2">
+          <div key={item.label} className="d-d-flex align-align-items-center gap-2">
             <div className="w-2.5 h-2.5 rounded-circle shadow-sm" style={{ backgroundColor: item.color }} />
             <span className="fw-bold text-brand-dark text-uppercase tracking-widest" style={{'fontSize':'10px'}}>{item.label}</span>
           </div>
@@ -186,16 +186,16 @@ export const InsightsTab = () => {
     <div className="space-y-8 pb-8">
       
       {/* View Switcher */}
-      <div className="d-flex flex-column md:flex-row md:items-center justify-content-between gap-6">
+      <div className="d-d-flex d-flex-column md:d-flex-row md:align-items-center justify-content-between gap-6">
         <div>
           <h2 className="text-2xl fw-bold text-brand-dark">Performance Insights</h2>
           <p className="text-sm text-brand-gray mt-1">Real-time analytics for your engagement activities.</p>
         </div>
-        <div className="bg-white p-1 rounded-2xl border border-brand-border d-flex gap-1 shadow-sm align-self-start md:self-auto">
+        <div className="bg-white p-1 rounded-4 border border-brand-border d-d-flex gap-1 shadow-sm align-self-start md:self-auto">
           <button 
             onClick={() => setActiveTab('campaigns')} 
             className={cn(
-              "px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300",
+              "px-8 py-2.5 rounded-3 text-sm fw-bold transition-all duration-300",
               activeTab === 'campaigns' 
                 ? "bg-brand-blue text-white shadow-lg shadow-brand-blue/20" 
                 : "text-brand-gray hover:bg-brand-bg hover:text-brand-dark"
@@ -206,7 +206,7 @@ export const InsightsTab = () => {
           <button 
             onClick={() => setActiveTab('forms')} 
             className={cn(
-              "px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300",
+              "px-8 py-2.5 rounded-3 text-sm fw-bold transition-all duration-300",
               activeTab === 'forms' 
                 ? "bg-brand-blue text-white shadow-lg shadow-brand-blue/20" 
                 : "text-brand-gray hover:bg-brand-bg hover:text-brand-dark"
@@ -299,8 +299,8 @@ export const InsightsTab = () => {
               title="Survey Status Distribution" 
               info="Current status of all active surveys"
             >
-              <div className="d-flex align-items-center justify-content-center h-100">
-                <div className="h-100 w-100 d-flex flex-column sm:flex-row align-items-center justify-content-center gap-8">
+              <div className="d-d-flex align-align-items-center justify-content-center h-100">
+                <div className="h-100 w-100 d-d-flex d-flex-column sm:d-flex-row align-align-items-center justify-content-center gap-8">
                   <div className="w-100 sm:w-1/2" style={{'height':'250px'}}>
                     {isMounted && (
                       <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={100}>
@@ -323,11 +323,11 @@ export const InsightsTab = () => {
                       </ResponsiveContainer>
                     )}
                   </div>
-                  <div className="d-flex flex-column justify-content-center gap-6 pr-4">
+                  <div className="d-d-flex d-flex-column justify-content-center gap-6 pr-4">
                     {surveyStatusData.map((item) => (
-                      <div key={item.name} className="d-flex align-items-center gap-4">
-                        <div className="w-3 h-3 rounded-circle flex-shrink-0" style={{ backgroundColor: item.color }} />
-                        <div className="d-flex flex-column">
+                      <div key={item.name} className="d-d-flex align-align-items-center gap-4">
+                        <div className="w-3 h-3 rounded-circle d-flex-flex-shrink-0" style={{ backgroundColor: item.color }} />
+                        <div className="d-d-flex d-flex-column">
                           <span className="text-2xl fw-bold text-brand-dark leading-none">{item.value}%</span>
                           <span className="fw-bold text-brand-gray text-uppercase tracking-wider mt-1" style={{'fontSize':'10px'}}>{item.name}</span>
                         </div>
@@ -379,7 +379,7 @@ export const InsightsTab = () => {
           {/* Bottom Row */}
           <div className="d-grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-card p-8 border border-brand-border h-100 lg:col-span-2" style={{'borderRadius':'24px'}}>
-              <div className="d-flex align-items-center gap-2 mb-8">
+              <div className="d-d-flex align-align-items-center gap-2 mb-8">
                   <h3 className="text-lg fw-bold text-brand-dark">Top Performing Campaigns</h3>
                   <Info size={14} className="text-brand-gray/40" />
               </div>
@@ -388,13 +388,13 @@ export const InsightsTab = () => {
                   { name: 'Appointment Reminder SMS', type: 'SMS', conversion: '91.5%', color: 'text-brand-blue' },
                   { name: 'Patient Follow-up Campaign', type: 'EMAIL', conversion: '9.9%', color: 'text-brand-blue' },
                 ].map((camp, i) => (
-                  <div key={i} className="d-flex align-items-center justify-content-between p-5 bg-brand-bg/30 border border-brand-border hover:border-brand-blue/30 transition-all cursor-pointer group" style={{'borderRadius':'20px'}}>
+                  <div key={i} className="d-d-flex align-align-items-center justify-content-between p-5 bg-brand-bg/30 border border-brand-border hover:border-brand-blue/30 transition-all cursor-pointer group" style={{'borderRadius':'20px'}}>
                       <div>
                         <h4 className="text-sm fw-bold text-brand-dark group-hover:text-brand-blue transition-colors">{camp.name}</h4>
-                        <span className="fw-bold text-brand-gray text-uppercase tracking-widest mt-1 d-block" style={{'fontSize':'10px'}}>{camp.type}</span>
+                        <span className="fw-bold text-brand-gray text-uppercase tracking-widest mt-1 d-d-block" style={{'fontSize':'10px'}}>{camp.type}</span>
                       </div>
                       <div className="text-end">
-                        <span className={cn("text-xl font-bold", camp.color)}>{camp.conversion}</span>
+                        <span className={cn("text-xl fw-bold", camp.color)}>{camp.conversion}</span>
                         <p className="text-brand-gray fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>Conversion</p>
                       </div>
                   </div>
@@ -497,7 +497,7 @@ export const InsightsTab = () => {
                 title="Channel Distribution" 
                 info="Distribution of responses by communication channel"
               >
-                <div className="d-flex flex-column align-items-center justify-content-center h-100">
+                <div className="d-d-flex d-flex-column align-align-items-center justify-content-center h-100">
                     <div className="h-100 w-100">
                       {isMounted && (
                       <ResponsiveContainer width="100%" height={300} minWidth={0} minHeight={100}>
@@ -527,8 +527,8 @@ export const InsightsTab = () => {
 
           {/* Insight Cards */}
           <div className="d-grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-brand-border p-8 d-flex align-items-start gap-6 hover:shadow-xl hover:border-brand-blue/30 transition-all" style={{'borderRadius':'24px'}}>
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-brand-blue d-flex align-items-center justify-content-center flex-shrink-0">
+            <div className="bg-white border border-brand-border p-8 d-d-flex align-align-items-start gap-6 hover:shadow-xl hover:border-brand-blue/30 transition-all" style={{'borderRadius':'24px'}}>
+              <div className="w-14 h-14 rounded-4 bg-blue-50 text-brand-blue d-d-flex align-align-items-center justify-content-center d-flex-flex-shrink-0">
                 <TrendingUp size={28} />
               </div>
               <div>
@@ -537,8 +537,8 @@ export const InsightsTab = () => {
               </div>
             </div>
             
-            <div className="bg-white border border-brand-border p-8 d-flex align-items-start gap-6 hover:shadow-xl hover:border-brand-blue/30 transition-all" style={{'borderRadius':'24px'}}>
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 d-flex align-items-center justify-content-center flex-shrink-0">
+            <div className="bg-white border border-brand-border p-8 d-d-flex align-align-items-start gap-6 hover:shadow-xl hover:border-brand-blue/30 transition-all" style={{'borderRadius':'24px'}}>
+              <div className="w-14 h-14 rounded-4 bg-emerald-50 text-emerald-600 d-d-flex align-align-items-center justify-content-center d-flex-flex-shrink-0">
                 <MessageSquare size={28} />
               </div>
               <div>
@@ -547,8 +547,8 @@ export const InsightsTab = () => {
               </div>
             </div>
 
-            <div className="bg-white border border-brand-border p-8 d-flex align-items-start gap-6 hover:shadow-xl hover:border-brand-blue/30 transition-all" style={{'borderRadius':'24px'}}>
-              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 d-flex align-items-center justify-content-center flex-shrink-0">
+            <div className="bg-white border border-brand-border p-8 d-d-flex align-align-items-start gap-6 hover:shadow-xl hover:border-brand-blue/30 transition-all" style={{'borderRadius':'24px'}}>
+              <div className="w-14 h-14 rounded-4 bg-indigo-50 text-indigo-600 d-d-flex align-align-items-center justify-content-center d-flex-flex-shrink-0">
                 <Clock size={28} />
               </div>
               <div>

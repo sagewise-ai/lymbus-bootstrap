@@ -214,7 +214,7 @@ export const LymbusModule = () => {
   ];
 
   return (
-    <div className="d-flex lg:h-[calc(100vh-80px)] w-100 overflow-hidden" style={{'height':'calc(100vh-140px)'}}>
+    <div className="d-d-flex lg:style={{height: "calc(100vh-80px)"}} w-100 overflow-d-none" style={{'height':'calc(100vh-140px)'}}>
       {/* Session History Sidebar */}
       <AnimatePresence initial={false}>
         {showHistory && (
@@ -222,31 +222,31 @@ export const LymbusModule = () => {
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: 280, opacity: 1 }}
             exit={{ width: 0, opacity: 0 }}
-            className="bg-card border-end border-brand-border d-flex flex-column flex-shrink-0"
+            className="bg-card border-end border-brand-border d-d-flex d-flex-column d-flex-flex-shrink-0"
           >
-            <div className="p-6 border-bottom border-brand-border">
+            <div className="p-4 border-bottom border-brand-border">
               <button 
                 onClick={handleNewChat}
-                className="w-100 d-flex align-items-center justify-content-center gap-2 bg-brand-bg hover:bg-brand-blue/5 text-brand-blue border border-brand-blue/20 p-3 rounded-3 fw-bold transition-all"
+                className="w-100 d-d-flex align-align-items-center justify-content-center gap-2 bg-brand-bg hover:bg-brand-blue/5 text-brand-blue border border-brand-blue/20 p-3 rounded-3 fw-bold transition-all"
               >
                 <Plus size={18} /> New Analysis
               </button>
             </div>
             
-            <div className="flex-fill overflow-y-auto p-3 space-y-1">
+            <div className="d-flex-fill overflow-y-auto p-3 space-y-1">
               <h3 className="px-3 fw-bold text-brand-gray/50 text-uppercase tracking-widest mb-2 mt-2" style={{'fontSize':'10px'}}>Recent Sessions</h3>
               {sessions.map(s => (
                 <button
                   key={s.id}
                   onClick={() => setActiveSessionId(s.id)}
-                  className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all text-left group ${
+                  className={`w-100 d-flex align-items-center gap-3 p-3 rounded-3 transition-all text-start group ${
                     activeSessionId === s.id ? 'bg-brand-blue text-white shadow-lg shadow-brand-blue/20' : 'hover:bg-brand-bg text-brand-dark'
                   }`}
                 >
                   <MessageCircle size={18} className={activeSessionId === s.id ? 'text-white' : 'text-brand-blue'} />
-                  <div className="flex-fill truncate">
+                  <div className="d-flex-fill truncate">
                     <p className="text-xs fw-bold truncate">{s.title}</p>
-                    <p className={`text-[10px] ${activeSessionId === s.id ? 'text-white/60' : 'text-brand-gray/60'}`}>
+                    <p className={`style={{color: "10px"}} ${activeSessionId === s.id ? 'text-white/60' : 'text-brand-gray/60'}`}>
                       {s.lastUpdate.toLocaleDateString()}
                     </p>
                   </div>
@@ -258,26 +258,26 @@ export const LymbusModule = () => {
       </AnimatePresence>
 
       {/* Main Chat Content */}
-      <div className="flex-fill d-flex flex-column min-w-0 bg-brand-bg/10 position-relative">
+      <div className="d-flex-fill d-d-flex d-flex-column min-w-0 bg-brand-bg/10 position-position-relative">
         {/* Toggle History Sidebar */}
         <button 
           onClick={() => setShowHistory(!showHistory)}
-          className="position-absolute left-4 top-4 z-10 w-10 h-10 bg-card border border-brand-border rounded-3 d-flex align-items-center justify-content-center text-brand-gray hover:text-brand-blue transition-colors shadow-sm"
+          className="position-position-absolute left-4 top-4 z-10 w-10 h-10 bg-card border border-brand-border rounded-3 d-d-flex align-align-items-center justify-content-center text-brand-gray hover:text-brand-blue transition-colors shadow-sm"
         >
           {showHistory ? <ChevronLeft size={20} /> : <History size={20} />}
         </button>
 
-        <div className="d-flex flex-column h-100 max-w-4xl mx-auto w-100 p-4 lg:p-6">
+        <div className="d-d-flex d-flex-column h-100 max-w-4xl mx-auto w-100 p-4 lg:p-4">
           {/* Header Info */}
-          <div className="d-flex align-items-center justify-content-between mb-4 pl-12 lg:pl-14">
+          <div className="d-d-flex align-align-items-center justify-content-between mb-4 pl-12 lg:pl-14">
             <div>
-              <h2 className="text-xl fw-bold text-brand-dark d-flex align-items-center gap-2">
+              <h2 className="text-xl fw-bold text-brand-dark d-d-flex align-align-items-center gap-2">
                 <Sparkles size={18} className="text-brand-blue" />
                 {activeSession.title}
               </h2>
             </div>
-            <div className="d-flex align-items-center gap-2">
-              <div className="d-none sm:flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-circle fw-bold border border-emerald-100 text-uppercase tracking-wider" style={{'fontSize':'10px'}}>
+            <div className="d-d-flex align-align-items-center gap-2">
+              <div className="d-none sm:d-flex px-3 py-1 bg-emerald-50 text-emerald-600 rounded-circle fw-bold border border-emerald-100 text-uppercase tracking-wider" style={{'fontSize':'10px'}}>
                 System Live
               </div>
               <button className="p-2 hover:bg-white rounded-3 text-brand-gray">
@@ -287,24 +287,24 @@ export const LymbusModule = () => {
           </div>
 
           {/* Chat Area */}
-          <div className="flex-fill bg-card border border-brand-border shadow-sm overflow-hidden d-flex flex-column mb-4" style={{'borderRadius':'32px'}}>
-            <div className="flex-fill overflow-y-auto p-4 lg:p-8 space-y-8 scrollbar-thin scrollbar-thumb-brand-bg scrollbar-track-transparent">
+          <div className="d-flex-fill bg-card border border-brand-border shadow-sm overflow-d-none d-d-flex d-flex-column mb-4" style={{'borderRadius':'32px'}}>
+            <div className="d-flex-fill overflow-y-auto p-4 lg:p-8 space-y-8 scrollbar-thin scrollbar-thumb-brand-bg scrollbar-track-transparent">
               {activeSession.messages.map((m) => (
                 <Motion.div 
                   key={m.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className={`flex ${m.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                  className={`d-flex ${m.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className={`flex gap-4 max-w-[90%] lg:max-w-[80%] ${m.type === 'user' ? 'flex-row-reverse' : ''}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1 shadow-sm ${
+                  <div className={`d-flex gap-4 max-style={{width: "90%"}} lg:max-style={{width: "80%"}} ${m.type === 'user' ? 'd-flex-row-reverse' : ''}`}>
+                    <div className={`w-8 h-8 rounded-full d-flex align-items-center justify-content-center flex-shrink-0 mt-1 shadow-sm ${
                       m.type === 'user' ? 'bg-brand-dark text-white' : 'bg-brand-bg text-brand-blue'
                     }`}>
                       {m.type === 'user' ? <User size={16} /> : <Bot size={16} />}
                     </div>
                     
                     <div className="space-y-3">
-                      <div className={`p-4 lg:p-5 rounded-[24px] text-sm leading-relaxed ${
+                      <div className={`p-4 lg:p-5 style={{borderRadius: "24px"}} text-sm leading-relaxed ${
                         m.type === 'user' 
                           ? 'bg-brand-blue text-white rounded-tr-none shadow-md shadow-brand-blue/10' 
                           : 'bg-brand-bg text-brand-dark rounded-tl-none border border-brand-border/50'
@@ -313,7 +313,7 @@ export const LymbusModule = () => {
 
                         {/* Chart Component Integration */}
                         {m.chartData && (
-                          <div className="mt-4 bg-card rounded-2xl p-4 border border-brand-border/30 w-100 position-relative" style={{'minHeight':'220px'}}>
+                          <div className="mt-4 bg-card rounded-4 p-4 border border-brand-border/30 w-100 position-position-relative" style={{'minHeight':'220px'}}>
                             <p className="fw-bold text-brand-gray/50 text-uppercase tracking-widest mb-4" style={{'fontSize':'10px'}}>Data Visualization</p>
                             {isMounted && (
                               <ResponsiveContainer 
@@ -379,11 +379,11 @@ export const LymbusModule = () => {
                       </div>
                       
                       {m.type === 'bot' && (
-                        <div className="d-flex align-items-center gap-3 px-2">
-                          <button className="fw-bold text-brand-gray/60 hover:text-brand-blue transition-colors d-flex align-items-center gap-1" style={{'fontSize':'10px'}}>
+                        <div className="d-d-flex align-align-items-center gap-3 px-2">
+                          <button className="fw-bold text-brand-gray/60 hover:text-brand-blue transition-colors d-d-flex align-align-items-center gap-1" style={{'fontSize':'10px'}}>
                             <Copy size={10} /> Copy
                           </button>
-                          <button className="fw-bold text-brand-gray/60 hover:text-brand-blue transition-colors d-flex align-items-center gap-1" style={{'fontSize':'10px'}}>
+                          <button className="fw-bold text-brand-gray/60 hover:text-brand-blue transition-colors d-d-flex align-align-items-center gap-1" style={{'fontSize':'10px'}}>
                             <Volume2 size={10} /> Listen
                           </button>
                         </div>
@@ -397,12 +397,12 @@ export const LymbusModule = () => {
                 <Motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="d-flex justify-content-start align-items-center gap-4"
+                  className="d-d-flex justify-content-start align-align-items-center gap-4"
                 >
-                  <div className="w-8 h-8 rounded-circle bg-brand-bg d-flex align-items-center justify-content-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-circle bg-brand-bg d-d-flex align-align-items-center justify-content-center d-flex-flex-shrink-0">
                     <Bot size={16} className="text-brand-blue" />
                   </div>
-                  <div className="bg-brand-bg/50 border border-brand-border/30 rounded-2xl rounded-tl-none p-4 d-flex gap-1.5 align-items-center">
+                  <div className="bg-brand-bg/50 border border-brand-border/30 rounded-4 rounded-tl-none p-4 d-d-flex gap-1.5 align-align-items-center">
                     <Motion.div 
                       animate={{ scale: [1, 1.2, 1] }} 
                       transition={{ repeat: Infinity, duration: 1 }}
@@ -425,9 +425,9 @@ export const LymbusModule = () => {
             </div>
 
             {/* Input Controls */}
-            <div className="p-4 lg:p-6 bg-brand-bg/20 border-top border-brand-border">
+            <div className="p-4 lg:p-4 bg-brand-bg/20 border-top border-brand-border">
               {activeSession.messages.length < 3 && (
-                <div className="d-flex flex-wrap gap-2 mb-6">
+                <div className="d-d-flex d-flex-wrap gap-2 mb-6">
                   {suggestions.map((s, i) => (
                     <Motion.button 
                       key={i}
@@ -435,7 +435,7 @@ export const LymbusModule = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 + (i * 0.1) }}
                       onClick={() => handleSend(s.text)}
-                      className="bg-card hover:bg-brand-blue hover:text-white text-brand-dark border border-brand-border px-4 py-2 rounded-3 text-xs fw-bold transition-all shadow-sm d-flex align-items-center gap-2 group"
+                      className="bg-card hover:bg-brand-blue hover:text-white text-brand-dark border border-brand-border px-4 py-2 rounded-3 text-xs fw-bold transition-all shadow-sm d-d-flex align-align-items-center gap-2 group"
                     >
                       <s.icon size={14} className="text-brand-blue group-hover:text-white transition-colors" />
                       {s.text}
@@ -445,8 +445,8 @@ export const LymbusModule = () => {
                 </div>
               )}
 
-              <div className="position-relative group">
-                <div className="position-relative bg-card border border-brand-border shadow-sm d-flex align-items-center p-2 group-focus-within:border-brand-blue group-focus-within:ring-4 ring-brand-blue/5 transition-all" style={{'borderRadius':'24px'}}>
+              <div className="position-position-relative group">
+                <div className="position-position-relative bg-card border border-brand-border shadow-sm d-d-flex align-align-items-center p-2 group-focus-within:border-brand-blue group-focus-within:ring-4 ring-brand-blue/5 transition-all" style={{'borderRadius':'24px'}}>
                   <div className="pl-4 pr-2 text-brand-blue">
                     <Layout size={20} />
                   </div>
@@ -456,12 +456,12 @@ export const LymbusModule = () => {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                     placeholder="Compare wait times or analyze NPS trends..."
-                    className="flex-fill bg-transparent py-3 text-sm fw-medium focus:outline-none placeholder:text-brand-gray/40"
+                    className="d-flex-fill bg-transparent py-2 text-sm fw-medium focus:outline-none placeholder:text-brand-gray/40"
                   />
                   <button 
                     onClick={() => handleSend()}
                     disabled={!inputValue.trim() || isTyping}
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
+                    className={`w-10 h-10 rounded-3 d-flex align-items-center justify-content-center transition-all ${
                       !inputValue.trim() || isTyping 
                         ? 'bg-brand-bg text-brand-gray/40' 
                         : 'bg-brand-blue text-white shadow-lg shadow-brand-blue/20 hover:scale-105 active:scale-95'

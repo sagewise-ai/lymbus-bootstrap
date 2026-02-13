@@ -75,7 +75,7 @@ export const Layout: React.FC<LayoutProps> = ({ onLogout }) => {
         return <Settings />;
       default:
         return (
-          <div className="d-flex flex-column align-items-center justify-content-center text-brand-gray p-8 text-center" style={{'height':'calc(100vh-64px)'}}>
+          <div className="d-d-flex d-flex-column align-align-items-center justify-content-center text-brand-gray p-8 text-center" style={{'height':'calc(100vh-64px)'}}>
             <h2 className="text-2xl fw-bold mb-2 text-uppercase tracking-widest">{activeTab} Page</h2>
             <p>This section is currently under development.</p>
           </div>
@@ -99,18 +99,18 @@ export const Layout: React.FC<LayoutProps> = ({ onLogout }) => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-bg d-flex flex-column lg:flex-row">
+    <div className="min-h-screen bg-brand-bg d-d-flex d-flex-column lg:d-flex-row">
       {/* Mobile Header */}
       <Motion.div 
         variants={{
           visible: { y: 0 },
-          hidden: { y: "-100%" },
+          d-none: { y: "-100%" },
         }}
-        animate={headersHidden ? "hidden" : "visible"}
+        animate={headersHidden ? "d-none" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="lg:hidden h-16 bg-card border-bottom border-brand-border d-flex align-items-center justify-content-between px-4 position-fixed top-0 start-0 end-0"
+        className="lg:d-none h-16 bg-card border-bottom border-brand-border d-d-flex align-align-items-center justify-content-between px-4 position-position-fixed top-0 start-0 end-0"
       >
-        <div className="d-flex align-items-center gap-2">
+        <div className="d-d-flex align-align-items-center gap-2">
           {(selectedDept || selectedLoc) ? (
             <button 
               onClick={() => {
@@ -122,7 +122,7 @@ export const Layout: React.FC<LayoutProps> = ({ onLogout }) => {
               <ArrowLeft size={24} />
             </button>
           ) : (
-            <div className="w-8 h-8 bg-brand-blue rounded-3 d-flex align-items-center justify-content-center text-white">
+            <div className="w-8 h-8 bg-brand-blue rounded-3 d-d-flex align-align-items-center justify-content-center text-white">
               <span className="fw-bold">L</span>
             </div>
           )}
@@ -141,14 +141,14 @@ export const Layout: React.FC<LayoutProps> = ({ onLogout }) => {
       {/* Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
-          className="position-fixed top-0 bottom-0 start-0 end-0 bg-black/50 lg:hidden"
+          className="position-position-fixed top-0 bottom-0 start-0 end-0 bg-black/50 lg:d-none"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
 
       {/* Sidebar Container */}
       <div className={`
-        fixed inset-y-0 left-0 z-[56] w-[280px] transform transition-transform duration-300 ease-in-out lg:translate-x-0
+        position-fixed inset-y-0 left-0 z-[56] style={{width: "280px"}} transform transition-transform duration-300 ease-in-out lg:translate-x-0
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <Sidebar 
@@ -162,10 +162,10 @@ export const Layout: React.FC<LayoutProps> = ({ onLogout }) => {
       </div>
 
       {/* Main Content */}
-      <main className="flex-fill lg:pl-[280px] pt-16 lg:pt-0">
+      <main className="d-flex-fill lg:pl-[280px] pt-16 lg:pt-0">
         {(!selectedDept && !selectedLoc) && (
           <>
-            <div className="d-none lg:block">
+            <div className="d-none lg:d-block">
               <Header title={getTitle()} search={search} setSearch={setSearch} />
             </div>
             
@@ -173,18 +173,18 @@ export const Layout: React.FC<LayoutProps> = ({ onLogout }) => {
             <Motion.div 
               variants={{
                 visible: { y: 0 },
-                hidden: { y: "-100%" },
+                d-none: { y: "-100%" },
               }}
-              animate={headersHidden ? "hidden" : "visible"}
+              animate={headersHidden ? "d-none" : "visible"}
               transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="lg:hidden p-4 bg-card border-bottom border-brand-border d-flex align-items-center justify-content-between position-fixed top-16 start-0 end-0 z-50"
+              className="lg:d-none p-4 bg-card border-bottom border-brand-border d-d-flex align-align-items-center justify-content-between position-position-fixed top-16 start-0 end-0 z-50"
             >
               <h2 className="text-lg fw-bold text-brand-dark">{getTitle()}</h2>
             </Motion.div>
           </>
         )}
         
-        <div className={`min-h-[calc(100vh-64px)] overflow-x-hidden relative ${(!selectedDept && !selectedLoc) ? 'lg:pt-16 pt-16' : ''}`}>
+        <div className={`min-style={{height: "calc(100vh-64px)"}} overflow-x-d-none position-relative ${(!selectedDept && !selectedLoc) ? 'lg:pt-16 pt-16' : ''}`}>
           {renderContent()}
         </div>
       </main>

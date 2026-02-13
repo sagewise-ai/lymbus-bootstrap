@@ -73,15 +73,15 @@ const StatCard = ({ title, value, change, positive = true, icon: Icon, colorClas
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       onClick={onClick}
-      className={`bg-card p-6 rounded-[24px] border transition-all cursor-pointer relative ${
+      className={`bg-card p-4 style={{borderRadius: "24px"}} border transition-all cursor-pointer position-relative ${
         isActive ? 'border-brand-border' : 'border-transparent opacity-50 grayscale'
       } hover:shadow-lg hover:border-brand-blue/20 ${rainbowClasses[index % 4]}`}
     >
-      <div className="d-flex align-items-center gap-2 mb-4">
+      <div className="d-d-flex align-align-items-center gap-2 mb-4">
         <div className={colorClass}>
           <Icon size={16} />
         </div>
-        <div className="d-flex align-items-center gap-1.5 group/info position-relative">
+        <div className="d-d-flex align-align-items-center gap-1.5 group/info position-position-relative">
           <h4 className="text-xs fw-bold text-brand-dark text-uppercase tracking-wider">{title}</h4>
           <div 
             className="text-brand-gray/40 hover:text-brand-blue transition-colors cursor-help"
@@ -97,19 +97,19 @@ const StatCard = ({ title, value, change, positive = true, icon: Icon, colorClas
                 initial={{ opacity: 0, y: 5, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 5, scale: 0.95 }}
-                className="position-absolute bottom-full start-0 mb-2 w-48 p-3 bg-brand-dark text-white leading-relaxed rounded-3 shadow-xl z-50 pe-none" style={{'fontSize':'10px'}}
+                className="position-position-absolute bottom-full start-0 mb-2 w-48 p-3 bg-brand-dark text-white leading-relaxed rounded-3 shadow-xl z-50 pe-none" style={{'fontSize':'10px'}}
               >
                 {METRIC_DESCRIPTIONS[title] || "Metric details not available."}
-                <div className="position-absolute top-full left-4 border-8 border-transparent border-t-brand-dark" />
+                <div className="position-position-absolute top-full left-4 border-8 border-transparent border-t-brand-dark" />
               </Motion.div>
             )}
           </AnimatePresence>
         </div>
       </div>
       <p className="fw-bold text-brand-dark leading-tight mb-2" style={{'fontSize':'32px'}}>{value}</p>
-      <div className="d-flex align-items-center gap-1">
+      <div className="d-d-flex align-align-items-center gap-1">
         {positive ? <ArrowUpRight size={14} className="text-green-500" /> : <ArrowDownRight size={14} className="text-red-500" />}
-        <span className={`text-[12px] font-bold ${positive ? 'text-green-500' : 'text-red-500'}`}>{change}</span>
+        <span className={`style={{color: "12px"}} fw-bold ${positive ? 'text-green-500' : 'text-red-500'}`}>{change}</span>
         <span className="text-brand-gray ml-1" style={{'fontSize':'12px'}}>vs last month</span>
       </div>
     </Motion.div>
@@ -196,17 +196,17 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedAlert(null)}
-              className="position-fixed top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm lg:pl-[280px]"
+              className="position-position-fixed top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm lg:pl-[280px]"
             />
             <Motion.div 
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              className="position-fixed top-0 end-0 h-100 w-100 bg-card shadow-2xl p-8 overflow-y-auto" style={{'maxWidth':'400px'}}
+              className="position-position-fixed top-0 end-0 h-100 w-100 bg-card shadow-2xl p-8 overflow-y-auto" style={{'maxWidth':'400px'}}
             >
-              <div className="d-flex align-items-center justify-content-between mb-8">
-                <div className="d-flex align-items-center gap-3">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+              <div className="d-d-flex align-align-items-center justify-content-between mb-8">
+                <div className="d-d-flex align-align-items-center gap-3">
+                  <div className={`w-10 h-10 rounded-3 d-flex align-items-center justify-content-center ${
                     selectedAlert.type === 'error' ? 'bg-red-500/10 text-red-500' : 
                     selectedAlert.type === 'warning' ? 'bg-orange-500/10 text-orange-500' : 'bg-brand-blue/10 text-brand-blue'
                   }`}>
@@ -230,8 +230,8 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                   <p className="text-sm text-brand-dark leading-relaxed">{selectedAlert.desc}</p>
                 </div>
 
-                <div className="p-6 bg-brand-bg border border-brand-border" style={{'borderRadius':'24px'}}>
-                  <h4 className="fw-bold text-brand-gray text-uppercase tracking-widest mb-4 fst-italic d-flex align-items-center gap-2" style={{'fontSize':'10px'}}>
+                <div className="p-4 bg-brand-bg border border-brand-border" style={{'borderRadius':'24px'}}>
+                  <h4 className="fw-bold text-brand-gray text-uppercase tracking-widest mb-4 fst-italic d-d-flex align-align-items-center gap-2" style={{'fontSize':'10px'}}>
                     <Sparkles size={12} className="text-brand-blue" />
                     Lymbus AI Deep Dive
                   </h4>
@@ -241,11 +241,11 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                 </div>
 
                 <div className="space-y-3">
-                  <button className="w-100 bg-brand-blue text-white fw-bold py-3 rounded-3 hover:shadow-lg shadow-brand-blue/20 transition-all d-flex align-items-center justify-content-center gap-2">
+                  <button className="w-100 bg-brand-blue text-white fw-bold py-2 rounded-3 hover:shadow-lg shadow-brand-blue/20 transition-all d-d-flex align-align-items-center justify-content-center gap-2">
                     <MessageCircle size={18} />
                     Respond to Feedback
                   </button>
-                  <button className="w-100 border border-brand-border text-brand-gray fw-bold py-3 rounded-3 hover:bg-brand-bg transition-colors">
+                  <button className="w-100 border border-brand-border text-brand-gray fw-bold py-2 rounded-3 hover:bg-brand-bg transition-colors">
                     Assign to Department Head
                   </button>
                 </div>
@@ -260,7 +260,7 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="w-100 position-relative group"
+        className="w-100 position-position-relative group"
       >
         <SplitFocusCard />
       </Motion.section>
@@ -315,19 +315,19 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
       {/* Charts & Alerts */}
       <section className="d-grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Line Chart */}
-        <div className="lg:col-span-12 bg-card p-4 sm:p-6 lg:p-8 border border-brand-border" style={{'borderRadius':'24px'}}>
-          <div className="d-flex flex-column sm:flex-row align-items-start sm:items-center justify-content-between mb-8 gap-4">
+        <div className="lg:col-span-12 bg-card p-4 sm:p-4 lg:p-8 border border-brand-border" style={{'borderRadius':'24px'}}>
+          <div className="d-d-flex d-flex-column sm:d-flex-row align-align-items-start sm:align-items-center justify-content-between mb-8 gap-4">
             <h3 className="text-lg fw-bold text-brand-dark">Experience Trends</h3>
-            <div className="d-flex flex-wrap align-items-center gap-2">
+            <div className="d-d-flex d-flex-wrap align-align-items-center gap-2">
               {[
-                { label: 'NPS', key: 'nps', color: 'bg-[var(--chart-1)]' },
-                { label: 'PREM', key: 'prem', color: 'bg-[var(--chart-2)]' },
-                { label: 'PROM', key: 'prom', color: 'bg-[var(--chart-3)]' }
+                { label: 'NPS', key: 'nps', color: 'style={{backgroundColor: "var(--chart-1)"}}' },
+                { label: 'PREM', key: 'prem', color: 'style={{backgroundColor: "var(--chart-2)"}}' },
+                { label: 'PROM', key: 'prom', color: 'style={{backgroundColor: "var(--chart-3)"}}' }
               ].map((metric) => (
                 <button
                   key={metric.key}
                   onClick={() => toggleMetric(metric.key)}
-                  className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all ${
+                  className={`d-flex align-items-center gap-2 px-3 py-1.5 rounded-full border transition-all ${
                     activeMetrics.includes(metric.key) 
                       ? 'bg-brand-bg border-brand-border shadow-sm' 
                       : 'bg-transparent border-transparent opacity-40 grayscale'
@@ -339,7 +339,7 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
               ))}
             </div>
           </div>
-          <div className="w-100 position-relative" style={{'minHeight':'300px'}}>
+          <div className="w-100 position-position-relative" style={{'minHeight':'300px'}}>
             {isMounted && (
               <ResponsiveContainer 
                 width="100%" 
@@ -413,10 +413,10 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
       </div>
 
         {/* Alerts Panel */}
-        <div className="d-none lg:col-span-4 bg-card p-4 sm:p-6 border border-brand-border" style={{'borderRadius':'24px'}}>
-          <div className="d-flex align-items-center justify-content-between mb-6">
+        <div className="d-none lg:col-span-4 bg-card p-4 sm:p-4 border border-brand-border" style={{'borderRadius':'24px'}}>
+          <div className="d-d-flex align-align-items-center justify-content-between mb-6">
             <h3 className="text-lg fw-bold text-brand-dark">Active Alerts</h3>
-            <button className="fw-bold text-white bg-emerald-400 px-3 py-1 rounded-circle d-flex align-items-center gap-1" style={{'fontSize':'10px'}}>
+            <button className="fw-bold text-white bg-emerald-400 px-3 py-1 rounded-circle d-d-flex align-align-items-center gap-1" style={{'fontSize':'10px'}}>
               All Alerts <ChevronRight size={12} />
             </button>
           </div>
@@ -425,14 +425,14 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
               <div 
                 key={alert.id} 
                 onClick={() => setSelectedAlert(alert)}
-                className="p-4 rounded-2xl bg-brand-bg/50 border border-brand-border hover:bg-brand-bg hover:border-brand-blue/30 transition-all cursor-pointer group"
+                className="p-4 rounded-4 bg-brand-bg/50 border border-brand-border hover:bg-brand-bg hover:border-brand-blue/30 transition-all cursor-pointer group"
               >
-                <div className="d-flex align-items-center justify-content-between mb-2">
-                  <div className="d-flex align-items-center gap-2">
+                <div className="d-d-flex align-align-items-center justify-content-between mb-2">
+                  <div className="d-d-flex align-align-items-center gap-2">
                     {alert.type === 'error' && <AlertCircle size={16} className="text-red-500" />}
                     {alert.type === 'warning' && <Zap size={16} className="text-orange-400" />}
                     {alert.type === 'info' && <MessageCircle size={16} className="text-brand-blue" />}
-                    <span className={`text-[11px] font-bold ${alert.type === 'error' ? 'text-red-500' : alert.type === 'warning' ? 'text-orange-500' : 'text-brand-blue'}`}>
+                    <span className={`style={{color: "11px"}} fw-bold ${alert.type === 'error' ? 'text-red-500' : alert.type === 'warning' ? 'text-orange-500' : 'text-brand-blue'}`}>
                       {alert.title}
                     </span>
                   </div>
@@ -448,33 +448,33 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
       </section>
 
       {/* Department Performance */}
-      <section className="bg-card border border-brand-border overflow-hidden" style={{'borderRadius':'24px'}}>
-        <div className="p-4 sm:p-6 d-flex flex-column sm:flex-row align-items-start sm:items-center justify-content-between border-bottom border-brand-border gap-4">
+      <section className="bg-card border border-brand-border overflow-d-none" style={{'borderRadius':'24px'}}>
+        <div className="p-4 sm:p-4 d-d-flex d-flex-column sm:d-flex-row align-align-items-start sm:align-items-center justify-content-between border-bottom border-brand-border gap-4">
           <h3 className="text-lg fw-bold text-brand-dark">Department Performance</h3>
-          <div className="d-flex align-items-center gap-4 w-100 sm:w-auto justify-content-between sm:justify-end">
-            <button className="d-flex align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors">
+          <div className="d-d-flex align-align-items-center gap-4 w-100 sm:w-auto justify-content-between sm:justify-end">
+            <button className="d-d-flex align-align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors">
               <Filter size={16} />
             </button>
-            <button className="d-flex align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors text-sm fw-bold">
+            <button className="d-d-flex align-align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors text-sm fw-bold">
               <Download size={16} /> <span className="d-none xs:inline">Export Table</span>
             </button>
           </div>
         </div>
         
         {/* Mobile View: Cards */}
-        <div className="d-block lg:hidden divide-y divide-brand-border">
+        <div className="d-d-block lg:d-none divide-y divide-brand-border">
           {filteredDepts.map((dept, i) => (
             <div 
               key={i} 
               className="p-4 space-y-3 active:bg-brand-bg transition-colors cursor-pointer"
               onClick={() => onSelectDept?.(dept)}
             >
-              <div className="d-flex justify-content-between align-items-start">
+              <div className="d-d-flex justify-content-between align-align-items-start">
                 <div>
                   <h4 className="fw-bold text-brand-dark">{dept.name}</h4>
                   <p className="text-brand-gray fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>{dept.forms} Forms</p>
                 </div>
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${parseInt(dept.complaints) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
+                <span className={`style={{color: "10px"}} fw-bold px-2 py-0.5 rounded-full ${parseInt(dept.complaints) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
                   {dept.complaints} Complaints
                 </span>
               </div>
@@ -506,7 +506,7 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
         </div>
 
         {/* Desktop View: Table */}
-        <div className="d-none lg:block overflow-x-auto">
+        <div className="d-none lg:d-block overflow-x-auto">
           <table className="w-100 text-start">
             <thead>
               <tr className="bg-brand-bg/30 text-uppercase tracking-wider text-brand-gray fw-bold" style={{'fontSize':'10px'}}>
@@ -523,9 +523,9 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                   <th 
                     key={col.key}
                     onClick={() => handleSort(col.key, 'dept')}
-                    className="px-6 py-4 cursor-pointer hover:bg-brand-bg/50 transition-colors group"
+                    className="px-5 py-4 cursor-pointer hover:bg-brand-bg/50 transition-colors group"
                   >
-                    <div className="d-flex align-items-center gap-1">
+                    <div className="d-d-flex align-align-items-center gap-1">
                       {col.label}
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                         {deptSort.key === col.key ? (
@@ -544,15 +544,15 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                   className="hover:bg-brand-bg/20 transition-colors group cursor-pointer"
                   onClick={() => onSelectDept?.(dept)}
                 >
-                  <td className="px-6 py-4 text-sm fw-bold text-brand-dark">{dept.name}</td>
-                  <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{dept.forms}</td>
-                  <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{dept.requests}</td>
-                  <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{dept.responses}</td>
-                  <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{dept.rate}</td>
-                  <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{dept.rating}</td>
-                  <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{dept.experience}</td>
-                  <td className="px-6 py-4">
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${parseInt(dept.complaints) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
+                  <td className="px-5 py-4 text-sm fw-bold text-brand-dark">{dept.name}</td>
+                  <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{dept.forms}</td>
+                  <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{dept.requests}</td>
+                  <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{dept.responses}</td>
+                  <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{dept.rate}</td>
+                  <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{dept.rating}</td>
+                  <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{dept.experience}</td>
+                  <td className="px-5 py-4">
+                    <span className={`style={{color: "10px"}} fw-bold px-2 py-0.5 rounded-full ${parseInt(dept.complaints) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
                       {dept.complaints}
                     </span>
                   </td>
@@ -564,77 +564,77 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
       </section>
 
       {/* AI CTA */}
-      <section className="bg-brand-blue [data-theme="rainbow']_&:bg-gradient-to-r [data-theme='rainbow']_&:from-[#FFB800] [data-theme='rainbow']_&:via-[#F20000] [data-theme='rainbow']_&:via-[#008D36] [data-theme='rainbow']_&:to-[#0078C1] rounded-[24px] p-4 flex flex-col sm:flex-row items-center justify-between text-white shadow-xl shadow-brand-blue/20 gap-3">
-        <div className="d-flex align-items-center gap-3">
-          <div className="w-8 h-8 bg-white/20 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0">
+      <section className="bg-brand-blue [data-theme="rainbow']_&:bg-gradient-to-r [data-theme='rainbow']_&:from-[#FFB800] [data-theme='rainbow']_&:via-[#F20000] [data-theme='rainbow']_&:via-[#008D36] [data-theme='rainbow']_&:to-[#0078C1] style={{borderRadius: "24px"}} p-4 d-flex d-flex-column sm:d-flex-row align-items-center justify-content-between text-white shadow-xl shadow-brand-blue/20 gap-3">
+        <div className="d-d-flex align-align-items-center gap-3">
+          <div className="w-8 h-8 bg-white/20 rounded-3 d-d-flex align-align-items-center justify-content-center d-flex-flex-shrink-0">
             <Sparkles size={16} />
           </div>
-          <p className="text-xs lg:text-sm fw-medium fst-italic text-center sm:text-left">
+          <p className="text-xs lg:text-sm fw-medium fst-italic text-center sm:text-start">
             Try Lymbus AI: <span className="fw-bold">"Compare Cardiology performance across all locations"</span>
           </p>
         </div>
-        <ChevronRight size={20} className="text-white/60 d-none sm:block" />
+        <ChevronRight size={20} className="text-white/60 d-none sm:d-block" />
       </section>
 
       {/* Breakdown by Location */}
       <section className="space-y-6">
-        <div className="d-flex flex-column gap-1">
+        <div className="d-d-flex d-flex-column gap-1">
           <h3 className="text-lg fw-bold text-brand-dark">Breakdown by Location</h3>
           <p className="text-xs text-brand-gray fw-medium text-uppercase tracking-wider">Operational Performance Context</p>
         </div>
 
         <div className="d-grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
           <div 
-            className="bg-card p-6 border border-brand-border cursor-pointer hover:border-brand-blue/30 transition-all active:scale-[0.98]" style={{'borderRadius':'24px'}}
+            className="bg-card p-4 border border-brand-border cursor-pointer hover:border-brand-blue/30 transition-all active:scale-[0.98]" style={{'borderRadius':'24px'}}
             onClick={() => onSelectLoc?.(locationData[2])} // West Clinic
           >
             <p className="fw-bold text-brand-gray text-uppercase tracking-wider mb-4" style={{'fontSize':'10px'}}>Best Performing</p>
-            <h4 className="text-xl lg:text-[24px] fw-bold text-brand-dark mb-4">West Clinic</h4>
+            <h4 className="text-xl lg:style={{color: "24px"}} fw-bold text-brand-dark mb-4">West Clinic</h4>
             <span className="fw-bold text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-circle text-uppercase" style={{'fontSize':'10px'}}>84% Experience Score</span>
           </div>
           <div 
-            className="bg-card p-6 border border-brand-border cursor-pointer hover:border-brand-blue/30 transition-all active:scale-[0.98]" style={{'borderRadius':'24px'}}
+            className="bg-card p-4 border border-brand-border cursor-pointer hover:border-brand-blue/30 transition-all active:scale-[0.98]" style={{'borderRadius':'24px'}}
             onClick={() => onSelectLoc?.(locationData[3])} // North Center
           >
             <p className="fw-bold text-brand-gray text-uppercase tracking-wider mb-4" style={{'fontSize':'10px'}}>Response Fatigue</p>
-            <h4 className="text-xl lg:text-[24px] fw-bold text-brand-dark mb-4">North Center</h4>
+            <h4 className="text-xl lg:style={{color: "24px"}} fw-bold text-brand-dark mb-4">North Center</h4>
             <span className="fw-bold text-orange-500 bg-orange-500/10 px-3 py-1 rounded-circle text-uppercase" style={{'fontSize':'10px'}}>62% Response Rate</span>
           </div>
           <div 
-            className="bg-card p-6 border border-brand-border cursor-pointer hover:border-brand-blue/30 transition-all active:scale-[0.98]" style={{'borderRadius':'24px'}}
+            className="bg-card p-4 border border-brand-border cursor-pointer hover:border-brand-blue/30 transition-all active:scale-[0.98]" style={{'borderRadius':'24px'}}
             onClick={() => onSelectLoc?.(locationData[3])} // North Center
           >
             <p className="fw-bold text-brand-gray text-uppercase tracking-wider mb-4" style={{'fontSize':'10px'}}>High Complaint Density</p>
-            <h4 className="text-xl lg:text-[24px] fw-bold text-brand-dark mb-4">North Center</h4>
+            <h4 className="text-xl lg:style={{color: "24px"}} fw-bold text-brand-dark mb-4">North Center</h4>
             <span className="fw-bold text-red-500 bg-red-500/10 px-3 py-1 rounded-circle text-uppercase" style={{'fontSize':'10px'}}>15% Negative Feedback</span>
           </div>
         </div>
 
         {/* Location Performance View */}
-        <div className="bg-card border border-brand-border overflow-hidden" style={{'borderRadius':'24px'}}>
-          <div className="p-6 d-flex align-items-center justify-content-between border-bottom border-brand-border">
+        <div className="bg-card border border-brand-border overflow-d-none" style={{'borderRadius':'24px'}}>
+          <div className="p-4 d-d-flex align-align-items-center justify-content-between border-bottom border-brand-border">
             <h3 className="text-lg fw-bold text-brand-dark">Location Performance</h3>
-            <div className="d-flex align-items-center gap-4">
-              <button className="d-flex align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors">
+            <div className="d-d-flex align-align-items-center gap-4">
+              <button className="d-d-flex align-align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors">
                 <Filter size={16} />
               </button>
-              <button className="d-flex align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors text-sm fw-bold">
+              <button className="d-d-flex align-align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors text-sm fw-bold">
                 <Download size={16} />
               </button>
             </div>
           </div>
 
           {/* Mobile View: Cards */}
-          <div className="d-block lg:hidden divide-y divide-brand-border">
+          <div className="d-d-block lg:d-none divide-y divide-brand-border">
             {filteredLocs.map((loc, i) => (
               <div 
                 key={i} 
                 className="p-4 space-y-3 active:bg-brand-bg transition-colors cursor-pointer"
                 onClick={() => onSelectLoc?.(loc)}
               >
-                <div className="d-flex justify-content-between align-items-start">
+                <div className="d-d-flex justify-content-between align-align-items-start">
                   <h4 className="fw-bold text-brand-dark">{loc.name}</h4>
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${parseInt(loc.negatives) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
+                  <span className={`style={{color: "10px"}} fw-bold px-2 py-0.5 rounded-full ${parseInt(loc.negatives) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
                     {loc.negatives} Negatives
                   </span>
                 </div>
@@ -657,7 +657,7 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
           </div>
 
           {/* Desktop View: Table */}
-          <div className="d-none lg:block overflow-x-auto">
+          <div className="d-none lg:d-block overflow-x-auto">
             <table className="w-100 text-start">
               <thead>
                 <tr className="bg-brand-bg/30 text-uppercase tracking-wider text-brand-gray fw-bold" style={{'fontSize':'10px'}}>
@@ -672,9 +672,9 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                     <th 
                       key={col.key}
                       onClick={() => handleSort(col.key, 'loc')}
-                      className="px-6 py-4 cursor-pointer hover:bg-brand-bg/50 transition-colors group"
+                      className="px-5 py-4 cursor-pointer hover:bg-brand-bg/50 transition-colors group"
                     >
-                      <div className="d-flex align-items-center gap-1">
+                      <div className="d-d-flex align-align-items-center gap-1">
                         {col.label}
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                           {locSort.key === col.key ? (
@@ -693,13 +693,13 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                     className="hover:bg-brand-bg/20 transition-colors group cursor-pointer"
                     onClick={() => onSelectLoc?.(loc)}
                   >
-                    <td className="px-6 py-4 text-sm fw-bold text-brand-dark">{loc.name}</td>
-                    <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{loc.requests}</td>
-                    <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{loc.responses}</td>
-                    <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{loc.rate}</td>
-                    <td className="px-6 py-4 text-sm fw-medium text-brand-gray">{loc.rating}</td>
-                    <td className="px-6 py-4">
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${parseInt(loc.negatives) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
+                    <td className="px-5 py-4 text-sm fw-bold text-brand-dark">{loc.name}</td>
+                    <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{loc.requests}</td>
+                    <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{loc.responses}</td>
+                    <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{loc.rate}</td>
+                    <td className="px-5 py-4 text-sm fw-medium text-brand-gray">{loc.rating}</td>
+                    <td className="px-5 py-4">
+                      <span className={`style={{color: "10px"}} fw-bold px-2 py-0.5 rounded-full ${parseInt(loc.negatives) > 10 ? 'bg-red-500/10 text-red-500' : 'bg-brand-bg text-brand-gray'}`}>
                         {loc.negatives}
                       </span>
                     </td>
@@ -707,7 +707,7 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
                 ))}
                 {filteredLocs.length === 0 && (
                   <tr>
-                    <td colSpan={6} className="px-6 py-12 text-center text-brand-gray text-sm fst-italic">
+                    <td colSpan={6} className="px-5 py-12 text-center text-brand-gray text-sm fst-italic">
                       No locations found matching "{search}"
                     </td>
                   </tr>
@@ -721,9 +721,9 @@ export const Dashboard = ({ search = '', onSelectDept, onSelectLoc }: { search?:
       <Leaderboard />
       
       {/* AI CTA Bottom */}
-      <section className="bg-brand-blue p-4 d-flex align-items-center justify-content-between text-white shadow-xl shadow-brand-blue/20" style={{'borderRadius':'24px'}}>
-        <div className="d-flex align-items-center gap-3">
-          <div className="w-8 h-8 bg-white/20 rounded-3 d-flex align-items-center justify-content-center">
+      <section className="bg-brand-blue p-4 d-d-flex align-align-items-center justify-content-between text-white shadow-xl shadow-brand-blue/20" style={{'borderRadius':'24px'}}>
+        <div className="d-d-flex align-align-items-center gap-3">
+          <div className="w-8 h-8 bg-white/20 rounded-3 d-d-flex align-align-items-center justify-content-center">
             <Sparkles size={16} />
           </div>
           <p className="text-sm fw-medium fst-italic">

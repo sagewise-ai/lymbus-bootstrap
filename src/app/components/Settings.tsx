@@ -34,8 +34,8 @@ import { toast } from 'sonner';
 // --- Benchmarking Tab Components ---
 
 const BenchmarkInput = ({ label, value, unit, description }: any) => (
-  <div className="d-flex flex-column gap-1.5 group">
-    <div className="d-flex align-items-center justify-content-between px-1">
+  <div className="d-d-flex d-flex-column gap-1.5 group">
+    <div className="d-d-flex align-align-items-center justify-content-between px-1">
       <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>
         {label}
       </label>
@@ -43,7 +43,7 @@ const BenchmarkInput = ({ label, value, unit, description }: any) => (
         <span className="fw-bold text-brand-blue/60 text-uppercase" style={{'fontSize':'10px'}}>{unit}</span>
       )}
     </div>
-    <div className="bg-brand-bg/50 position-relative d-flex align-items-center px-4 border border-brand-border focus-within:border-brand-blue/30 focus-within:bg-white transition-all" style={{'height':'40px', 'borderRadius':'12px'}}>
+    <div className="bg-brand-bg/50 position-position-relative d-d-flex align-align-items-center px-4 border border-brand-border focus-within:border-brand-blue/30 focus-within:bg-white transition-all" style={{'height':'40px', 'borderRadius':'12px'}}>
       <input 
         type="text" 
         defaultValue={value}
@@ -58,14 +58,14 @@ const BenchmarkInput = ({ label, value, unit, description }: any) => (
 
 const BenchmarkingView = ({ onReset }: { onReset: () => void }) => (
   <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-    <div className="d-flex align-items-center justify-content-between">
+    <div className="d-d-flex align-align-items-center justify-content-between">
       <div className="space-y-1">
         <h3 className="text-lg fw-bold text-brand-dark">Benchmark Targets</h3>
         <p className="text-brand-gray text-sm">Define your comparison baselines</p>
       </div>
     </div>
 
-    <div className="bg-card p-6 md:p-8 border border-brand-border shadow-sm" style={{'borderRadius':'24px'}}>
+    <div className="bg-card p-4 md:p-8 border border-brand-border shadow-sm" style={{'borderRadius':'24px'}}>
       <div className="d-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-6">
         <BenchmarkInput 
           label="NPS Target" 
@@ -116,17 +116,17 @@ const BenchmarkingView = ({ onReset }: { onReset: () => void }) => (
         />
       </div>
 
-      <div className="d-flex flex-column sm:flex-row align-items-center justify-content-end gap-3 pt-8 mt-4 border-top border-brand-border/50">
+      <div className="d-d-flex d-flex-column sm:d-flex-row align-align-items-center justify-content-end gap-3 pt-8 mt-4 border-top border-brand-border/50">
         <button 
           onClick={onReset}
-          className="w-100 sm:w-auto d-flex align-items-center justify-content-center gap-2 px-6 py-2.5 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}
+          className="w-100 sm:w-auto d-d-flex align-align-items-center justify-content-center gap-2 px-5 py-2.5 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}
         >
           <RotateCcw size={14} />
           Reset Defaults
         </button>
         <button 
           onClick={() => toast.success('Benchmarks saved successfully')}
-          className="w-100 sm:w-auto d-flex align-items-center justify-content-center gap-2 px-8 py-2.5 rounded-3 bg-brand-dark text-white fw-bold text-uppercase tracking-widest hover:bg-black transition-all shadow-xl active:scale-95" style={{'fontSize':'10px'}}
+          className="w-100 sm:w-auto d-d-flex align-align-items-center justify-content-center gap-2 px-8 py-2.5 rounded-3 bg-brand-dark text-white fw-bold text-uppercase tracking-widest hover:bg-black transition-all shadow-xl active:scale-95" style={{'fontSize':'10px'}}
         >
           <Save size={14} />
           Save Changes
@@ -139,9 +139,9 @@ const BenchmarkingView = ({ onReset }: { onReset: () => void }) => (
 // --- User Roles Tab Components ---
 
 const RoleCard = ({ role, description, users, colorClass, badgeBg }: any) => (
-  <div className="bg-card p-5 border border-brand-border d-flex align-items-center justify-content-between hover:shadow-md transition-all group" style={{'borderRadius':'16px'}}>
-    <div className="d-flex align-items-center gap-4">
-      <span className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest ${badgeBg} ${colorClass} border border-transparent group-hover:border-current/10`}>
+  <div className="bg-card p-5 border border-brand-border d-d-flex align-align-items-center justify-content-between hover:shadow-md transition-all group" style={{'borderRadius':'16px'}}>
+    <div className="d-d-flex align-align-items-center gap-4">
+      <span className={`px-2.5 py-1 rounded-3 style={{color: "10px"}} fw-bold uppercase tracking-widest ${badgeBg} ${colorClass} border border-transparent group-hover:border-current/10`}>
         {role}
       </span>
       <span className="text-brand-gray text-xs fw-bold group-hover:text-brand-dark transition-colors">
@@ -156,12 +156,12 @@ const RoleCard = ({ role, description, users, colorClass, badgeBg }: any) => (
 
 const UserRolesView = () => (
   <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-    <div className="d-flex flex-column md:flex-row md:items-center justify-content-between gap-4">
+    <div className="d-d-flex d-flex-column md:d-flex-row md:align-items-center justify-content-between gap-4">
       <div className="space-y-1">
         <h3 className="text-lg fw-bold text-brand-dark">Permissions</h3>
         <p className="text-brand-gray text-sm">System access management</p>
       </div>
-      <button className="d-flex align-items-center justify-content-center gap-2 px-4 py-2 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}>
+      <button className="d-d-flex align-align-items-center justify-content-center gap-2 px-4 py-2 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}>
         <Users size={14} />
         Add User
       </button>
@@ -217,11 +217,11 @@ const UserRolesView = () => (
 //   return (
 //     <div
 //       onClick={onClick}
-//       className="bg-card p-6 border border-brand-border hover:border-brand-blue/40 transition-all cursor-pointer group position-relative overflow-hidden" style={{'borderRadius':'24px'}}
+//       className="bg-card p-4 border border-brand-border hover:border-brand-blue/40 transition-all cursor-pointer group position-position-relative overflow-d-none" style={{'borderRadius':'24px'}}
 //     >
-//       <div className="d-flex align-items-start justify-content-between mb-6">
-//         <div className="d-flex align-items-center gap-4">
-//           <div className="w-12 h-12 rounded-2xl bg-brand-bg d-flex align-items-center justify-content-center text-brand-blue group-hover:scale-110 transition-transform duration-300">
+//       <div className="d-d-flex align-align-items-start justify-content-between mb-6">
+//         <div className="d-d-flex align-align-items-center gap-4">
+//           <div className="w-12 h-12 rounded-4 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-blue group-hover:scale-110 transition-transform duration-300">
 //             <Building2 size={24} />
 //           </div>
 //           <div>
@@ -233,8 +233,8 @@ const UserRolesView = () => (
 //             </p>
 //           </div>
 //         </div>
-//         <div className="d-flex flex-column align-items-end">
-//           <span className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border ${
+//         <div className="d-d-flex d-flex-column align-items-end">
+//           <span className={`px-2.5 py-1 rounded-3 style={{color: "10px"}} fw-bold uppercase tracking-wider border ${
 //             facility.configuredCount > 0
 //               ? 'bg-emerald-50 text-emerald-700 border-emerald-100'
 //               : 'bg-gray-50 text-gray-400 border-gray-100'
@@ -244,13 +244,13 @@ const UserRolesView = () => (
 //         </div>
 //       </div>
 //
-//       <div className="d-flex flex-wrap gap-2 pt-4 border-top border-brand-border/50">
+//       <div className="d-d-flex d-flex-wrap gap-2 pt-4 border-top border-brand-border/50">
 //         {sources.map((source) => {
 //           const isConfigured = facility.configuredSources.includes(source.type);
 //           return (
 //             <div
 //               key={source.type}
-//               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border transition-all ${
+//               className={`d-flex align-items-center gap-1.5 px-3 py-1.5 rounded-3 border transition-all ${
 //                 isConfigured
 //                   ? 'bg-brand-blue/5 border-brand-blue/20 text-brand-blue'
 //                   : 'bg-gray-50 border-gray-100 text-gray-400 opacity-60'
@@ -264,8 +264,8 @@ const UserRolesView = () => (
 //         })}
 //       </div>
 //
-//       <div className="position-absolute right-6 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity">
-//         <div className="w-8 h-8 rounded-circle bg-brand-blue text-white d-flex align-items-center justify-content-center shadow-lg shadow-brand-blue/20">
+//       <div className="position-position-absolute right-6 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity">
+//         <div className="w-8 h-8 rounded-circle bg-brand-blue text-white d-d-flex align-align-items-center justify-content-center shadow-lg shadow-brand-blue/20">
 //           <Plus size={18} />
 //         </div>
 //       </div>
@@ -292,14 +292,14 @@ const UserRolesView = () => (
 //
 //   return (
 //     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-//       <div className="d-flex flex-column md:flex-row md:items-center justify-content-between gap-6">
+//       <div className="d-d-flex d-flex-column md:d-flex-row md:align-items-center justify-content-between gap-6">
 //         <div className="space-y-1">
 //           <h3 className="text-lg fw-bold text-brand-dark">Facility Data</h3>
 //           <p className="text-brand-gray text-sm">Managed integration endpoints</p>
 //         </div>
 //
-//         <div className="position-relative group w-100 md:w-80">
-//           <Search className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors" size={18} />
+//         <div className="position-position-relative group w-100 md:w-80">
+//           <Search className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors" size={18} />
 //           <input 
 //             type="text" 
 //             placeholder="Search facilities..." 
@@ -372,7 +372,7 @@ const StatusBadge = ({ status }: { status: DataSourceEntry['status'] }) => {
   };
   const s = map[status];
   return (
-    <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider border ${s.cls}`}>
+    <span className={`inline-d-flex align-items-center gap-1 px-2 py-1 rounded-md style={{color: "10px"}} fw-bold uppercase tracking-wider border ${s.cls}`}>
       <s.icon size={10} />
       {s.label}
     </span>
@@ -440,7 +440,7 @@ const DataSourcesView = () => {
             className="space-y-6"
           >
             {/* Header */}
-            <div className="d-flex flex-column md:flex-row md:items-center justify-content-between gap-4">
+            <div className="d-d-flex d-flex-column md:d-flex-row md:align-items-center justify-content-between gap-4">
               <div className="space-y-1">
                 <h3 className="text-lg fw-bold text-brand-dark">Data Sources</h3>
                 <p className="text-brand-gray text-sm">
@@ -456,9 +456,9 @@ const DataSourcesView = () => {
                 </p>
               </div>
 
-              <div className="d-flex align-items-center gap-3 w-100 md:w-auto">
-                <div className="position-relative group flex-fill md:w-72">
-                  <Search className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors" size={16} />
+              <div className="d-d-flex align-align-items-center gap-3 w-100 md:w-auto">
+                <div className="position-position-relative group d-flex-fill md:w-72">
+                  <Search className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors" size={16} />
                   <input
                     type="text"
                     placeholder="Search sources..."
@@ -469,10 +469,10 @@ const DataSourcesView = () => {
                 </div>
 
                 {/* Facility filter dropdown */}
-                <div className="position-relative">
+                <div className="position-position-relative">
                   <button
                     onClick={() => setIsFilterOpen(!isFilterOpen)}
-                    className={`h-11 px-4 rounded-xl border flex items-center gap-2 text-sm font-bold transition-all shrink-0 ${
+                    className={`h-11 px-4 rounded-3 border d-flex align-items-center gap-2 text-sm fw-bold transition-all flex-shrink-0 ${
                       selectedFacility !== 'all'
                         ? 'border-brand-blue/30 bg-brand-blue/5 text-brand-blue'
                         : 'border-brand-border bg-card text-brand-gray hover:bg-brand-bg'
@@ -486,11 +486,11 @@ const DataSourcesView = () => {
                   </button>
 
                   {isFilterOpen && (
-                    <div className="position-absolute end-0 top-full mt-2 w-72 bg-white rounded-3 border border-brand-border shadow-xl z-20 py-2 max-h-64 overflow-y-auto custom-scrollbar">
+                    <div className="position-position-absolute end-0 top-full mt-2 w-72 bg-white rounded-3 border border-brand-border shadow-xl z-20 py-2 max-h-64 overflow-y-auto custom-scrollbar">
                       <button
                         onClick={() => { setSelectedFacility('all'); setIsFilterOpen(false); }}
-                        className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors flex items-center gap-3 ${
-                          selectedFacility === 'all' ? 'bg-brand-blue/5 text-brand-blue font-bold' : 'text-brand-dark hover:bg-brand-bg'
+                        className={`w-100 text-start px-4 py-2.5 text-sm fw-medium transition-colors d-flex align-items-center gap-3 ${
+                          selectedFacility === 'all' ? 'bg-brand-blue/5 text-brand-blue fw-bold' : 'text-brand-dark hover:bg-brand-bg'
                         }`}
                       >
                         <LayoutGrid size={14} />
@@ -504,14 +504,14 @@ const DataSourcesView = () => {
                           <button
                             key={name}
                             onClick={() => { setSelectedFacility(name); setIsFilterOpen(false); }}
-                            className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors flex items-center gap-3 ${
-                              selectedFacility === name ? 'bg-brand-blue/5 text-brand-blue font-bold' : 'text-brand-dark hover:bg-brand-bg'
+                            className={`w-100 text-start px-4 py-2.5 text-sm fw-medium transition-colors d-flex align-items-center gap-3 ${
+                              selectedFacility === name ? 'bg-brand-blue/5 text-brand-blue fw-bold' : 'text-brand-dark hover:bg-brand-bg'
                             }`}
                           >
-                            <Building2 size={14} className="flex-shrink-0" />
-                            <span className="flex-fill truncate">{name}</span>
-                            <span className="fw-bold text-brand-gray bg-brand-bg px-1.5 py-0.5 rounded-2 flex-shrink-0" style={{'fontSize':'10px'}}>{count}</span>
-                            {selectedFacility === name && <CheckCircle2 size={12} className="ml-1 flex-shrink-0" />}
+                            <Building2 size={14} className="d-flex-flex-shrink-0" />
+                            <span className="d-flex-fill truncate">{name}</span>
+                            <span className="fw-bold text-brand-gray bg-brand-bg px-1.5 py-0.5 rounded-2 d-flex-flex-shrink-0" style={{'fontSize':'10px'}}>{count}</span>
+                            {selectedFacility === name && <CheckCircle2 size={12} className="ml-1 d-flex-flex-shrink-0" />}
                           </button>
                         );
                       })}
@@ -523,11 +523,11 @@ const DataSourcesView = () => {
 
             {/* Active filter chip */}
             {selectedFacility !== 'all' && (
-              <div className="d-flex align-items-center gap-2">
+              <div className="d-d-flex align-align-items-center gap-2">
                 <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Filtering:</span>
                 <button
                   onClick={() => setSelectedFacility('all')}
-                  className="d-inline-flex align-items-center gap-1.5 px-3 py-1.5 rounded-3 bg-brand-blue/5 border border-brand-blue/20 text-brand-blue text-xs fw-bold hover:bg-brand-blue/10 transition-all"
+                  className="d-inline-d-flex align-align-items-center gap-1.5 px-3 py-1.5 rounded-3 bg-brand-blue/5 border border-brand-blue/20 text-brand-blue text-xs fw-bold hover:bg-brand-blue/10 transition-all"
                 >
                   <Building2 size={12} />
                   {selectedFacility}
@@ -537,9 +537,9 @@ const DataSourcesView = () => {
             )}
 
             {/* Source list */}
-            <div className="bg-card border border-brand-border shadow-sm overflow-hidden" style={{'borderRadius':'24px'}}>
+            <div className="bg-card border border-brand-border shadow-sm overflow-d-none" style={{'borderRadius':'24px'}}>
               {/* Table header */}
-              <div className="d-none md:grid md:grid-cols-[1fr_130px_120px_80px_52px] gap-4 px-6 py-3 bg-brand-bg/50 border-bottom border-brand-border">
+              <div className="d-none md:grid md:grid-cols-[1fr_130px_120px_80px_52px] gap-4 px-5 py-2 bg-brand-bg/50 border-bottom border-brand-border">
                 <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Source</span>
                 <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Type</span>
                 <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Last Sync</span>
@@ -549,7 +549,7 @@ const DataSourcesView = () => {
 
               {/* Rows */}
               {filtered.length === 0 ? (
-                <div className="d-flex flex-column align-items-center justify-content-center py-16 text-brand-gray gap-3">
+                <div className="d-d-flex d-flex-column align-align-items-center justify-content-center py-16 text-brand-gray gap-3">
                   <Database size={32} className="opacity-30" />
                   <p className="text-sm fw-bold">No sources found</p>
                   <p className="text-xs">Try adjusting your search or filter.</p>
@@ -564,20 +564,20 @@ const DataSourcesView = () => {
                       <div
                         key={entry.id}
                         onClick={() => setEditingEntryId(entry.id)}
-                        className="px-6 py-4 hover:bg-brand-bg/30 transition-colors cursor-pointer group"
+                        className="px-5 py-4 hover:bg-brand-bg/30 transition-colors cursor-pointer group"
                       >
                         {/* Desktop layout */}
-                        <div className="d-none md:grid md:grid-cols-[1fr_130px_120px_80px_52px] gap-4 align-items-center">
-                          <div className="d-flex align-items-center gap-4 min-w-0">
-                            <div className={`w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0 ${meta?.bg || 'bg-brand-bg'} ${meta?.color || 'text-brand-gray'}`}>
+                        <div className="d-none md:grid md:grid-cols-[1fr_130px_120px_80px_52px] gap-4 align-align-items-center">
+                          <div className="d-d-flex align-align-items-center gap-4 min-w-0">
+                            <div className={`w-10 h-10 style={{borderRadius: "10px"}} d-flex align-items-center justify-content-center flex-shrink-0 ${meta?.bg || 'bg-brand-bg'} ${meta?.color || 'text-brand-gray'}`}>
                               <Icon size={18} />
                             </div>
                             <div className="min-w-0">
                               <h5 className="text-sm fw-bold text-brand-dark leading-tight truncate group-hover:text-brand-blue transition-colors">
                                 {entry.name}
                               </h5>
-                              <div className="d-flex align-items-center gap-1.5 mt-0.5">
-                                <Building2 size={10} className="text-brand-gray flex-shrink-0" />
+                              <div className="d-d-flex align-align-items-center gap-1.5 mt-0.5">
+                                <Building2 size={10} className="text-brand-gray d-flex-flex-shrink-0" />
                                 <span className="text-brand-gray fw-medium truncate" style={{'fontSize':'11px'}}>{entry.facilityName}</span>
                               </div>
                               <p className="text-brand-gray/60 font-mono truncate mt-0.5" style={{'fontSize':'10px'}}>{entry.endpoint}</p>
@@ -585,13 +585,13 @@ const DataSourcesView = () => {
                           </div>
 
                           <div>
-                            <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border ${meta?.bg || 'bg-brand-bg'} ${meta?.color || 'text-brand-gray'} ${meta?.borderColor || 'border-brand-border'}`}>
+                            <span className={`inline-d-flex align-items-center gap-1.5 px-2.5 py-1 rounded-3 style={{color: "10px"}} fw-bold uppercase tracking-wider border ${meta?.bg || 'bg-brand-bg'} ${meta?.color || 'text-brand-gray'} ${meta?.borderColor || 'border-brand-border'}`}>
                               <Icon size={10} />
                               {meta?.label || entry.sourceType}
                             </span>
                           </div>
 
-                          <div className="d-flex align-items-center gap-1.5">
+                          <div className="d-d-flex align-align-items-center gap-1.5">
                             <Clock size={12} className="text-brand-gray/50" />
                             <span className="text-xs text-brand-gray fw-medium">{entry.lastSync}</span>
                           </div>
@@ -600,11 +600,11 @@ const DataSourcesView = () => {
                             <StatusBadge status={entry.status} />
                           </div>
 
-                          <div className="d-flex justify-content-end">
+                          <div className="d-d-flex justify-content-end">
                             <button
                               onClick={(e) => { e.stopPropagation(); toggleEntryStatus(entry.id); }}
-                              className={`w-11 h-6 rounded-full p-1 transition-all relative flex items-center ${
-                                isOn ? 'bg-brand-blue shadow-[0_0_10px_rgba(54,73,233,0.3)]' : 'bg-gray-200'
+                              className={`w-11 h-6 rounded-full p-1 transition-all position-relative d-flex align-items-center ${
+                                isOn ? 'bg-brand-blue shadostyle={{width: "0_0_10px_rgba(54,73,233,0.3)"}}' : 'bg-gray-200'
                               }`}
                               aria-label={`Toggle ${entry.name} ${isOn ? 'off' : 'on'}`}
                             >
@@ -616,22 +616,22 @@ const DataSourcesView = () => {
                         </div>
 
                         {/* Mobile layout */}
-                        <div className="md:hidden space-y-3">
-                          <div className="d-flex align-items-start gap-3">
-                            <div className={`w-10 h-10 rounded-[10px] flex items-center justify-center shrink-0 ${meta?.bg || 'bg-brand-bg'} ${meta?.color || 'text-brand-gray'}`}>
+                        <div className="md:d-none space-y-3">
+                          <div className="d-d-flex align-align-items-start gap-3">
+                            <div className={`w-10 h-10 style={{borderRadius: "10px"}} d-flex align-items-center justify-content-center flex-shrink-0 ${meta?.bg || 'bg-brand-bg'} ${meta?.color || 'text-brand-gray'}`}>
                               <Icon size={18} />
                             </div>
-                            <div className="flex-fill min-w-0">
+                            <div className="d-flex-fill min-w-0">
                               <h5 className="text-sm fw-bold text-brand-dark leading-tight truncate">{entry.name}</h5>
-                              <div className="d-flex align-items-center gap-1.5 mt-0.5">
-                                <Building2 size={10} className="text-brand-gray flex-shrink-0" />
+                              <div className="d-d-flex align-align-items-center gap-1.5 mt-0.5">
+                                <Building2 size={10} className="text-brand-gray d-flex-flex-shrink-0" />
                                 <span className="text-brand-gray fw-medium truncate" style={{'fontSize':'11px'}}>{entry.facilityName}</span>
                               </div>
                             </div>
                             <button
                               onClick={(e) => { e.stopPropagation(); toggleEntryStatus(entry.id); }}
-                              className={`w-11 h-6 rounded-full p-1 transition-all relative flex items-center shrink-0 ${
-                                isOn ? 'bg-brand-blue shadow-[0_0_10px_rgba(54,73,233,0.3)]' : 'bg-gray-200'
+                              className={`w-11 h-6 rounded-full p-1 transition-all position-relative d-flex align-items-center flex-shrink-0 ${
+                                isOn ? 'bg-brand-blue shadostyle={{width: "0_0_10px_rgba(54,73,233,0.3)"}}' : 'bg-gray-200'
                               }`}
                               aria-label={`Toggle ${entry.name} ${isOn ? 'off' : 'on'}`}
                             >
@@ -640,13 +640,13 @@ const DataSourcesView = () => {
                               }`} />
                             </button>
                           </div>
-                          <div className="d-flex align-items-center justify-content-between" style={{'paddingLeft':'52px'}}>
-                            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider ${meta?.bg} ${meta?.color} border ${meta?.borderColor}`}>
+                          <div className="d-d-flex align-align-items-center justify-content-between" style={{'paddingLeft':'52px'}}>
+                            <span className={`inline-d-flex align-items-center gap-1 px-2 py-0.5 rounded-md style={{color: "10px"}} fw-bold uppercase tracking-wider ${meta?.bg} ${meta?.color} border ${meta?.borderColor}`}>
                               {meta?.label}
                             </span>
-                            <div className="d-flex align-items-center gap-3">
+                            <div className="d-d-flex align-align-items-center gap-3">
                               <StatusBadge status={entry.status} />
-                              <span className="text-brand-gray fw-medium d-flex align-items-center gap-1" style={{'fontSize':'11px'}}>
+                              <span className="text-brand-gray fw-medium d-d-flex align-align-items-center gap-1" style={{'fontSize':'11px'}}>
                                 <Clock size={10} />
                                 {entry.lastSync}
                               </span>
@@ -671,34 +671,34 @@ const DataSourcesView = () => {
             {/* Breadcrumb back */}
             <button
               onClick={() => setEditingEntryId(null)}
-              className="d-flex align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors"
+              className="d-d-flex align-align-items-center gap-2 text-brand-gray hover:text-brand-dark transition-colors"
             >
               <ChevronLeft size={16} />
               <span className="fw-bold text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Back to Sources</span>
             </button>
 
             {/* Edit card */}
-            <div className="bg-card border border-brand-border shadow-sm overflow-hidden" style={{'borderRadius':'24px'}}>
+            <div className="bg-card border border-brand-border shadow-sm overflow-d-none" style={{'borderRadius':'24px'}}>
               {/* Card header */}
-              <div className="p-6 border-bottom border-brand-border d-flex flex-column sm:flex-row sm:items-center justify-content-between gap-4">
-                <div className="d-flex align-items-center gap-4">
-                  <div className={`w-12 h-12 rounded-[12px] flex items-center justify-center shrink-0 ${editingMeta?.bg || 'bg-brand-bg'} ${editingMeta?.color || 'text-brand-gray'}`}>
+              <div className="p-4 border-bottom border-brand-border d-d-flex d-flex-column sm:d-flex-row sm:align-items-center justify-content-between gap-4">
+                <div className="d-d-flex align-align-items-center gap-4">
+                  <div className={`w-12 h-12 style={{borderRadius: "12px"}} d-flex align-items-center justify-content-center flex-shrink-0 ${editingMeta?.bg || 'bg-brand-bg'} ${editingMeta?.color || 'text-brand-gray'}`}>
                     <EditingIcon size={24} />
                   </div>
                   <div>
                     <h4 className="fw-bold text-brand-dark" style={{'fontSize':'15px'}}>{editingEntry?.name}</h4>
-                    <div className="d-flex align-items-center gap-2 mt-0.5">
+                    <div className="d-d-flex align-align-items-center gap-2 mt-0.5">
                       <Building2 size={11} className="text-brand-gray" />
                       <span className="text-xs text-brand-gray fw-medium">{editingEntry?.facilityName} &bull; {editingEntry?.facilityLocation}</span>
                     </div>
                   </div>
                 </div>
-                <div className="d-flex align-items-center gap-3 pl-16 sm:pl-0">
+                <div className="d-d-flex align-align-items-center gap-3 pl-16 sm:pl-0">
                   <StatusBadge status={editingEntry?.status || 'inactive'} />
                   <button
                     onClick={() => toggleEntryStatus(editingEntry!.id)}
-                    className={`w-11 h-6 rounded-full p-1 transition-all relative flex items-center ${
-                      editingEntry?.status === 'active' ? 'bg-brand-blue shadow-[0_0_10px_rgba(54,73,233,0.3)]' : 'bg-gray-200'
+                    className={`w-11 h-6 rounded-full p-1 transition-all position-relative d-flex align-items-center ${
+                      editingEntry?.status === 'active' ? 'bg-brand-blue shadostyle={{width: "0_0_10px_rgba(54,73,233,0.3)"}}' : 'bg-gray-200'
                     }`}
                     aria-label={`Toggle ${editingEntry?.name}`}
                   >
@@ -710,17 +710,17 @@ const DataSourcesView = () => {
               </div>
 
               {/* Config fields */}
-              <div className="p-6">
+              <div className="p-4">
                 <h5 className="fw-bold text-brand-gray text-uppercase tracking-widest mb-5" style={{'fontSize':'10px'}}>Configuration</h5>
                 <div className="d-grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Shared fields */}
                   <div className="space-y-2">
                     <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Source Name</label>
-                    <input type="text" defaultValue={editingEntry?.name} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                    <input type="text" defaultValue={editingEntry?.name} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                   </div>
                   <div className="space-y-2">
                     <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Facility</label>
-                    <input type="text" defaultValue={editingEntry?.facilityName} className="w-100 bg-brand-bg/50 rounded-3 px-4 py-3 text-sm fw-bold text-brand-gray border border-brand-border outline-none cursor-not-allowed" readOnly />
+                    <input type="text" defaultValue={editingEntry?.facilityName} className="w-100 bg-brand-bg/50 rounded-3 px-4 py-2 text-sm fw-bold text-brand-gray border border-brand-border outline-none cursor-not-allowed" readOnly />
                   </div>
 
                   {/* EMR fields */}
@@ -728,21 +728,21 @@ const DataSourcesView = () => {
                     <>
                       <div className="md:col-span-2 space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>API Endpoint</label>
-                        <input type="text" defaultValue={editingEntry.endpoint} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue={editingEntry.endpoint} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>FHIR Version</label>
-                        <div className="position-relative">
-                          <select defaultValue="FHIR R4" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none appearance-none focus:ring-2 focus:ring-brand-blue/20">
+                        <div className="position-position-relative">
+                          <select defaultValue="FHIR R4" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none appearance-none focus:ring-2 focus:ring-brand-blue/20">
                             <option>FHIR R4</option>
                             <option>FHIR STU3</option>
                           </select>
-                          <ChevronDown size={14} className="position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pe-none" />
+                          <ChevronDown size={14} className="position-position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pe-none" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Client ID</label>
-                        <input type="text" defaultValue="SC_21324" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue="SC_21324" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                     </>
                   )}
@@ -752,15 +752,15 @@ const DataSourcesView = () => {
                     <>
                       <div className="md:col-span-2 space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Host</label>
-                        <input type="text" defaultValue={editingEntry.endpoint.split(':')[0]} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue={editingEntry.endpoint.split(':')[0]} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Database Name</label>
-                        <input type="text" defaultValue={editingEntry.endpoint.split('/').pop()} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue={editingEntry.endpoint.split('/').pop()} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Port</label>
-                        <input type="text" defaultValue="5432" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue="5432" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                     </>
                   )}
@@ -770,22 +770,22 @@ const DataSourcesView = () => {
                     <>
                       <div className="md:col-span-2 space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Base URL</label>
-                        <input type="text" defaultValue={editingEntry.endpoint} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue={editingEntry.endpoint} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Auth Type</label>
-                        <div className="position-relative">
-                          <select className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none appearance-none focus:ring-2 focus:ring-brand-blue/20">
+                        <div className="position-position-relative">
+                          <select className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none appearance-none focus:ring-2 focus:ring-brand-blue/20">
                             <option>API Key</option>
                             <option>OAuth 2.0</option>
                             <option>Bearer Token</option>
                           </select>
-                          <ChevronDown size={14} className="position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pe-none" />
+                          <ChevronDown size={14} className="position-position-absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray pe-none" />
                         </div>
                       </div>
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Rate Limit (req/min)</label>
-                        <input type="text" defaultValue="60" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue="60" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                       </div>
                     </>
                   )}
@@ -795,12 +795,12 @@ const DataSourcesView = () => {
                     <div className="md:col-span-2 space-y-4">
                       <div className="space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Current File</label>
-                        <div className="d-flex align-items-center gap-3 bg-brand-bg rounded-3 px-4 py-3 border border-brand-border">
-                          <FileSpreadsheet size={16} className="text-emerald-600 flex-shrink-0" />
+                        <div className="d-d-flex align-align-items-center gap-3 bg-brand-bg rounded-3 px-4 py-2 border border-brand-border">
+                          <FileSpreadsheet size={16} className="text-emerald-600 d-flex-flex-shrink-0" />
                           <span className="text-sm fw-bold text-brand-dark">{editingEntry.endpoint}</span>
                         </div>
                       </div>
-                      <div className="h-32 border-2 border-dashed border-brand-border rounded-3 d-flex flex-column align-items-center justify-content-center text-brand-gray gap-2 cursor-pointer hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all">
+                      <div className="h-32 border-2 border-dashed border-brand-border rounded-3 d-d-flex d-flex-column align-align-items-center justify-content-center text-brand-gray gap-2 cursor-pointer hover:border-brand-blue/50 hover:bg-brand-blue/5 transition-all">
                         <FileSpreadsheet size={24} className="opacity-50" />
                         <span className="fw-bold text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Click to upload or drag file</span>
                       </div>
@@ -812,14 +812,14 @@ const DataSourcesView = () => {
                     <>
                       <div className="md:col-span-2 space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Spreadsheet ID</label>
-                        <input type="text" defaultValue={editingEntry.endpoint.split('...')[0].trim() + '...'} placeholder="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms" className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue={editingEntry.endpoint.split('...')[0].trim() + '...'} placeholder="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms" className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                         <p className="text-brand-gray fw-medium fst-italic" style={{'fontSize':'10px'}}>
                           Found in the Google Sheets URL between <span className="font-mono text-brand-dark fst-normal">/d/</span> and <span className="font-mono text-brand-dark fst-normal">/edit</span>.
                         </p>
                       </div>
                       <div className="md:col-span-2 space-y-2">
                         <label className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Range</label>
-                        <input type="text" defaultValue={editingEntry.endpoint.includes('\u2022') ? editingEntry.endpoint.split('\u2022')[1].trim() : 'Sheet1!A1:Z1000'} className="w-100 bg-brand-bg rounded-3 px-4 py-3 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
+                        <input type="text" defaultValue={editingEntry.endpoint.includes('\u2022') ? editingEntry.endpoint.split('\u2022')[1].trim() : 'Sheet1!A1:Z1000'} className="w-100 bg-brand-bg rounded-3 px-4 py-2 text-sm fw-bold text-brand-dark border border-brand-border outline-none focus:ring-2 focus:ring-brand-blue/20" />
                         <p className="text-brand-gray fw-medium fst-italic" style={{'fontSize':'10px'}}>
                           Use A1 notation, e.g. <span className="font-mono text-brand-dark fst-normal">Sheet1!A1:D100</span> or a named range.
                         </p>
@@ -829,10 +829,10 @@ const DataSourcesView = () => {
                 </div>
 
                 {/* Save / Cancel footer */}
-                <div className="mt-8 pt-6 border-top border-brand-border d-flex flex-column sm:flex-row align-items-center justify-content-end gap-3">
+                <div className="mt-8 pt-6 border-top border-brand-border d-d-flex d-flex-column sm:d-flex-row align-align-items-center justify-content-end gap-3">
                   <button
                     onClick={() => setEditingEntryId(null)}
-                    className="w-100 sm:w-auto px-6 py-2.5 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}
+                    className="w-100 sm:w-auto px-5 py-2.5 rounded-3 border border-brand-border text-brand-gray fw-bold text-uppercase tracking-widest hover:bg-brand-bg transition-all" style={{'fontSize':'10px'}}
                   >
                     Cancel
                   </button>
@@ -841,7 +841,7 @@ const DataSourcesView = () => {
                       toast.success(`${editingEntry?.name} configuration saved`);
                       setEditingEntryId(null);
                     }}
-                    className="w-100 sm:w-auto d-flex align-items-center justify-content-center gap-2 px-8 py-2.5 rounded-3 bg-brand-blue text-white fw-bold text-uppercase tracking-widest hover:bg-brand-blue/90 transition-all shadow-lg shadow-brand-blue/10" style={{'fontSize':'10px'}}
+                    className="w-100 sm:w-auto d-d-flex align-align-items-center justify-content-center gap-2 px-8 py-2.5 rounded-3 bg-brand-blue text-white fw-bold text-uppercase tracking-widest hover:bg-brand-blue/90 transition-all shadow-lg shadow-brand-blue/10" style={{'fontSize':'10px'}}
                   >
                     <Save size={14} />
                     Save Configuration
@@ -875,18 +875,18 @@ const DataSourcesView = () => {
 const FacilityCard = ({ facility, onEdit, onDelete, onClick }: any) => (
   <div 
     onClick={onClick}
-    className="bg-card p-6 border border-brand-border hover:border-brand-blue/40 transition-all group position-relative overflow-hidden cursor-pointer" style={{'borderRadius':'24px'}}
+    className="bg-card p-4 border border-brand-border hover:border-brand-blue/40 transition-all group position-position-relative overflow-d-none cursor-pointer" style={{'borderRadius':'24px'}}
   >
-    <div className="d-flex align-items-start justify-content-between">
-      <div className="d-flex align-items-center gap-4">
-        <div className="w-12 h-12 rounded-2xl bg-brand-bg d-flex align-items-center justify-content-center text-brand-blue group-hover:scale-110 transition-transform duration-300">
+    <div className="d-d-flex align-align-items-start justify-content-between">
+      <div className="d-d-flex align-align-items-center gap-4">
+        <div className="w-12 h-12 rounded-4 bg-brand-bg d-d-flex align-align-items-center justify-content-center text-brand-blue group-hover:scale-110 transition-transform duration-300">
           <Building2 size={24} />
         </div>
         <div>
           <h4 className="text-base fw-bold text-brand-dark group-hover:text-brand-blue transition-colors">
             {facility.name}
           </h4>
-          <div className="d-flex align-items-center gap-2 mt-1">
+          <div className="d-d-flex align-align-items-center gap-2 mt-1">
              <MapPin size={12} className="text-brand-gray" />
              <p className="text-xs text-brand-gray fw-medium">
                {facility.location} • {facility.id}
@@ -894,7 +894,7 @@ const FacilityCard = ({ facility, onEdit, onDelete, onClick }: any) => (
           </div>
         </div>
       </div>
-      <div className="d-flex align-items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="d-d-flex align-align-items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button 
           onClick={(e) => {
             e.stopPropagation();
@@ -915,11 +915,11 @@ const FacilityCard = ({ facility, onEdit, onDelete, onClick }: any) => (
         </button>
       </div>
     </div>
-    <div className="mt-4 pt-4 border-top border-brand-border/50 d-flex align-items-center justify-content-between">
+    <div className="mt-4 pt-4 border-top border-brand-border/50 d-d-flex align-align-items-center justify-content-between">
       <span className="px-2.5 py-1 rounded-3 fw-bold text-uppercase tracking-wider bg-brand-bg text-brand-gray border border-brand-border/50" style={{'fontSize':'10px'}}>
         {facility.type}
       </span>
-      <span className="fw-bold text-brand-blue text-uppercase tracking-widest d-flex align-items-center gap-1.5 cursor-pointer hover:underline" style={{'fontSize':'10px'}}>
+      <span className="fw-bold text-brand-blue text-uppercase tracking-widest d-d-flex align-align-items-center gap-1.5 cursor-pointer hover:underline" style={{'fontSize':'10px'}}>
         View Details <ChevronDown size={12} />
       </span>
     </div>
@@ -963,15 +963,15 @@ const FacilitiesView = () => {
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="d-flex flex-column md:flex-row md:items-center justify-content-between gap-6">
+      <div className="d-d-flex d-flex-column md:d-flex-row md:align-items-center justify-content-between gap-6">
         <div className="space-y-1">
           <h3 className="text-lg fw-bold text-brand-dark">Facilities</h3>
           <p className="text-brand-gray text-sm">Manage healthcare locations and campus details</p>
         </div>
 
-        <div className="d-flex align-items-center gap-3 w-100 md:w-auto">
-          <div className="position-relative group flex-fill md:w-80">
-            <Search className="position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors" size={18} />
+        <div className="d-d-flex align-align-items-center gap-3 w-100 md:w-auto">
+          <div className="position-position-relative group d-flex-fill md:w-80">
+            <Search className="position-position-absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray group-focus-within:text-brand-blue transition-colors" size={18} />
             <input 
               type="text" 
               placeholder="Search facilities..." 
@@ -1029,16 +1029,16 @@ export const Settings = () => {
     <div className="p-4 lg:p-8 space-y-8 mx-auto pb-20" style={{'maxWidth':'1200px'}}>
       
       {/* Tabs */}
-      <div className="d-flex align-items-center">
-        <div className="bg-white p-1.5 border d-flex gap-1 overflow-x-auto no-scrollbar whitespace-nowrap" style={{'borderRadius':'12px', 'borderColor':'#eee'}}>
+      <div className="d-d-flex align-align-items-center">
+        <div className="bg-white p-1.5 border d-d-flex gap-1 overflow-x-auto no-scrollbar whitespace-nowrap" style={{'borderRadius':'12px', 'borderColor':'#eee'}}>
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-[24px] text-sm font-bold transition-all duration-200 ${
+              className={`d-flex align-items-center gap-2 px-5 py-2.5 style={{borderRadius: "24px"}} text-sm fw-bold transition-all duration-200 ${
                 activeTab === tab.id 
-                  ? 'bg-[#3649e9] text-white shadow-[0_10px_15px_rgba(54,73,233,0.2)]' 
-                  : 'text-[#6a7282] hover:bg-brand-bg hover:text-brand-dark'
+                  ? 'style={{backgroundColor: "#3649e9"}} text-white shadostyle={{width: "0_10px_15px_rgba(54,73,233,0.2)"}}' 
+                  : 'style={{color: "#6a7282"}} hover:bg-brand-bg hover:text-brand-dark'
               }`}
             >
               <tab.icon size={16} />
@@ -1077,7 +1077,7 @@ export const Settings = () => {
       {activeTab === 'data' && (
         <button 
           onClick={() => toast.info('Feature coming soon: Add Data Source')}
-          className="position-fixed bottom-8 right-8 z-40 w-14 h-14 rounded-circle bg-brand-dark text-white hover:bg-black transition-all shadow-2xl d-flex align-items-center justify-content-center hover:scale-105 active:scale-95"
+          className="position-position-fixed bottom-8 right-8 z-40 w-14 h-14 rounded-circle bg-brand-dark text-white hover:bg-black transition-all shadow-2xl d-d-flex align-align-items-center justify-content-center hover:scale-105 active:scale-95"
           aria-label="Add Data Source"
         >
           <Plus size={24} />
@@ -1087,7 +1087,7 @@ export const Settings = () => {
       {activeTab === 'facility' && (
         <button 
           onClick={() => toast.info('Feature coming soon: Add Facility Modal')}
-          className="position-fixed bottom-8 right-8 z-40 w-14 h-14 rounded-circle bg-brand-dark text-white hover:bg-black transition-all shadow-2xl d-flex align-items-center justify-content-center hover:scale-105 active:scale-95"
+          className="position-position-fixed bottom-8 right-8 z-40 w-14 h-14 rounded-circle bg-brand-dark text-white hover:bg-black transition-all shadow-2xl d-d-flex align-align-items-center justify-content-center hover:scale-105 active:scale-95"
           aria-label="Add Facility"
         >
           <Plus size={24} />

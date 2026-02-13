@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
   const [isFacilityOpen, setIsFacilityOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [selectedFacility, setSelectedFacility] = useState('Main Hospital');
-  const [hidden, setHidden] = useState(false);
+  const [d-none, setHidden] = useState(false);
 
   const { scrollY } = useScroll();
 
@@ -76,18 +76,18 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
     <Motion.header 
       variants={{
         visible: { y: 0 },
-        hidden: { y: "-100%" },
+        d-none: { y: "-100%" },
       }}
-      animate={hidden ? "hidden" : "visible"}
+      animate={d-none ? "d-none" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="h-16 bg-card border-bottom border-brand-border d-flex align-items-center justify-content-between px-4 lg:px-8 position-fixed top-0 lg:left-[280px] start-0 end-0 z-40"
+      className="h-16 bg-card border-bottom border-brand-border d-d-flex align-align-items-center justify-content-between px-4 lg:px-8 position-position-fixed top-0 lg:left-[280px] start-0 end-0 z-40"
     >
-      <h2 className="text-xl fw-bold text-brand-dark tracking-tight d-none sm:block">{title}</h2>
+      <h2 className="text-xl fw-bold text-brand-dark tracking-tight d-none sm:d-block">{title}</h2>
       
-      <div className="d-flex align-items-center gap-4 flex-fill justify-content-end">
+      <div className="d-d-flex align-align-items-center gap-4 d-flex-fill justify-content-end">
         {/* Search Bar */}
-        <div className="position-relative flex-fill" style={{'maxWidth':'448px'}}>
-          <Search size={16} className="position-absolute left-3 top-1/2 -translate-y-1/2 text-brand-gray" />
+        <div className="position-position-relative d-flex-fill" style={{'maxWidth':'448px'}}>
+          <Search size={16} className="position-position-absolute left-3 top-1/2 -translate-y-1/2 text-brand-gray" />
           <input 
             type="text" 
             value={search}
@@ -98,17 +98,17 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
         </div>
 
         {/* Notifications */}
-        <div className="position-relative">
+        <div className="position-position-relative">
           <button 
             onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
-            className={`w-10 h-10 flex items-center justify-center rounded-xl transition-all relative ${
+            className={`w-10 h-10 d-flex align-items-center justify-content-center rounded-3 transition-all position-relative ${
               isNotificationsOpen 
                 ? 'bg-brand-blue text-white shadow-lg shadow-brand-blue/20' 
                 : 'bg-brand-bg text-brand-dark hover:bg-brand-bg/80'
             }`}
           >
             <Bell size={18} />
-            <div className={`absolute top-2.5 right-2.5 w-2 h-2 rounded-full border-2 transition-colors ${
+            <div className={`position-absolute top-2.5 right-2.5 w-2 h-2 rounded-full border-2 transition-colors ${
               isNotificationsOpen ? 'bg-white border-brand-blue' : 'bg-brand-blue border-card'
             }`} />
           </button>
@@ -116,14 +116,14 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
           <AnimatePresence>
             {isNotificationsOpen && (
               <>
-                <div className="position-fixed top-0 bottom-0 start-0 end-0 z-10" onClick={() => setIsNotificationsOpen(false)} />
+                <div className="position-position-fixed top-0 bottom-0 start-0 end-0 z-10" onClick={() => setIsNotificationsOpen(false)} />
                 <Motion.div
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="position-absolute end-0 top-full mt-2 w-80 sm:w-96 bg-card rounded-2xl shadow-2xl border border-brand-border z-20 overflow-hidden d-flex flex-column"
+                  className="position-position-absolute end-0 top-full mt-2 w-80 sm:w-96 bg-card rounded-4 shadow-2xl border border-brand-border z-20 overflow-d-none d-d-flex d-flex-column"
                 >
-                  <div className="p-4 border-bottom border-brand-bg d-flex align-items-center justify-content-between">
+                  <div className="p-4 border-bottom border-brand-bg d-d-flex align-align-items-center justify-content-between">
                     <div>
                       <h3 className="text-sm fw-bold text-brand-dark">Active Alerts</h3>
                       <p className="text-brand-gray fw-bold text-uppercase tracking-widest mt-0.5" style={{'fontSize':'10px'}}>2 Critical Issues</p>
@@ -135,9 +135,9 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
                     {notifications.map((notif) => (
                       <div 
                         key={notif.id}
-                        className={`p-4 border-b border-brand-bg hover:bg-brand-bg/50 transition-colors cursor-pointer flex gap-4 ${notif.unread ? 'bg-brand-blue/5' : ''}`}
+                        className={`p-4 border-b border-brand-bg hover:bg-brand-bg/50 transition-colors cursor-pointer d-flex gap-4 ${notif.unread ? 'bg-brand-blue/5' : ''}`}
                       >
-                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+                        <div className={`w-10 h-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0 ${
                           notif.severity === 'high' ? 'bg-red-50 text-red-600' :
                           notif.severity === 'medium' ? 'bg-amber-50 text-amber-600' :
                           'bg-blue-50 text-blue-600'
@@ -145,15 +145,15 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
                           {notif.type === 'alert' && <AlertCircle size={18} />}
                           {notif.type === 'system' && <Calendar size={18} />}
                         </div>
-                        <div className="flex-fill min-w-0">
-                          <div className="d-flex align-items-center justify-content-between gap-2 mb-0.5">
+                        <div className="d-flex-fill min-w-0">
+                          <div className="d-d-flex align-align-items-center justify-content-between gap-2 mb-0.5">
                             <h4 className="text-xs fw-bold text-brand-dark truncate">{notif.title}</h4>
                             <span className="fw-medium text-brand-gray whitespace-nowrap" style={{'fontSize':'10px'}}>{notif.time}</span>
                           </div>
                           <p className="text-xs text-brand-gray leading-normal line-clamp-2">{notif.desc}</p>
                         </div>
                         {notif.unread && (
-                          <div className="w-1.5 h-1.5 rounded-circle bg-brand-blue flex-shrink-0 mt-1.5" />
+                          <div className="w-1.5 h-1.5 rounded-circle bg-brand-blue d-flex-flex-shrink-0 mt-1.5" />
                         )}
                       </div>
                     ))}
@@ -165,10 +165,10 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
         </div>
 
         {/* Hospital Selector */}
-        <div className="position-relative">
+        <div className="position-position-relative">
           <button 
             onClick={() => setIsFacilityOpen(!isFacilityOpen)}
-            className="d-flex align-items-center gap-2 bg-brand-bg px-4 py-2 rounded-3 hover:bg-brand-bg/80 transition-colors flex-shrink-0"
+            className="d-d-flex align-align-items-center gap-2 bg-brand-bg px-4 py-2 rounded-3 hover:bg-brand-bg/80 transition-colors d-flex-flex-shrink-0"
           >
             <span className="text-xs fw-bold text-brand-dark whitespace-nowrap" style={{'fontSize':'14px'}}>{selectedFacility}</span>
             <ChevronDown size={14} className={`text-brand-gray transition-transform duration-200 ${isFacilityOpen ? 'rotate-180' : ''}`} />
@@ -178,14 +178,14 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
             {isFacilityOpen && (
               <>
                 <div 
-                  className="position-fixed top-0 bottom-0 start-0 end-0 z-10" 
+                  className="position-position-fixed top-0 bottom-0 start-0 end-0 z-10" 
                   onClick={() => setIsFacilityOpen(false)}
                 />
                 <Motion.div
                   initial={{ opacity: 0, y: 10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="position-absolute end-0 top-full mt-2 w-56 bg-card rounded-2xl shadow-2xl border border-brand-border z-20 py-2 overflow-hidden"
+                  className="position-position-absolute end-0 top-full mt-2 w-56 bg-card rounded-4 shadow-2xl border border-brand-border z-20 py-2 overflow-d-none"
                 >
                   <div className="px-4 py-2 mb-1 border-bottom border-brand-bg">
                     <p className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Select Facility</p>
@@ -197,9 +197,9 @@ export const Header: React.FC<HeaderProps> = ({ title, search, setSearch }) => {
                         setSelectedFacility(facility);
                         setIsFacilityOpen(false);
                       }}
-                      className="w-100 px-4 py-2.5 text-start d-flex align-items-center justify-content-between group hover:bg-brand-bg transition-colors"
+                      className="w-100 px-4 py-2.5 text-start d-d-flex align-align-items-center justify-content-between group hover:bg-brand-bg transition-colors"
                     >
-                      <span className={`text-sm font-bold ${selectedFacility === facility ? 'text-brand-blue' : 'text-brand-dark'}`}>
+                      <span className={`text-sm fw-bold ${selectedFacility === facility ? 'text-brand-blue' : 'text-brand-dark'}`}>
                         {facility}
                       </span>
                       {selectedFacility === facility && (

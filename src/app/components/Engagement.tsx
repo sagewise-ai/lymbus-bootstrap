@@ -214,7 +214,7 @@ const StatusBadge = ({ status }: { status: string }) => {
     Draft: 'bg-slate-50 text-slate-700 border border-slate-200',
   };
   return (
-    <span className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide flex items-center justify-center h-6 ${colors[status] || 'bg-gray-50 text-gray-600'}`}>
+    <span className={`style={{color: "10px"}} fw-bold px-3 py-1 rounded-full uppercase tracking-wide d-flex align-items-center justify-content-center h-6 ${colors[status] || 'bg-gray-50 text-gray-600'}`}>
       {status}
     </span>
   );
@@ -294,18 +294,18 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
     const val = parseInt(perfString);
     if (val < 40) return 'bg-red-500';
     if (val < 70) return 'bg-orange-500';
-    return 'bg-[#00d88c]'; 
+    return 'style={{backgroundColor: "#00d88c"}}'; 
   };
 
   const StatusPill = ({ status }: { status: string }) => {
     const colors: Record<string, string> = {
-      Active: 'bg-[#f0fdf4] text-[#10b981]',
-      Paused: 'bg-[#fffbeb] text-[#f59e0b]',
-      Ended: 'bg-[#fef2f2] text-[#ef4444]',
+      Active: 'style={{backgroundColor: "#f0fdf4"}} style={{color: "#10b981"}}',
+      Paused: 'style={{backgroundColor: "#fffbeb"}} style={{color: "#f59e0b"}}',
+      Ended: 'style={{backgroundColor: "#fef2f2"}} style={{color: "#ef4444"}}',
       Draft: 'bg-slate-50 text-slate-700',
     };
     return (
-      <div className={cn("w-full h-8 rounded-xl flex items-center justify-center text-[10px] font-bold uppercase tracking-widest", colors[status] || 'bg-gray-50 text-gray-600')}>
+      <div className={cn("w-100 h-8 rounded-3 d-flex align-items-center justify-content-center style={{color: "10px"}} fw-bold uppercase tracking-widest", colors[status] || 'bg-gray-50 text-gray-600')}>
         {status}
       </div>
     );
@@ -313,11 +313,11 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
 
   const FormStatusBadge = ({ status }: { status: string }) => {
     const colors: Record<string, string> = {
-      Active: 'bg-[rgba(52,211,153,0.1)] text-[#10b981]',
-      Draft: 'bg-[#f3f4f6] text-[#6b7280]',
+      Active: 'style={{backgroundColor: "rgba(52,211,153,0.1)"}} style={{color: "#10b981"}}',
+      Draft: 'style={{backgroundColor: "#f3f4f6"}} style={{color: "#6b7280"}}',
     };
     return (
-      <div className={cn("px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest", colors[status] || 'bg-gray-100 text-gray-600')}>
+      <div className={cn("px-3 py-1 rounded-full style={{color: "10px"}} fw-bold uppercase tracking-widest", colors[status] || 'bg-gray-100 text-gray-600')}>
         {status}
       </div>
     );
@@ -418,12 +418,12 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
   const FilterSection = ({ title, options, current, onChange }: any) => (
     <div className="space-y-3">
       <h4 className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>{title}</h4>
-      <div className="d-flex flex-wrap gap-2">
+      <div className="d-d-flex d-flex-wrap gap-2">
         {options.map((opt: string) => (
           <button
             key={opt}
             onClick={() => onChange(opt)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all border ${
+            className={`px-3 py-1.5 rounded-3 text-xs fw-bold transition-all border ${
               current === opt 
                 ? 'bg-brand-blue border-brand-blue text-white' 
                 : 'bg-white border-brand-border text-brand-gray hover:border-brand-blue/30'
@@ -439,7 +439,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
   return (
     <div className="p-4 lg:p-8 space-y-6 lg:space-y-8 animate-in fade-in duration-500">
       {/* Tabs */}
-      <div className="bg-white p-1.5 border d-flex gap-1 overflow-x-auto no-scrollbar whitespace-nowrap" style={{'borderRadius':'12px', 'borderColor':'#eee'}}>
+      <div className="bg-white p-1.5 border d-d-flex gap-1 overflow-x-auto no-scrollbar whitespace-nowrap" style={{'borderRadius':'12px', 'borderColor':'#eee'}}>
         {[
           { id: 'insights', label: 'Insights', icon: Zap },
           { id: 'campaigns', label: 'Campaigns', icon: MessageSquare },
@@ -452,10 +452,10 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               setActiveSubTab(tab.id);
               setView('grid');
             }}
-            className={`flex items-center gap-2 px-6 py-2.5 rounded-[24px] text-sm font-bold transition-all duration-200 ${
+            className={`d-flex align-items-center gap-2 px-5 py-2.5 style={{borderRadius: "24px"}} text-sm fw-bold transition-all duration-200 ${
               activeSubTab === tab.id 
-                ? 'bg-[#3649e9] text-white shadow-[0_10px_15px_rgba(54,73,233,0.2)]' 
-                : 'text-[#6a7282] hover:bg-brand-bg hover:text-brand-dark'
+                ? 'style={{backgroundColor: "#3649e9"}} text-white shadostyle={{width: "0_10px_15px_rgba(54,73,233,0.2)"}}' 
+                : 'style={{color: "#6a7282"}} hover:bg-brand-bg hover:text-brand-dark'
             }`}
           >
             <tab.icon size={16} />
@@ -465,8 +465,8 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
       </div>
 
       {activeSubTab !== 'insights' && activeSubTab !== 'responses' && (
-      <div className="d-flex flex-column lg:flex-row lg:items-center justify-content-between gap-4">
-        <div className="d-flex flex-column gap-1 text-center lg:text-left">
+      <div className="d-d-flex d-flex-column lg:d-flex-row lg:align-items-center justify-content-between gap-4">
+        <div className="d-d-flex d-flex-column gap-1 text-center lg:text-start">
           <h3 className="fw-bold" style={{'fontSize':'18px', 'color':'#09156a'}}>
             {activeSubTab === 'campaigns' ? 'All Campaigns' : activeSubTab === 'forms' ? 'All Forms' : activeSubTab.charAt(0).toUpperCase() + activeSubTab.slice(1)}
           </h3>
@@ -475,19 +475,19 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
           </p>
         </div>
 
-        <div className="d-flex flex-column sm:flex-row align-items-center gap-4">
+        <div className="d-d-flex d-flex-column sm:d-flex-row align-align-items-center gap-4">
           {/* View Toggle */}
           {activeSubTab !== 'forms' && (
-            <div className="bg-white p-1 border d-flex gap-1 w-100 sm:w-auto h-10 align-items-center justify-content-center" style={{'borderRadius':'12px', 'borderColor':'#eee'}}>
+            <div className="bg-white p-1 border d-d-flex gap-1 w-100 sm:w-auto h-10 align-align-items-center justify-content-center" style={{'borderRadius':'12px', 'borderColor':'#eee'}}>
               <button 
                 onClick={() => setView('grid')}
-                className={`flex-1 sm:flex-none p-2 rounded-[12px] transition-colors flex justify-center ${view === 'grid' ? 'bg-[#3649e9] text-white' : 'text-[#6a7282] hover:bg-brand-bg'}`}
+                className={`d-flex-grow-1 sm:d-flex-none p-2 style={{borderRadius: "12px"}} transition-colors d-flex justify-content-center ${view === 'grid' ? 'style={{backgroundColor: "#3649e9"}} text-white' : 'style={{color: "#6a7282"}} hover:bg-brand-bg'}`}
               >
                 <LayoutGrid size={18} />
               </button>
               <button 
                 onClick={() => setView('list')}
-                className={`flex-1 sm:flex-none p-2 rounded-[12px] transition-colors flex justify-center ${view === 'list' ? 'bg-[#3649e9] text-white' : 'text-[#6a7282] hover:bg-brand-bg'}`}
+                className={`d-flex-grow-1 sm:d-flex-none p-2 style={{borderRadius: "12px"}} transition-colors d-flex justify-content-center ${view === 'list' ? 'style={{backgroundColor: "#3649e9"}} text-white' : 'style={{color: "#6a7282"}} hover:bg-brand-bg'}`}
               >
                 <List size={18} />
               </button>
@@ -495,8 +495,8 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
           )}
 
           {/* Search */}
-          <div className="position-relative w-100 sm:w-64">
-            <Search size={16} className="position-absolute left-3 top-1/2 -translate-y-1/2" style={{'color':'#6a7282'}} />
+          <div className="position-position-relative w-100 sm:w-64">
+            <Search size={16} className="position-position-absolute left-3 top-1/2 -translate-y-1/2" style={{'color':'#6a7282'}} />
             <input 
               type="text" 
               value={localSearch}
@@ -506,18 +506,18 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
             />
           </div>
 
-          <div className="position-relative">
+          <div className="position-position-relative">
             <button 
               onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className={`p-2.5 border rounded-[12px] transition-all flex justify-center ${
+              className={`p-2.5 border style={{borderRadius: "12px"}} transition-all d-flex justify-content-center ${
                 isFilterOpen || Object.values(activeFilters).some(v => v !== 'All')
                   ? 'bg-brand-blue border-brand-blue text-white shadow-lg shadow-brand-blue/20' 
-                  : 'bg-white border-[#eee] text-[#6a7282] hover:bg-brand-bg'
+                  : 'bg-white border-[#eee] style={{color: "#6a7282"}} hover:bg-brand-bg'
               }`}
             >
               <Filter size={18} />
               {Object.values(activeFilters).some(v => v !== 'All') && !isFilterOpen && (
-                <div className="position-absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-circle border-2 border-white" />
+                <div className="position-position-absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-circle border-2 border-white" />
               )}
             </button>
 
@@ -529,15 +529,15 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onClick={() => setIsFilterOpen(false)}
-                    className="position-fixed top-0 bottom-0 start-0 end-0"
+                    className="position-position-fixed top-0 bottom-0 start-0 end-0"
                   />
                   <Motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="position-absolute end-0 top-full mt-3 w-100 sm:w-[320px] bg-white shadow-2xl border border-brand-border p-4 sm:p-6 overflow-hidden" style={{'maxWidth':'calc(100vw-32px)', 'borderRadius':'24px'}}
+                    className="position-position-absolute end-0 top-full mt-3 w-100 sm:style={{width: "320px"}} bg-white shadow-2xl border border-brand-border p-4 sm:p-4 overflow-d-none" style={{'maxWidth':'calc(100vw-32px)', 'borderRadius':'24px'}}
                   >
-                    <div className="d-flex align-items-center justify-content-between mb-6">
+                    <div className="d-d-flex align-align-items-center justify-content-between mb-6">
                       <h3 className="fw-bold text-brand-dark">
                         {activeSubTab === 'forms' ? 'Form Filters' : 'Campaign Filters'}
                       </h3>
@@ -603,16 +603,16 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       )}
                     </div>
 
-                    <div className="mt-8 pt-6 border-top border-brand-border d-flex align-items-center gap-3">
+                    <div className="mt-8 pt-6 border-top border-brand-border d-d-flex align-align-items-center gap-3">
                       <button 
                         onClick={clearFilters}
-                        className="flex-fill py-2.5 rounded-3 text-xs fw-bold text-brand-gray hover:bg-brand-bg transition-colors text-uppercase tracking-widest"
+                        className="d-flex-fill py-2.5 rounded-3 text-xs fw-bold text-brand-gray hover:bg-brand-bg transition-colors text-uppercase tracking-widest"
                       >
                         Clear All
                       </button>
                       <button 
                         onClick={applyFilters}
-                        className="flex-fill py-2.5 rounded-3 bg-brand-blue text-white text-xs fw-bold hover:shadow-lg shadow-brand-blue/20 transition-all d-flex align-items-center justify-content-center gap-2 text-uppercase tracking-widest"
+                        className="d-flex-fill py-2.5 rounded-3 bg-brand-blue text-white text-xs fw-bold hover:shadow-lg shadow-brand-blue/20 transition-all d-d-flex align-align-items-center justify-content-center gap-2 text-uppercase tracking-widest"
                       >
                         <Check size={14} />
                         Apply
@@ -644,7 +644,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="bg-card border border-brand-border overflow-hidden" style={{'borderRadius':'24px'}}
+              className="bg-card border border-brand-border overflow-d-none" style={{'borderRadius':'24px'}}
             >
               <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
                 <table className="w-100 text-start lg:min-w-0" style={{'minWidth':'1000px'}}>
@@ -661,9 +661,9 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                         <th 
                           key={col.key}
                           onClick={() => handleSort(col.key)}
-                          className="px-6 py-4 cursor-pointer hover:bg-brand-bg/50 transition-colors group"
+                          className="px-5 py-4 cursor-pointer hover:bg-brand-bg/50 transition-colors group"
                         >
-                          <div className="d-flex align-items-center gap-1">
+                          <div className="d-d-flex align-align-items-center gap-1">
                             {col.label}
                             <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                               {sort.key === col.key ? (
@@ -673,36 +673,36 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                           </div>
                         </th>
                       ))}
-                      <th className="px-6 py-4 text-end">Actions</th>
+                      <th className="px-5 py-4 text-end">Actions</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-brand-border">
                     {filteredCampaigns.map((camp) => (
                       <tr key={camp.id} className="hover:bg-brand-bg/20 transition-colors group">
-                        <td className="px-6 py-5">
-                          <div className="d-flex flex-column gap-1.5">
+                        <td className="px-5 py-5">
+                          <div className="d-d-flex d-flex-column gap-1.5">
                             <span className="text-sm fw-bold text-brand-dark">{camp.name}</span>
-                            <div className="d-flex align-items-center gap-2">
+                            <div className="d-d-flex align-align-items-center gap-2">
                               <StatusBadge status={camp.status} />
                               {camp.channels.map(ch => (
-                                <span key={ch} className="fw-bold px-3 py-1 rounded-3 h-6 d-flex align-items-center justify-content-center text-uppercase tracking-wide" style={{'backgroundColor':'#f1f3f5', 'color':'#495057', 'fontSize':'10px'}}>
+                                <span key={ch} className="fw-bold px-3 py-1 rounded-3 h-6 d-d-flex align-align-items-center justify-content-center text-uppercase tracking-wide" style={{'backgroundColor':'#f1f3f5', 'color':'#495057', 'fontSize':'10px'}}>
                                   {ch}
                                 </span>
                               ))}
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-5 text-sm fw-medium text-brand-gray">{camp.delivered}</td>
-                        <td className="px-6 py-5 text-sm fw-medium text-brand-gray">{camp.opened}</td>
-                        <td className="px-6 py-5 text-sm fw-medium text-brand-gray">{camp.clicked}</td>
-                        <td className="px-6 py-5">
-                          <div className="d-flex flex-column gap-2">
-                            <div className="d-flex align-items-center justify-content-between fw-bold text-brand-gray mb-1" style={{'fontSize':'10px'}}>
+                        <td className="px-5 py-5 text-sm fw-medium text-brand-gray">{camp.delivered}</td>
+                        <td className="px-5 py-5 text-sm fw-medium text-brand-gray">{camp.opened}</td>
+                        <td className="px-5 py-5 text-sm fw-medium text-brand-gray">{camp.clicked}</td>
+                        <td className="px-5 py-5">
+                          <div className="d-d-flex d-flex-column gap-2">
+                            <div className="d-d-flex align-align-items-center justify-content-between fw-bold text-brand-gray mb-1" style={{'fontSize':'10px'}}>
                               <span>{camp.performance}</span>
                             </div>
-                            <div className="h-1 w-24 bg-brand-bg rounded-circle overflow-hidden">
+                            <div className="h-1 w-24 bg-brand-bg rounded-circle overflow-d-none">
                               <Motion.div 
-                                className={`h-full ${getPerformanceColor(camp.performance)} rounded-full`} 
+                                className={`h-100 ${getPerformanceColor(camp.performance)} rounded-full`} 
                                 initial={{ width: 0 }}
                                 animate={{ width: camp.performance }}
                                 transition={{ duration: 1, ease: "easeOut" }}
@@ -710,11 +710,11 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-5 text-sm fw-medium text-brand-gray">
+                        <td className="px-5 py-5 text-sm fw-medium text-brand-gray">
                           {camp.startDate} - {camp.endDate}
                         </td>
-                        <td className="px-6 py-5">
-                          <div className="d-flex align-items-center justify-content-end gap-2">
+                        <td className="px-5 py-5">
+                          <div className="d-d-flex align-align-items-center justify-content-end gap-2">
                             {camp.status === 'Paused' ? (
                               <button className="p-2 bg-emerald-50 text-emerald-500 rounded-3 hover:bg-emerald-100 transition-colors">
                                 <Play size={14} fill="currentColor" />
@@ -747,7 +747,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                     ))}
                     {filteredCampaigns.length === 0 && (
                       <tr>
-                        <td colSpan={7} className="px-6 py-12 text-center text-brand-gray text-sm fst-italic">
+                        <td colSpan={7} className="px-5 py-12 text-center text-brand-gray text-sm fst-italic">
                           No campaigns found matching "{combinedSearch}"
                         </td>
                       </tr>
@@ -768,20 +768,20 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                 <div 
                   key={camp.id} 
                   className={cn(
-                    "bg-white rounded-[24px] border border-brand-border p-6 transition-all flex flex-col",
+                    "bg-white style={{borderRadius: "24px"}} border border-brand-border p-4 transition-all d-flex d-flex-column",
                     camp.status !== 'Ended' && "hover:shadow-xl group"
                   )}
                 >
                   {/* Card Header: Tags & Menu */}
-                  <div className="d-flex align-items-center justify-content-between mb-4">
-                    <div className="d-flex align-items-center gap-2">
+                  <div className="d-d-flex align-align-items-center justify-content-between mb-4">
+                    <div className="d-d-flex align-align-items-center gap-2">
                       {camp.channels.map(ch => (
                         <span key={ch} className="fw-bold px-3 py-1 rounded-3 text-uppercase tracking-wider" style={{'backgroundColor':'#f5f7f7', 'color':'#6a7282', 'fontSize':'10px'}}>
                           {ch}
                         </span>
                       ))}
                     </div>
-                    <div className="position-relative">
+                    <div className="position-position-relative">
                       <button 
                         onClick={() => setOpenMenuId(openMenuId === camp.id ? null : camp.id)}
                         className="p-1 hover:text-brand-dark transition-colors" style={{'color':'#6a7282'}}
@@ -792,14 +792,14 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       <AnimatePresence>
                         {openMenuId === camp.id && (
                           <>
-                            <div className="position-fixed top-0 bottom-0 start-0 end-0 z-10" onClick={() => setOpenMenuId(null)} />
+                            <div className="position-position-fixed top-0 bottom-0 start-0 end-0 z-10" onClick={() => setOpenMenuId(null)} />
                             <Motion.div
                               initial={{ opacity: 0, scale: 0.95, y: -10 }}
                               animate={{ opacity: 1, scale: 1, y: 0 }}
                               exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                              className="position-absolute end-0 top-full mt-2 w-32 bg-white rounded-3 shadow-xl border border-brand-border z-20 py-1 overflow-hidden"
+                              className="position-position-absolute end-0 top-full mt-2 w-32 bg-white rounded-3 shadow-xl border border-brand-border z-20 py-1 overflow-d-none"
                             >
-                              <button className="w-100 px-4 py-2 text-start text-xs fw-bold text-brand-dark hover:bg-brand-bg transition-colors d-flex align-items-center gap-2">
+                              <button className="w-100 px-4 py-2 text-start text-xs fw-bold text-brand-dark hover:bg-brand-bg transition-colors d-d-flex align-align-items-center gap-2">
                                 <Edit2 size={12} /> Edit
                               </button>
                               <button 
@@ -813,7 +813,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                                     onConfirm: () => toast.error('Campaign deleted')
                                   });
                                 }}
-                                className="w-100 px-4 py-2 text-start text-xs fw-bold text-red-500 hover:bg-red-50 transition-colors d-flex align-items-center gap-2"
+                                className="w-100 px-4 py-2 text-start text-xs fw-bold text-red-500 hover:bg-red-50 transition-colors d-d-flex align-align-items-center gap-2"
                               >
                                 <Trash2 size={12} /> Delete
                               </button>
@@ -830,7 +830,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                   </h4>
 
                   {/* Date Range */}
-                  <div className="d-flex align-items-center gap-2 mb-6">
+                  <div className="d-d-flex align-align-items-center gap-2 mb-6">
                     <Calendar size={12} className="" style={{'color':'#6a7282'}} />
                     <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px', 'color':'#6a7282'}}>
                       {camp.startDate} - {camp.endDate}
@@ -838,7 +838,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                   </div>
 
                   {/* Stats Grid: 3 columns */}
-                  <div className="d-flex align-items-center justify-content-between mb-6">
+                  <div className="d-d-flex align-align-items-center justify-content-between mb-6">
                     <div>
                       <p className="fw-bold leading-none mb-1" style={{'fontSize':'14px', 'color':'#09156a'}}>{(1200 + camp.id * 450).toLocaleString()}</p>
                       <p className="fw-bold text-uppercase tracking-wider leading-none" style={{'fontSize':'10px', 'color':'#6a7282'}}>Sent</p>
@@ -855,33 +855,33 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
 
                   {/* Overall Performance */}
                   <div className="mb-6">
-                    <div className="d-flex align-items-center justify-content-between mb-2">
+                    <div className="d-d-flex align-align-items-center justify-content-between mb-2">
                       <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px', 'color':'#6a7282'}}>Overall Performance</span>
                       <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px', 'color':'#09156a'}}>{camp.performance}</span>
                     </div>
-                    <div className="w-100 rounded-circle overflow-hidden" style={{'height':'6px', 'backgroundColor':'#f5f7f7'}}>
+                    <div className="w-100 rounded-circle overflow-d-none" style={{'height':'6px', 'backgroundColor':'#f5f7f7'}}>
                       <Motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: camp.performance }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className={cn("h-full rounded-full", getPerformanceColor(camp.performance))}
+                        className={cn("h-100 rounded-full", getPerformanceColor(camp.performance))}
                       />
                     </div>
                   </div>
 
                   {/* Status & CTA Overlay: Fade & Scale transition */}
-                  <div className="mt-auto position-relative h-8">
-                    <div className="position-absolute top-0 bottom-0 start-0 end-0 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 d-flex align-items-center pe-none group-hover:pointer-events-none">
+                  <div className="mt-auto position-position-relative h-8">
+                    <div className="position-position-absolute top-0 bottom-0 start-0 end-0 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 d-d-flex align-align-items-center pe-none group-hover:pointer-events-none">
                       <StatusPill status={camp.status} />
                     </div>
-                    <div className="position-absolute top-0 bottom-0 start-0 end-0 transition-all duration-300 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 d-flex align-items-center">
+                    <div className="position-position-absolute top-0 bottom-0 start-0 end-0 transition-all duration-300 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 d-d-flex align-align-items-center">
                       {camp.status === 'Active' ? (
                         <button 
                           onClick={(e) => {
                             e.stopPropagation();
                             toast.success(`Campaign "${camp.name}" paused`);
                           }}
-                          className="w-100 h-8 rounded-3 bg-orange-500 text-white fw-bold text-uppercase tracking-widest d-flex align-items-center justify-content-center gap-2 hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20" style={{'fontSize':'10px'}}
+                          className="w-100 h-8 rounded-3 bg-orange-500 text-white fw-bold text-uppercase tracking-widest d-d-flex align-align-items-center justify-content-center gap-2 hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20" style={{'fontSize':'10px'}}
                         >
                           <Pause size={14} />
                           Pause Campaign
@@ -892,7 +892,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                             e.stopPropagation();
                             toast.success(`Campaign "${camp.name}" resumed`);
                           }}
-                          className="w-100 h-8 rounded-3 text-white fw-bold text-uppercase tracking-widest d-flex align-items-center justify-content-center gap-2 hover:bg-blue-700 transition-colors shadow-lg shadow-brand-blue/20" style={{'backgroundColor':'#3649e9', 'fontSize':'10px'}}
+                          className="w-100 h-8 rounded-3 text-white fw-bold text-uppercase tracking-widest d-d-flex align-align-items-center justify-content-center gap-2 hover:bg-blue-700 transition-colors shadow-lg shadow-brand-blue/20" style={{'backgroundColor':'#3649e9', 'fontSize':'10px'}}
                         >
                           <Play size={14} />
                           Resume Campaign
@@ -925,18 +925,18 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
 
             <div className="d-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredForms.map((form) => (
-              <div key={form.id} className="bg-white border p-6 hover:shadow-xl transition-all group d-flex flex-column position-relative overflow-hidden" style={{'borderRadius':'24px', 'borderColor':'#eee'}}>
+              <div key={form.id} className="bg-white border p-4 hover:shadow-xl transition-all group d-d-flex d-flex-column position-position-relative overflow-d-none" style={{'borderRadius':'24px', 'borderColor':'#eee'}}>
                 {/* Header: Status & Actions */}
-                <div className="d-flex align-items-center justify-content-between mb-6">
+                <div className="d-d-flex align-align-items-center justify-content-between mb-6">
                   <FormStatusBadge status={form.status} />
-                  <div className="d-flex align-items-center gap-1 position-relative">
+                  <div className="d-d-flex align-align-items-center gap-1 position-position-relative">
                     <button 
                       onClick={() => setPreviewForm(form)}
                       className="p-1.5 hover:text-brand-blue transition-colors rounded-3 hover:bg-brand-bg" style={{'color':'#6a7282'}}
                     >
                       <Eye size={16} />
                     </button>
-                    <div className="position-relative">
+                    <div className="position-position-relative">
                       <button 
                         onClick={() => setOpenMenuId(openMenuId === `form-${form.id}` ? null : `form-${form.id}`)}
                         className="p-1.5 hover:text-brand-dark transition-colors rounded-3 hover:bg-brand-bg" style={{'color':'#6a7282'}}
@@ -946,14 +946,14 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       <AnimatePresence>
                         {openMenuId === `form-${form.id}` && (
                           <>
-                            <div className="position-fixed top-0 bottom-0 start-0 end-0 z-10" onClick={() => setOpenMenuId(null)} />
+                            <div className="position-position-fixed top-0 bottom-0 start-0 end-0 z-10" onClick={() => setOpenMenuId(null)} />
                             <Motion.div
                               initial={{ opacity: 0, scale: 0.95, y: -10 }}
                               animate={{ opacity: 1, scale: 1, y: 0 }}
                               exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                              className="position-absolute end-0 top-full mt-2 w-32 bg-white rounded-3 shadow-xl border border-brand-border z-20 py-1 overflow-hidden"
+                              className="position-position-absolute end-0 top-full mt-2 w-32 bg-white rounded-3 shadow-xl border border-brand-border z-20 py-1 overflow-d-none"
                             >
-                              <button className="w-100 px-4 py-2 text-start text-xs fw-bold text-brand-dark hover:bg-brand-bg transition-colors d-flex align-items-center gap-2">
+                              <button className="w-100 px-4 py-2 text-start text-xs fw-bold text-brand-dark hover:bg-brand-bg transition-colors d-d-flex align-align-items-center gap-2">
                                 <Edit2 size={12} /> Edit
                               </button>
                               <button 
@@ -967,7 +967,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                                     onConfirm: () => toast.error('Form deleted')
                                   });
                                 }}
-                                className="w-100 px-4 py-2 text-start text-xs fw-bold text-red-500 hover:bg-red-50 transition-colors d-flex align-items-center gap-2"
+                                className="w-100 px-4 py-2 text-start text-xs fw-bold text-red-500 hover:bg-red-50 transition-colors d-d-flex align-align-items-center gap-2"
                               >
                                 <Trash2 size={12} /> Delete
                               </button>
@@ -981,21 +981,21 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
 
                 {/* Title */}
                 <h4 
-                  className="fw-bold mb-4 line-clamp-2 cursor-pointer hover:text-[#3649e9] transition-colors" style={{'fontSize':'18px', 'color':'#09156a', 'lineHeight':'1.3', 'minHeight':'54px'}}
+                  className="fw-bold mb-4 line-clamp-2 cursor-pointer hover:style={{color: "#3649e9"}} transition-colors" style={{'fontSize':'18px', 'color':'#09156a', 'lineHeight':'1.3', 'minHeight':'54px'}}
                   onClick={() => setPreviewForm(form)}
                 >
                   {form.name}
                 </h4>
 
                 {/* Details Row */}
-                <div className="d-flex align-items-center gap-6 mb-6">
-                  <div className="d-flex align-items-center gap-2">
+                <div className="d-d-flex align-align-items-center gap-6 mb-6">
+                  <div className="d-d-flex align-align-items-center gap-2">
                     <HelpCircle size={12} className="" style={{'color':'#6a7282'}} />
                     <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px', 'color':'#6a7282'}}>
                       {form.questions} Questions
                     </span>
                   </div>
-                  <div className="d-flex align-items-center gap-2">
+                  <div className="d-d-flex align-align-items-center gap-2">
                     <Calendar size={12} className="" style={{'color':'#6a7282'}} />
                     <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px', 'color':'#6a7282'}}>
                       {form.date}
@@ -1004,14 +1004,14 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                 </div>
 
                 {/* CTA Overlay Section: Fade & Scale transition */}
-                <div className="mt-auto position-relative h-10">
-                  <div className="position-absolute top-0 bottom-0 start-0 end-0 border-top group-hover:opacity-0 transition-all duration-300 d-flex align-items-center" style={{'borderColor':'#eee'}}>
+                <div className="mt-auto position-position-relative h-10">
+                  <div className="position-position-absolute top-0 bottom-0 start-0 end-0 border-top group-hover:opacity-0 transition-all duration-300 d-d-flex align-align-items-center" style={{'borderColor':'#eee'}}>
                     <div className="w-100 h-px bg-transparent" />
                   </div>
-                  <div className="position-absolute top-0 bottom-0 start-0 end-0 transition-all duration-300 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 d-flex align-items-center">
+                  <div className="position-position-absolute top-0 bottom-0 start-0 end-0 transition-all duration-300 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 d-d-flex align-align-items-center">
                     <button 
                       onClick={() => setSharingForm(form)}
-                      className="w-100 h-10 rounded-3 text-white fw-bold d-flex align-items-center justify-content-center gap-2 hover:bg-blue-700 transition-colors" style={{'backgroundColor':'#3649e9', 'fontSize':'12px'}}
+                      className="w-100 h-10 rounded-3 text-white fw-bold d-d-flex align-align-items-center justify-content-center gap-2 hover:bg-blue-700 transition-colors" style={{'backgroundColor':'#3649e9', 'fontSize':'12px'}}
                     >
                       Share form
                     </button>
@@ -1036,9 +1036,9 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
         >
           {/* Sentiment Overview & Stats */}
           <div className="d-grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="col-span-1 md:col-span-2 bg-card p-6 border border-brand-border d-flex flex-column min-w-0" style={{'borderRadius':'24px', 'height':'350px'}}>
+            <div className="col-span-1 md:col-span-2 bg-card p-4 border border-brand-border d-d-flex d-flex-column min-w-0" style={{'borderRadius':'24px', 'height':'350px'}}>
                <h3 className="text-lg fw-bold text-brand-dark mb-6">Sentiment Analysis by Campaign</h3>
-               <div className="flex-fill min-h-0 w-100 overflow-x-auto pb-6 custom-scrollbar scroll-smooth">
+               <div className="d-flex-fill min-h-0 w-100 overflow-x-auto pb-6 custom-scrollbar scroll-smooth">
                  <div className="h-100 pr-12" style={{'minWidth':'1200px'}}>
                    {isMounted && (
                      <ResponsiveContainer width="100%" height={250} minWidth={0} minHeight={100}>
@@ -1076,20 +1076,20 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                </div>
             </div>
 
-            <div className="d-flex flex-column gap-6" style={{'height':'350px'}}>
-               <div className="flex-fill bg-card p-6 border border-brand-border d-flex flex-column align-items-center justify-content-center text-center hover:shadow-lg transition-all" style={{'borderRadius':'24px'}}>
-                  <div className="w-12 h-12 rounded-circle bg-emerald-50 text-emerald-700 d-flex align-items-center justify-content-center mb-2">
+            <div className="d-d-flex d-flex-column gap-6" style={{'height':'350px'}}>
+               <div className="d-flex-fill bg-card p-4 border border-brand-border d-d-flex d-flex-column align-align-items-center justify-content-center text-center hover:shadow-lg transition-all" style={{'borderRadius':'24px'}}>
+                  <div className="w-12 h-12 rounded-circle bg-emerald-50 text-emerald-700 d-d-flex align-align-items-center justify-content-center mb-2">
                     <Smile size={24} />
                   </div>
                   <h4 className="text-3xl fw-bold text-brand-dark">8.2</h4>
                   <p className="fw-bold text-brand-gray text-uppercase tracking-wider mt-1" style={{'fontSize':'10px'}}>Avg Sentiment Score</p>
-                  <div className="d-flex align-items-center gap-1 mt-1 text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-3">
+                  <div className="d-d-flex align-align-items-center gap-1 mt-1 text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-3">
                     <TrendingUp size={10} />
                     <span className="fw-bold" style={{'fontSize':'10px'}}>+0.4 vs last month</span>
                   </div>
                </div>
-               <div className="flex-fill bg-card p-6 border border-brand-border d-flex flex-column align-items-center justify-content-center text-center hover:shadow-lg transition-all" style={{'borderRadius':'24px'}}>
-                  <div className="w-12 h-12 rounded-circle bg-brand-blue/10 text-brand-blue d-flex align-items-center justify-content-center mb-2">
+               <div className="d-flex-fill bg-card p-4 border border-brand-border d-d-flex d-flex-column align-align-items-center justify-content-center text-center hover:shadow-lg transition-all" style={{'borderRadius':'24px'}}>
+                  <div className="w-12 h-12 rounded-circle bg-brand-blue/10 text-brand-blue d-d-flex align-align-items-center justify-content-center mb-2">
                     <MessageSquare size={24} />
                   </div>
                   <h4 className="text-3xl fw-bold text-brand-dark">4,030</h4>
@@ -1099,14 +1099,14 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
           </div>
 
           {/* Detailed List */}
-          <div className="bg-card p-6 border border-brand-border" style={{'borderRadius':'24px'}}>
+          <div className="bg-card p-4 border border-brand-border" style={{'borderRadius':'24px'}}>
              {/* Local Toolbar */}
-             <div className="d-flex flex-column md:flex-row md:items-center justify-content-between gap-4 mb-6">
+             <div className="d-d-flex d-flex-column md:d-flex-row md:align-items-center justify-content-between gap-4 mb-6">
                <h3 className="text-lg fw-bold text-brand-dark">Campaign Response Breakdown</h3>
                
-               <div className="d-flex align-items-center gap-3">
-                 <div className="position-relative w-100 md:w-64">
-                    <Search size={14} className="position-absolute left-3 top-1/2 -translate-y-1/2 text-brand-gray" />
+               <div className="d-d-flex align-align-items-center gap-3">
+                 <div className="position-position-relative w-100 md:w-64">
+                    <Search size={14} className="position-position-absolute left-3 top-1/2 -translate-y-1/2 text-brand-gray" />
                     <input 
                       type="text" 
                       value={responseSearch}
@@ -1115,13 +1115,13 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       className="w-100 h-9 bg-brand-bg border border-brand-border rounded-3 pl-9 pr-4 fw-bold tracking-widest text-uppercase focus:outline-none focus:ring-1 focus:ring-brand-blue/50" style={{'fontSize':'10px'}}
                     />
                  </div>
-                 <div className="d-flex gap-2">
+                 <div className="d-d-flex gap-2">
                    {['All', 'Positive', 'Neutral', 'Negative'].map(filter => (
                      <button
                        key={filter}
                        onClick={() => setResponseFilter(filter)}
                        className={cn(
-                         "px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-colors border",
+                         "px-3 py-1.5 rounded-3 style={{color: "10px"}} fw-bold uppercase tracking-wider transition-colors border",
                          responseFilter === filter 
                            ? "bg-brand-blue border-brand-blue text-white" 
                            : "bg-white border-brand-border text-brand-gray hover:bg-brand-bg"
@@ -1136,23 +1136,23 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
 
              <div className="d-grid grid-cols-1 gap-4">
                {filteredResponses.map((camp) => (
-                 <div key={camp.id} className="p-6 rounded-2xl bg-brand-bg/30 border border-brand-border hover:bg-brand-bg/50 transition-colors group">
-                    <div className="d-flex flex-column lg:flex-row lg:items-center justify-content-between gap-6">
-                       <div className="d-flex align-items-start gap-4">
+                 <div key={camp.id} className="p-4 rounded-4 bg-brand-bg/30 border border-brand-border hover:bg-brand-bg/50 transition-colors group">
+                    <div className="d-d-flex d-flex-column lg:d-flex-row lg:align-items-center justify-content-between gap-6">
+                       <div className="d-d-flex align-align-items-start gap-4">
                           <div className={cn(
-                            "w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110",
+                            "w-12 h-12 rounded-4 d-flex align-items-center justify-content-center flex-shrink-0 transition-transform group-hover:scale-110",
                             camp.sentiment >= 8 ? "bg-emerald-50 text-emerald-700" : camp.sentiment >= 6 ? "bg-amber-50 text-amber-700" : "bg-red-50 text-red-700"
                           )}>
                              {camp.sentiment >= 8 ? <Smile size={24} /> : camp.sentiment >= 6 ? <Meh size={24} /> : <Frown size={24} />}
                           </div>
                           <div>
                             <h4 className="text-lg fw-bold text-brand-dark">{camp.campaign}</h4>
-                            <div className="d-flex align-items-center gap-3 mt-1">
-                               <div className="d-flex align-items-center gap-1.5 bg-white px-2 py-0.5 rounded-2 border border-brand-border/50">
+                            <div className="d-d-flex align-align-items-center gap-3 mt-1">
+                               <div className="d-d-flex align-align-items-center gap-1.5 bg-white px-2 py-0.5 rounded-2 border border-brand-border/50">
                                  <span className="fw-bold text-brand-gray text-uppercase tracking-wider" style={{'fontSize':'10px'}}>Sentiment:</span>
-                                 <span className={cn("text-xs font-bold", camp.sentiment >= 8 ? "text-emerald-700" : camp.sentiment >= 6 ? "text-amber-700" : "text-red-700")}>{camp.sentiment}/10</span>
+                                 <span className={cn("text-xs fw-bold", camp.sentiment >= 8 ? "text-emerald-700" : camp.sentiment >= 6 ? "text-amber-700" : "text-red-700")}>{camp.sentiment}/10</span>
                                </div>
-                               <div className="d-flex align-items-center gap-1.5 bg-white px-2 py-0.5 rounded-2 border border-brand-border/50 text-brand-blue">
+                               <div className="d-d-flex align-align-items-center gap-1.5 bg-white px-2 py-0.5 rounded-2 border border-brand-border/50 text-brand-blue">
                                   <FileText size={10} />
                                   <span className="fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>{camp.form}</span>
                                 </div>
@@ -1179,9 +1179,9 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
             key="other"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="d-flex flex-column align-items-center justify-content-center py-24 bg-white border border-brand-border text-brand-gray" style={{'borderRadius':'24px'}}
+            className="d-d-flex d-flex-column align-align-items-center justify-content-center py-24 bg-white border border-brand-border text-brand-gray" style={{'borderRadius':'24px'}}
           >
-            <div className="w-16 h-16 bg-brand-bg rounded-2xl d-flex align-items-center justify-content-center mb-4">
+            <div className="w-16 h-16 bg-brand-bg rounded-4 d-d-flex align-align-items-center justify-content-center mb-4">
               <BarChart3 size={32} />
             </div>
             <h3 className="text-lg fw-bold text-brand-dark mb-1">Coming Soon</h3>
@@ -1199,15 +1199,15 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSharingForm(null)}
-              className="position-fixed top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm"
+              className="position-position-fixed top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm"
             />
             <Motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="position-fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-md bg-card shadow-2xl p-8" style={{'width':'90%', 'borderRadius':'32px'}}
+              className="position-position-fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-md bg-card shadow-2xl p-8" style={{'width':'90%', 'borderRadius':'32px'}}
             >
-              <div className="d-flex align-items-center justify-content-between mb-8">
+              <div className="d-d-flex align-align-items-center justify-content-between mb-8">
                 <h3 className="text-xl fw-bold text-brand-dark">Share Form</h3>
                 <button 
                   onClick={() => setSharingForm(null)}
@@ -1218,8 +1218,8 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-brand-bg/50 p-6 rounded-2xl d-flex flex-column align-items-center justify-content-center text-center">
-                  <div className="w-16 h-16 bg-white rounded-2xl d-flex align-items-center justify-content-center shadow-sm mb-3">
+                <div className="bg-brand-bg/50 p-4 rounded-4 d-d-flex d-flex-column align-align-items-center justify-content-center text-center">
+                  <div className="w-16 h-16 bg-white rounded-4 d-d-flex align-align-items-center justify-content-center shadow-sm mb-3">
                     <FileText size={32} className="text-brand-blue" />
                   </div>
                   <h4 className="fw-bold text-brand-dark text-lg line-clamp-1">{sharingForm.name}</h4>
@@ -1233,9 +1233,9 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       toast.success('Link copied to clipboard!');
                       setSharingForm(null);
                     }}
-                    className="d-flex flex-column align-items-center justify-content-center gap-3 p-6 bg-white border border-brand-border rounded-2xl hover:border-brand-blue hover:bg-brand-blue/5 transition-all group"
+                    className="d-d-flex d-flex-column align-align-items-center justify-content-center gap-3 p-4 bg-white border border-brand-border rounded-4 hover:border-brand-blue hover:bg-brand-blue/5 transition-all group"
                   >
-                    <div className="w-12 h-12 bg-brand-bg rounded-3 d-flex align-items-center justify-content-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 bg-brand-bg rounded-3 d-d-flex align-align-items-center justify-content-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
                       <Link size={24} />
                     </div>
                     <span className="fw-bold text-brand-dark text-sm">Copy Link</span>
@@ -1246,9 +1246,9 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       toast.info('QR Code generating...');
                       // In a real app, this would show a QR code view
                     }}
-                    className="d-flex flex-column align-items-center justify-content-center gap-3 p-6 bg-white border border-brand-border rounded-2xl hover:border-brand-blue hover:bg-brand-blue/5 transition-all group"
+                    className="d-d-flex d-flex-column align-align-items-center justify-content-center gap-3 p-4 bg-white border border-brand-border rounded-4 hover:border-brand-blue hover:bg-brand-blue/5 transition-all group"
                   >
-                    <div className="w-12 h-12 bg-brand-bg rounded-3 d-flex align-items-center justify-content-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 bg-brand-bg rounded-3 d-d-flex align-align-items-center justify-content-center group-hover:bg-brand-blue group-hover:text-white transition-colors">
                       <QrCode size={24} />
                     </div>
                     <span className="fw-bold text-brand-dark text-sm">QR Code</span>
@@ -1275,35 +1275,35 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setPreviewForm(null)}
-              className="position-fixed top-0 bottom-0 start-0 end-0 bg-black/20 backdrop-blur-sm"
+              className="position-position-fixed top-0 bottom-0 start-0 end-0 bg-black/20 backdrop-blur-sm"
             />
             <Motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="position-fixed top-0 end-0 bottom-0 w-100 max-w-2xl bg-brand-bg d-flex flex-column shadow-2xl"
+              className="position-position-fixed top-0 end-0 bottom-0 w-100 max-w-2xl bg-brand-bg d-d-flex d-flex-column shadow-2xl"
             >
               {/* Drawer Header */}
-              <div className="bg-card px-8 py-6 border-bottom border-brand-border d-flex align-items-center justify-content-between">
+              <div className="bg-card px-8 py-6 border-bottom border-brand-border d-d-flex align-align-items-center justify-content-between">
                 <div>
-                  <div className="d-flex align-items-center gap-3 mb-1">
+                  <div className="d-d-flex align-align-items-center gap-3 mb-1">
                     <span className="px-2 py-0.5 rounded-2 bg-brand-blue/10 text-brand-blue fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>Preview Mode</span>
                     <h3 className="text-lg fw-bold text-brand-dark">{previewForm.name}</h3>
                   </div>
                   <p className="text-xs text-brand-gray fw-medium">Viewing as Patient • {previewForm.questions} Questions</p>
                 </div>
-                <div className="d-flex align-items-center gap-4">
-                  <div className="d-flex bg-brand-bg p-1 rounded-3 border border-brand-border">
+                <div className="d-d-flex align-align-items-center gap-4">
+                  <div className="d-d-flex bg-brand-bg p-1 rounded-3 border border-brand-border">
                     <button 
                       onClick={() => setPreviewDevice('desktop')}
-                      className={`p-2 rounded-lg transition-all ${previewDevice === 'desktop' ? 'bg-white shadow-sm text-brand-blue' : 'text-brand-gray'}`}
+                      className={`p-2 rounded-3 transition-all ${previewDevice === 'desktop' ? 'bg-white shadow-sm text-brand-blue' : 'text-brand-gray'}`}
                     >
                       <Monitor size={18} />
                     </button>
                     <button 
                       onClick={() => setPreviewDevice('mobile')}
-                      className={`p-2 rounded-lg transition-all ${previewDevice === 'mobile' ? 'bg-white shadow-sm text-brand-blue' : 'text-brand-gray'}`}
+                      className={`p-2 rounded-3 transition-all ${previewDevice === 'mobile' ? 'bg-white shadow-sm text-brand-blue' : 'text-brand-gray'}`}
                     >
                       <Smartphone size={18} />
                     </button>
@@ -1318,11 +1318,11 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               </div>
 
               {/* Preview Content Area */}
-              <div className="flex-fill overflow-y-auto p-8 d-flex justify-content-center">
-                <div className={`transition-all duration-500 bg-white shadow-xl rounded-[32px] overflow-hidden border border-brand-border flex flex-col ${previewDevice === 'mobile' ? 'w-[375px] h-[667px]' : 'w-full'}`}>
+              <div className="d-flex-fill overflow-y-auto p-8 d-d-flex justify-content-center">
+                <div className={`transition-all duration-500 bg-white shadow-xl style={{borderRadius: "32px"}} overflow-d-none border border-brand-border d-flex d-flex-column ${previewDevice === 'mobile' ? 'style={{width: "375px"}} style={{height: "667px"}}' : 'w-100'}`}>
                   {/* Mock Form Top Bar */}
                   <div className="h-2 bg-brand-blue w-100" />
-                  <div className="p-8 flex-fill overflow-y-auto custom-scrollbar">
+                  <div className="p-8 d-flex-fill overflow-y-auto custom-scrollbar">
                     <div className="mb-8">
                       <h4 className="text-2xl fw-bold text-brand-dark mb-3">{previewForm.name}</h4>
                       <p className="text-brand-gray text-sm leading-relaxed">
@@ -1333,23 +1333,23 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                     <div className="space-y-8">
                       {/* Mock Question 1 */}
                       <div className="space-y-3">
-                        <label className="text-sm fw-bold text-brand-dark d-flex align-items-center gap-2">
+                        <label className="text-sm fw-bold text-brand-dark d-d-flex align-align-items-center gap-2">
                           Full Legal Name
                           <span className="text-red-500">*</span>
                         </label>
-                        <div className="w-100 h-12 rounded-3 border border-brand-border bg-brand-bg/30 px-4 d-flex align-items-center text-brand-gray fst-italic text-sm">
+                        <div className="w-100 h-12 rounded-3 border border-brand-border bg-brand-bg/30 px-4 d-d-flex align-align-items-center text-brand-gray fst-italic text-sm">
                           Patient response area...
                         </div>
                       </div>
 
                       {/* Mock Question 2 */}
                       <div className="space-y-3">
-                        <label className="text-sm fw-bold text-brand-dark d-flex align-items-center gap-2">
+                        <label className="text-sm fw-bold text-brand-dark d-d-flex align-align-items-center gap-2">
                           How satisfied are you with our check-in process?
                         </label>
-                        <div className="d-flex gap-3">
+                        <div className="d-d-flex gap-3">
                           {[1, 2, 3, 4, 5].map(num => (
-                            <div key={num} className="w-10 h-10 rounded-circle border border-brand-border d-flex align-items-center justify-content-center text-sm fw-bold text-brand-gray">
+                            <div key={num} className="w-10 h-10 rounded-circle border border-brand-border d-d-flex align-align-items-center justify-content-center text-sm fw-bold text-brand-gray">
                               {num}
                             </div>
                           ))}
@@ -1358,12 +1358,12 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
 
                       {/* Mock Question 3 */}
                       <div className="space-y-3">
-                        <label className="text-sm fw-bold text-brand-dark d-flex align-items-center gap-2">
+                        <label className="text-sm fw-bold text-brand-dark d-d-flex align-align-items-center gap-2">
                           Primary Reason for Visit
                         </label>
                         <div className="d-grid grid-cols-1 gap-2">
                           {['Routine Check-up', 'Follow-up', 'New Symptoms', 'Lab Results'].map(opt => (
-                            <div key={opt} className="px-4 py-3 rounded-3 border border-brand-border d-flex align-items-center gap-3">
+                            <div key={opt} className="px-4 py-2 rounded-3 border border-brand-border d-d-flex align-align-items-center gap-3">
                               <div className="w-5 h-5 rounded-circle border border-brand-border" />
                               <span className="text-sm text-brand-gray">{opt}</span>
                             </div>
@@ -1373,7 +1373,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                     </div>
 
                     <div className="mt-12 pt-8 border-top border-brand-border">
-                      <button className="w-100 py-4 bg-brand-blue text-white fw-bold rounded-2xl shadow-lg shadow-brand-blue/20">
+                      <button className="w-100 py-4 bg-brand-blue text-white fw-bold rounded-4 shadow-lg shadow-brand-blue/20">
                         Submit Form
                       </button>
                     </div>
@@ -1382,12 +1382,12 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               </div>
 
               {/* Drawer Footer */}
-              <div className="bg-card p-6 border-top border-brand-border d-flex align-items-center justify-content-center gap-8">
-                <div className="d-flex align-items-center gap-2 text-xs fw-bold text-brand-gray">
+              <div className="bg-card p-4 border-top border-brand-border d-d-flex align-align-items-center justify-content-center gap-8">
+                <div className="d-d-flex align-align-items-center gap-2 text-xs fw-bold text-brand-gray">
                   <CheckCircle2 size={16} className="" style={{'color':'#00d08a'}} />
                   HIPAA Compliant
                 </div>
-                <div className="d-flex align-items-center gap-2 text-xs fw-bold text-brand-gray">
+                <div className="d-d-flex align-align-items-center gap-2 text-xs fw-bold text-brand-gray">
                   <CheckCircle2 size={16} className="" style={{'color':'#00d08a'}} />
                   SSL Encrypted
                 </div>
@@ -1400,23 +1400,23 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
       {/* Floating CTA */}
       <AnimatePresence>
         {(activeSubTab === 'campaigns' || activeSubTab === 'forms') && (
-          <div className="position-fixed bottom-8 right-8 d-flex flex-column align-items-end gap-4">
+          <div className="position-position-fixed bottom-8 right-8 d-d-flex d-flex-column align-items-end gap-4">
             <AnimatePresence>
               {isFabMenuOpen && (
                 <Motion.div
                   initial={{ opacity: 0, scale: 0.9, y: 10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.9, y: 10 }}
-                  className="bg-white shadow-2xl border border-brand-border p-3 d-flex flex-column gap-2" style={{'borderRadius':'24px', 'minWidth':'200px'}}
+                  className="bg-white shadow-2xl border border-brand-border p-3 d-d-flex d-flex-column gap-2" style={{'borderRadius':'24px', 'minWidth':'200px'}}
                 >
                   <button 
                     onClick={() => {
                       setShowTemplates(true);
                       setIsFabMenuOpen(false);
                     }}
-                    className="d-flex align-items-center gap-3 p-4 rounded-3 hover:bg-brand-bg transition-colors text-start group"
+                    className="d-d-flex align-align-items-center gap-3 p-4 rounded-3 hover:bg-brand-bg transition-colors text-start group"
                   >
-                    <div className="w-10 h-10 bg-brand-bg rounded-3 d-flex align-items-center justify-content-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                    <div className="w-10 h-10 bg-brand-bg rounded-3 d-d-flex align-align-items-center justify-content-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-colors">
                       <Zap size={20} fill="currentColor" />
                     </div>
                     <div>
@@ -1429,9 +1429,9 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                       setShowFormBuilder(true);
                       setIsFabMenuOpen(false);
                     }}
-                    className="d-flex align-items-center gap-3 p-4 rounded-3 hover:bg-brand-bg transition-colors text-start group"
+                    className="d-d-flex align-align-items-center gap-3 p-4 rounded-3 hover:bg-brand-bg transition-colors text-start group"
                   >
-                    <div className="w-10 h-10 bg-brand-bg rounded-3 d-flex align-items-center justify-content-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <div className="w-10 h-10 bg-brand-bg rounded-3 d-d-flex align-align-items-center justify-content-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
                       <FilePlus size={20} />
                     </div>
                     <div>
@@ -1469,7 +1469,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                   setShowCampaignBuilder(true);
                 }
               }}
-              className={`w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-white shadow-2xl shadow-brand-blue/30 transition-all duration-300 relative z-[151] ${
+              className={`w-16 h-16 lg:w-20 lg:h-20 rounded-full d-flex align-items-center justify-content-center text-white shadow-2xl shadow-brand-blue/30 transition-all duration-300 position-relative z-[151] ${
                 isFabMenuOpen ? 'bg-brand-dark rotate-45' : 'bg-brand-blue'
               }`}
             >
@@ -1488,17 +1488,17 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowTemplates(false)}
-              className="position-fixed top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm"
+              className="position-position-fixed top-0 bottom-0 start-0 end-0 bg-black/40 backdrop-blur-sm"
             />
             <Motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="position-fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-100 bg-card shadow-2xl overflow-hidden d-flex flex-column border border-brand-border" style={{'maxWidth':'480px', 'borderRadius':'32px'}}
+              className="position-position-fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-100 bg-card shadow-2xl overflow-d-none d-d-flex d-flex-column border border-brand-border" style={{'maxWidth':'480px', 'borderRadius':'32px'}}
             >
-              <div className="p-6 border-bottom border-brand-border bg-white d-flex align-items-center justify-content-between">
-                <div className="d-flex align-items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-blue/10 rounded-3 d-flex align-items-center justify-content-center text-brand-blue">
+              <div className="p-4 border-bottom border-brand-border bg-white d-d-flex align-align-items-center justify-content-between">
+                <div className="d-d-flex align-align-items-center gap-3">
+                  <div className="w-10 h-10 bg-brand-blue/10 rounded-3 d-d-flex align-align-items-center justify-content-center text-brand-blue">
                     <Zap size={20} />
                   </div>
                   <div>
@@ -1514,7 +1514,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                 </button>
               </div>
               
-              <div className="flex-fill overflow-y-auto p-6 space-y-3" style={{'maxHeight':'400px'}}>
+              <div className="d-flex-fill overflow-y-auto p-4 space-y-3" style={{'maxHeight':'400px'}}>
                 {[
                   { title: 'OPD Visit Feedback', questions: 5, icon: MessageSquare, color: 'text-blue-500' },
                   { title: 'IPD Discharge Survey', questions: 12, icon: FileText, color: 'text-green-500' },
@@ -1526,10 +1526,10 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="w-100 d-flex align-items-center justify-content-between p-4 rounded-2xl bg-brand-bg/40 border border-brand-border hover:bg-brand-bg transition-all group"
+                    className="w-100 d-d-flex align-align-items-center justify-content-between p-4 rounded-4 bg-brand-bg/40 border border-brand-border hover:bg-brand-bg transition-all group"
                   >
-                    <div className="d-flex align-items-center gap-4">
-                      <div className={`w-10 h-10 bg-white rounded-xl flex items-center justify-center ${tpl.color} shadow-sm group-hover:scale-110 transition-transform`}>
+                    <div className="d-d-flex align-align-items-center gap-4">
+                      <div className={`w-10 h-10 bg-white rounded-3 d-flex align-items-center justify-content-center ${tpl.color} shadow-sm group-hover:scale-110 transition-transform`}>
                         <tpl.icon size={20} />
                       </div>
                       <div className="text-start">
@@ -1542,7 +1542,7 @@ export const Engagement = ({ search = '' }: { search?: string }) => {
                 ))}
               </div>
 
-              <div className="p-6 bg-brand-bg/50 border-top border-brand-border d-flex align-items-center justify-content-between">
+              <div className="p-4 bg-brand-bg/50 border-top border-brand-border d-d-flex align-align-items-center justify-content-between">
                 <span className="text-xs text-brand-gray fw-medium">Over 20+ more templates available</span>
                 <button className="text-brand-blue text-xs fw-bold text-uppercase tracking-widest hover:underline">
                   View Library
