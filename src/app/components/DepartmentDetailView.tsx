@@ -1,0 +1,431 @@
+import React from 'react';
+import { 
+  X, 
+  ArrowLeft, 
+  TrendingUp, 
+  Clock, 
+  Users, 
+  MessageSquare, 
+  AlertCircle,
+  BarChart2,
+  Calendar,
+  ChevronRight,
+  UserCheck,
+  Star,
+  Sparkles,
+  ArrowUpRight,
+  Activity,
+  ThumbsUp,
+  BrainCircuit,
+  LayoutDashboard,
+  Info,
+  ArrowDownRight
+} from 'lucide-react';
+import { motion as Motion, AnimatePresence } from 'motion/react';
+import { 
+  BarChart, 
+  Bar, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip as RechartsTooltip, 
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  Cell
+} from 'recharts';
+
+import { ImageWithFallback } from './figma/ImageWithFallback';
+
+interface DepartmentDetailViewProps {
+  dept: any;
+  onClose: () => void;
+}
+
+const weeklyData = [
+  { day: 'Mon', satisfaction: 85, volume: 120 },
+  { day: 'Tue', satisfaction: 88, volume: 145 },
+  { day: 'Wed', satisfaction: 72, volume: 130 },
+  { day: 'Thu', satisfaction: 45, volume: 110 },
+  { day: 'Fri', satisfaction: 60, volume: 160 },
+  { day: 'Sat', satisfaction: 92, volume: 90 },
+  { day: 'Sun', satisfaction: 95, volume: 75 },
+];
+
+const staffPerformance = [
+  { 
+    name: 'Dr. Sarah Wilson', 
+    rating: 4.9, 
+    feedback: 42, 
+    avatar: "https://images.unsplash.com/photo-1759350075177-eeb89d507990?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGRvY3RvciUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MDU3MjY2MHww&ixlib=rb-4.1.0&q=80&w=1080"
+  },
+  { 
+    name: 'Nurse Michael Chen', 
+    rating: 4.7, 
+    feedback: 38, 
+    avatar: "https://images.unsplash.com/photo-1612531385476-a86dc00daf9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBudXJzZSUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MDYzNTcwN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+  },
+  { 
+    name: 'Dr. James Miller', 
+    rating: 4.8, 
+    feedback: 25, 
+    avatar: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzA2MzU3MDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+  },
+];
+
+const METRIC_DESCRIPTIONS: Record<string, string> = {
+  "Overall Rating": "Measures patient satisfaction based on post-visit feedback on a scale of 0-5.",
+  "Response Rate": "The percentage of patients who completed their surveys out of the total requests sent.",
+  "Avg Wait Time": "The average time patients spent waiting before their appointment started.",
+  "Total Forms": "The total number of form responses received during this period.",
+  "Negative Feedback": "The percentage of responses flagged as negative sentiment during this period."
+};
+
+const StatCard = ({ title, value, change, positive = true, icon: Icon, colorClass, delay = 0, index = 0 }: any) => {
+  const [showInfo, setShowInfo] = React.useState(false);
+  const rainbowClasses = ['rainbow-card-blue', 'rainbow-card-green', 'rainbow-card-yellow', 'rainbow-card-red'];
+
+  return (
+    <Motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      className={`bg-card p-6 rounded-[24px] border transition-all relative border-brand-border hover:shadow-lg hover:border-brand-blue/20 ${rainbowClasses[index % 4]}`}
+    >
+      <div className="d-flex align-items-center gap-2 mb-4">
+        <div className={colorClass}>
+          <Icon size={16} />
+        </div>
+        <div className="d-flex align-items-center gap-1.5 group/info position-relative">
+          <h4 className="text-xs fw-bold text-brand-dark text-uppercase tracking-wider">{title}</h4>
+          <div 
+            className="text-brand-gray/40 hover:text-brand-blue transition-colors cursor-help"
+            onMouseEnter={() => setShowInfo(true)}
+            onMouseLeave={() => setShowInfo(false)}
+          >
+            <Info size={12} />
+          </div>
+          
+          <AnimatePresence>
+            {showInfo && (
+              <Motion.div
+                initial={{ opacity: 0, y: 5, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 5, scale: 0.95 }}
+                className="position-absolute bottom-full start-0 mb-2 w-48 p-3 bg-brand-dark text-white leading-relaxed rounded-3 shadow-xl z-50 pe-none" style={{'fontSize':'10px'}}
+              >
+                {METRIC_DESCRIPTIONS[title] || "Metric details not available."}
+                <div className="position-absolute top-full left-4 border-8 border-transparent border-t-brand-dark" />
+              </Motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+      <p className="fw-bold text-brand-dark leading-tight mb-2" style={{'fontSize':'32px'}}>{value}</p>
+      <div className="d-flex align-items-center gap-1">
+        {positive ? <ArrowUpRight size={14} className="text-green-500" /> : <ArrowDownRight size={14} className="text-red-500" />}
+        <span className={`text-[12px] font-bold ${positive ? 'text-green-500' : 'text-red-500'}`}>{change}</span>
+        <span className="text-brand-gray ml-1" style={{'fontSize':'12px'}}>vs last month</span>
+      </div>
+    </Motion.div>
+  );
+};
+
+export const DepartmentDetailView: React.FC<DepartmentDetailViewProps> = ({ dept, onClose }) => {
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+    const timer = setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="bg-brand-bg min-h-screen pb-20"
+    >
+      {/* Header */}
+      <div className="position-sticky top-0 bg-card border-bottom border-brand-border z-20 px-4 lg:px-8 py-4 d-flex align-items-center justify-content-between">
+        <div className="d-flex align-items-center gap-4">
+          <button 
+            onClick={onClose}
+            className="p-2 hover:bg-brand-bg rounded-3 text-brand-gray transition-all d-flex align-items-center gap-2 group border border-transparent hover:border-brand-border"
+          >
+            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+            <span className="d-none sm:inline fw-bold text-xs text-uppercase tracking-widest">Dashboard</span>
+          </button>
+          <div className="h-6 bg-brand-border d-none sm:block" style={{'width':'1px'}} />
+          <div className="d-flex flex-column">
+            <h2 className="text-lg fw-bold text-brand-dark leading-none">{dept.name}</h2>
+          </div>
+        </div>
+        <div className="d-flex align-items-center gap-3">
+          <button onClick={onClose} className="p-2 hover:bg-red-50 hover:text-red-500 text-brand-gray transition-colors border border-transparent hover:border-red-100" style={{'borderRadius':'12px'}}>
+            <X size={20} />
+          </button>
+        </div>
+      </div>
+
+      <div className="p-4 lg:p-8 space-y-6 lg:space-y-8 max-w-7xl mx-auto">
+        {/* KPI Grid - Matching Dashboard exactly */}
+        <div className="d-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          <StatCard 
+            title="Overall Rating" 
+            value={dept.rating} 
+            change="5.2%" 
+            icon={Star} 
+            colorClass="text-green-500" 
+            delay={0.1} 
+            index={0}
+          />
+          <StatCard 
+            title="Response Rate" 
+            value={dept.rate} 
+            change="3.8%" 
+            icon={TrendingUp} 
+            colorClass="text-green-500" 
+            delay={0.15} 
+            index={1}
+          />
+          <StatCard 
+            title="Negative Feedback" 
+            value="15%" 
+            change="0.5%" 
+            positive={false} 
+            icon={AlertCircle} 
+            colorClass="text-red-500" 
+            delay={0.2} 
+            index={2}
+          />
+          <StatCard 
+            title="Total Forms" 
+            value={dept.responses} 
+            change="2.3%" 
+            icon={MessageSquare} 
+            colorClass="text-green-500" 
+            delay={0.25} 
+            index={3}
+          />
+        </div>
+
+        {/* Charts & AI Section */}
+        <div className="d-grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* Satisfaction Trend */}
+          <div className="lg:col-span-8 bg-card p-6 border border-brand-border shadow-sm d-flex flex-column" style={{'borderRadius':'24px'}}>
+            <div className="d-flex align-items-center justify-content-between mb-8">
+              <div className="d-flex align-items-center gap-3">
+                <div className="p-2 bg-brand-bg text-brand-blue" style={{'borderRadius':'12px'}}>
+                  <Activity size={20} />
+                </div>
+                <div>
+                  <h3 className="text-lg fw-bold text-brand-dark">Satisfaction Trend</h3>
+                  <p className="text-brand-gray fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>7-Day Performance Window</p>
+                </div>
+              </div>
+              <div className="d-flex align-items-center gap-4">
+                <div className="d-flex align-items-center gap-2">
+                  <div className="w-3 h-3 rounded-circle bg-brand-blue" />
+                  <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Satisfaction %</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex-fill w-100" style={{'minHeight':'300px'}}>
+              {isMounted && (
+                <ResponsiveContainer width="100%" height={300} minWidth={0} minHeight={100}>
+                  <AreaChart data={weeklyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                    <defs>
+                      <linearGradient id="colorSat" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="var(--brand-blue)" stopOpacity={0.15}/>
+                        <stop offset="95%" stopColor="var(--brand-blue)" stopOpacity={0.01}/>
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--brand-border)" />
+                    <XAxis 
+                      dataKey="day" 
+                      axisLine={false} 
+                      tickLine={false} 
+                      tick={{ fontSize: 10, fill: 'var(--brand-gray)', fontWeight: 'bold' }} 
+                    />
+                    <YAxis 
+                      axisLine={false} 
+                      tickLine={false} 
+                      tick={{ fontSize: 10, fill: 'var(--brand-gray)', fontWeight: 'bold' }}
+                      domain={[0, 100]}
+                    />
+                    <RechartsTooltip 
+                      contentStyle={{ 
+                        borderRadius: '12px', 
+                        border: 'none', 
+                        boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)',
+                        backgroundColor: 'var(--card)',
+                        padding: '12px'
+                      }}
+                      itemStyle={{ fontSize: '12px', fontWeight: 'bold', color: 'var(--brand-dark)' }}
+                      labelStyle={{ fontSize: '10px', fontWeight: 'bold', color: 'var(--brand-gray)', marginBottom: '4px', textTransform: 'uppercase' }}
+                    />
+                    <Area 
+                      type="monotone" 
+                      dataKey="satisfaction" 
+                      stroke="var(--brand-blue)" 
+                      strokeWidth={3} 
+                      fillOpacity={1} 
+                      fill="url(#colorSat)" 
+                      animationDuration={1500}
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              )}
+            </div>
+          </div>
+
+          {/* AI Insight Sidebar */}
+          <div className="lg:col-span-4 d-flex">
+            <div className="bg-brand-blue p-8 text-white position-relative overflow-hidden d-flex flex-column justify-content-between shadow-lg shadow-brand-blue/20 w-100 group" style={{'borderRadius':'24px'}}>
+              <div className="position-absolute top-0 end-0 p-12 opacity-10 pe-none group-hover:scale-125 transition-transform duration-700">
+                <BrainCircuit size={160} />
+              </div>
+              <div className="position-relative z-10">
+                <div className="d-flex align-items-center gap-2 mb-6">
+                  <div className="w-10 h-10 bg-white/20 backdrop-blur-md d-flex align-items-center justify-content-center border border-white/20" style={{'borderRadius':'12px'}}>
+                    <Sparkles size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <h4 className="fw-bold text-uppercase" style={{'letterSpacing':'0.2em', 'fontSize':'10px'}}>Lymbus AI</h4>
+                    <p className="text-white/60 fw-bold text-uppercase tracking-widest" style={{'fontSize':'10px'}}>Smart Corelation</p>
+                  </div>
+                </div>
+                <h3 className="text-2xl fw-bold mb-4 leading-tight">Staffing Efficiency Correlation</h3>
+                <p className="text-sm text-white/80 leading-relaxed mb-8 fw-medium">
+                  Analysis indicates that satisfaction scores for <span className="text-white fw-bold text-decoration-underline decoration-white/30">{dept.name}</span> correlate strongly (0.84) with morning shift staffing levels. The drop on Thursday aligns with a 20% reduction in frontline staff availability.
+                </p>
+              </div>
+              
+              <div className="position-relative z-10 space-y-3">
+                <button className="d-none w-100 bg-white text-brand-blue py-4 fw-bold text-xs text-uppercase tracking-widest hover:bg-white/90 transition-all shadow-xl active:scale-95 d-flex align-items-center justify-content-center gap-2" style={{'borderRadius':'16px'}}>
+                  <LayoutDashboard size={14} />
+                  View Staffing Report
+                </button>
+                <p className="d-none text-center text-white/50 fw-bold text-uppercase" style={{'fontSize':'9px', 'letterSpacing':'0.1em'}}>Updated 12 minutes ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Detailed Metrics Table & Staff Performance */}
+        <div className="d-grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Department Leaders */}
+          <div className="bg-card border border-brand-border p-6 shadow-sm d-flex flex-column" style={{'borderRadius':'24px'}}>
+            <div className="d-flex align-items-center justify-content-between mb-6">
+              <div className="d-flex align-items-center gap-3">
+                <div className="p-2 bg-blue-50 text-brand-blue" style={{'borderRadius':'12px'}}>
+                  <Users size={20} />
+                </div>
+                <div>
+                  <h3 className="text-lg fw-bold text-brand-dark">Department Leaders</h3>
+                  <p className="text-brand-gray fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>Top Performing Personnel</p>
+                </div>
+              </div>
+              <button className="fw-bold text-brand-blue text-uppercase tracking-widest hover:underline" style={{'fontSize':'10px'}}>View All</button>
+            </div>
+            
+            <div className="space-y-3">
+              {staffPerformance.map((staff, i) => (
+                <div key={i} className="d-flex align-items-center justify-content-between p-4 bg-brand-bg/40 border border-brand-border/50 hover:bg-brand-bg transition-all group" style={{'borderRadius':'16px'}}>
+                  <div className="d-flex align-items-center gap-4">
+                    <div className="position-relative">
+                      <div className="w-12 h-12 bg-brand-blue/10 d-flex align-items-center justify-content-center overflow-hidden border border-brand-blue/20 group-hover:border-brand-blue transition-all" style={{'borderRadius':'14px'}}>
+                        <ImageWithFallback 
+                          src={staff.avatar} 
+                          alt={staff.name} 
+                          className="w-100 h-100 object-fit-cover"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-sm fw-bold text-brand-dark">{staff.name}</p>
+                      <div className="d-flex align-items-center gap-2 mt-0.5">
+                        <span className="text-brand-gray fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>{staff.feedback} Reviews</span>
+                        <span className="w-1 h-1 rounded-circle bg-brand-border" />
+                        <span className="text-emerald-600 fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>Active</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-1.5 bg-amber-50 px-3 py-1.5 border border-amber-100" style={{'borderRadius':'12px'}}>
+                    <Star size={12} className="text-amber-500 fill-amber-500" />
+                    <span className="text-xs fw-bold text-amber-700">{staff.rating}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Issue Breakdown */}
+          <div className="bg-card border border-brand-border p-6 shadow-sm d-flex flex-column" style={{'borderRadius':'24px'}}>
+            <div className="d-flex align-items-center justify-content-between mb-6">
+              <div className="d-flex align-items-center gap-3">
+                <div className="p-2 bg-red-50 text-red-500" style={{'borderRadius':'12px'}}>
+                  <AlertCircle size={20} />
+                </div>
+                <div>
+                  <h3 className="text-lg fw-bold text-brand-dark">Sentiment Analysis</h3>
+                  <p className="text-brand-gray fw-bold text-uppercase tracking-wider" style={{'fontSize':'10px'}}>Key Improvement Areas</p>
+                </div>
+              </div>
+              <div className="d-flex align-items-center gap-1 text-red-600 bg-red-50 px-2 py-0.5 rounded-circle fw-bold" style={{'fontSize':'10px'}}>
+                <ArrowUpRight size={10} />
+                Critical
+              </div>
+            </div>
+
+            <div className="space-y-6 flex-fill">
+              {[
+                { label: 'Wait Times & Intake', count: 24, percent: 65, color: 'bg-red-500', icon: Clock },
+                { label: 'Front Desk Comms', count: 12, percent: 35, color: 'bg-orange-500', icon: MessageSquare },
+                { label: 'Facility Cleanliness', count: 4, percent: 12, color: 'bg-brand-blue', icon: Sparkles },
+              ].map((theme, i) => (
+                <div key={i} className="space-y-3">
+                  <div className="d-flex justify-content-between align-items-end">
+                    <div className="d-flex align-items-center gap-2">
+                      <theme.icon size={14} className="text-brand-gray" />
+                      <span className="text-xs fw-bold text-brand-dark text-uppercase tracking-tight">{theme.label}</span>
+                    </div>
+                    <span className="fw-bold text-brand-gray text-uppercase tracking-widest" style={{'fontSize':'10px'}}>{theme.count} mentions</span>
+                  </div>
+                  <div className="position-relative h-2.5 w-100 bg-brand-bg rounded-circle overflow-hidden border border-brand-border/50">
+                    <Motion.div 
+                      initial={{ width: 0 }}
+                      animate={{ width: `${theme.percent}%` }}
+                      transition={{ duration: 1.2, delay: 0.5 + (i * 0.1), ease: "easeOut" }}
+                      className={`h-full ${theme.color} rounded-full`} 
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 p-5 bg-red-50 border border-red-100 d-flex align-items-start gap-4 position-relative overflow-hidden group" style={{'borderRadius':'16px'}}>
+              <div className="position-absolute top-0 end-0 p-4 opacity-5 pe-none group-hover:scale-150 transition-transform duration-500">
+                <AlertCircle size={80} />
+              </div>
+              <div className="w-10 h-10 bg-red-500/10 d-flex align-items-center justify-content-center flex-shrink-0 border border-red-200" style={{'borderRadius':'12px'}}>
+                <AlertCircle size={18} className="text-red-600" />
+              </div>
+              <div className="position-relative z-10">
+                <p className="fw-bold text-red-700 mb-1 text-uppercase" style={{'fontSize':'10px', 'letterSpacing':'0.2em'}}>Urgent Action Required</p>
+                <p className="text-red-600 fw-bold leading-relaxed" style={{'fontSize':'11px'}}>
+                  Wait times have spiked by <span className="fw-bold text-decoration-underline">40%</span> in {dept.name} this week. AI suggests immediate resource reallocation to morning intake desks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Motion.div>
+  );
+};
